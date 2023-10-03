@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    background-color: tan;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease-in-out;    
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;    
+}
+
+
+.menu-logo {
+    width: 75px;
+    height: 75px;
+}
+
+.menu-item {
+    display: none;
+    margin-left: auto;
+    list-style: none;
+    width: 100%;
+}
+
+.menu-item.show {
+    display: block;
+}
+
