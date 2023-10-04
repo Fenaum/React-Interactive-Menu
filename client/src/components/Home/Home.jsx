@@ -1,5 +1,9 @@
-export default function Home() {
+
+
+export default function Menu() {
     return (
-        <div>this is a home</div>
+        <main>
+
+        </main>
     )
 }
