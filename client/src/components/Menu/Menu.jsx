@@ -1,7 +1,10 @@
+import { useState } from "react"
+import menuDb from "../../db/menu.json"
+
 export default function Menu() {
     return (
-        <div>
+        <main>
             this is a menu
-        </div>
+        </main>
     )
 }

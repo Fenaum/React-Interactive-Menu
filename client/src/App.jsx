@@ -10,8 +10,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/menu' element={<Menu />} />
+        <Route path='/' element={<Menu />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
     </Router>

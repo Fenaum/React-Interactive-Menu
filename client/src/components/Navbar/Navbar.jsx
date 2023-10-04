@@ -28,13 +28,13 @@ export default function Navbar() {
       </header>
       <ul className={`menu-items ${isMenuOpen ? "show" : ""}`}>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">CART</Link>
         </li>
         <li>
-          <Link to="/service">Service</Link>
+          <Link to="/service">SERVICES</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">ABOUT</Link>
         </li>
       </ul>
     </>

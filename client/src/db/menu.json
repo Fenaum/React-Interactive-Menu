@@ -1,0 +1,34 @@
+{
+    "menu": [
+        {
+        "id": 1,
+        "name": "Fried Rice",
+        "spicy": true,
+        "price": 15
+        },
+        {
+        "id": 2,
+        "name": "Yakisoba",
+        "spicy": false,
+        "price": 17
+        },
+        {
+        "id": 3,
+        "name": "Burger",
+        "spicy": false,
+        "price": 11
+        },
+        {
+        "id": 4,
+        "name": "Salad",
+        "spicy": false,
+        "price": 8
+        },
+        {
+        "id": 5,
+        "name": "Shishito Pepper",
+        "spicy": true,
+        "price": 8
+        }
+    ]
+}
