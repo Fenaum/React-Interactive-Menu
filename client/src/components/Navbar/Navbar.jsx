@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 import menuLogo from "../../assets/images/menu.svg";
+import About from "../About/About"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

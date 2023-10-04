@@ -1,10 +1,13 @@
 import { useState } from "react"
-import menuDb from "../../db/menu.json"
+import { MenuItem } from "./MenuItem"
 
 export default function Menu() {
     return (
         <main>
-            this is a menu
+            <h2>
+                this is a menu
+            </h2>
+            <MenuItem />
         </main>
     )
 }
