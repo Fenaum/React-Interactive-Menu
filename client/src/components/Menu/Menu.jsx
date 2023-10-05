@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { MenuItem } from "./MenuItem"
+import Entree from "./Entree"
+import Appetizer from "./Appetizer"
 import "./menu.css"
 
 export default function Menu() {
@@ -8,7 +8,14 @@ export default function Menu() {
             <h2 className="menu-title" >
                 Our Menu
             </h2>
-            <MenuItem />
+            <div className="entree">
+                <h3>Entree</h3>
+                <Appetizer />
+            </div>
+            <div className="appetizer">
+                <h3>Appetizers</h3>
+                <Entree />
+            </div>
         </main>
     )
 }

@@ -1,3 +1,4 @@
+
 .menu-container {
     position: relative;
 }
@@ -6,8 +7,41 @@
     text-align: center;
 }
 
+.entree > h3,.appetizer > h3 {
+    padding: 20px;
+    background-color: var(--color-wood-brown);
+    color: var(--color-light-cream);
+}
+
 .card-container {
     display: flex;
-    padding: 50px;
+    padding: 0px;
     background-color: #a69f5e11;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.card-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+
+.item-card {
+    position: relative;
+    flex: 0 0 auto;
+    display: grid;
+    padding: 20px;
+    margin: 20px;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.item-img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
 }
