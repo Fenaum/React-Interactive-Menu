@@ -1,85 +1,627 @@
 {
-    "menu": [
+  "menu": {
+    "entree": [
+      {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "spicy": false,
+        "price": 14,
+        "description": "A classic Roman pasta dish made with eggs, Pecorino Romano cheese, pancetta, and black pepper. Creamy and flavorful.",
+        "vegetarian": false,
+        "ingredients": [
+          "Spaghetti",
+          "Eggs",
+          "Pecorino Romano Cheese",
+          "Pancetta",
+          "Black Pepper"
+        ],
+        "calories": 450,
+        "tags": ["Italian", "Pasta", "Creamy"]
+      },
+      {
+        "id": 2,
+        "name": "Margherita Pizza",
+        "spicy": false,
+        "price": 16,
+        "description": "A classic Neapolitan pizza with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Pizza Dough",
+          "Tomato Sauce",
+          "Fresh Mozzarella Cheese",
+          "Basil Leaves",
+          "Olive Oil"
+        ],
+        "calories": 600,
+        "tags": ["Italian", "Pizza", "Margherita"]
+      },
+      {
+        "id": 3,
+        "name": "Osso Buco",
+        "spicy": false,
+        "price": 28,
+        "description": "Tender veal shanks braised with white wine, broth, onions, carrots, celery, and gremolata. Served with risotto milanese.",
+        "vegetarian": false,
+        "ingredients": [
+          "Veal Shanks",
+          "White Wine",
+          "Broth",
+          "Onions",
+          "Carrots",
+          "Celery",
+          "Gremolata",
+          "Risotto Milanese"
+        ],
+        "calories": 620,
+        "tags": ["Italian", "Braised", "Veal"]
+      },
+      {
+        "id": 4,
+        "name": "Lasagna",
+        "spicy": false,
+        "price": 18,
+        "description": "Layered pasta dish with ricotta cheese, mozzarella, Parmesan, Bolognese sauce, and fresh basil. Baked to perfection.",
+        "vegetarian": false,
+        "ingredients": [
+          "Lasagna Noodles",
+          "Ricotta Cheese",
+          "Mozzarella Cheese",
+          "Parmesan Cheese",
+          "Bolognese Sauce",
+          "Fresh Basil"
+        ],
+        "calories": 700,
+        "tags": ["Italian", "Pasta", "Lasagna"]
+      },
+      {
+        "id": 5,
+        "name": "Gnocchi Sorrentina",
+        "spicy": false,
+        "price": 20,
+        "description": "Soft potato gnocchi baked with tomato sauce, mozzarella cheese, and fresh basil. Comfort food at its finest.",
+        "vegetarian": true,
+        "ingredients": [
+          "Potato Gnocchi",
+          "Tomato Sauce",
+          "Mozzarella Cheese",
+          "Fresh Basil"
+        ],
+        "calories": 550,
+        "tags": ["Italian", "Pasta", "Gnocchi"]
+      },
+      {
+        "id": 6,
+        "name": "Risotto ai Funghi",
+        "spicy": false,
+        "price": 22,
+        "description": "Creamy risotto with wild mushrooms, shallots, white wine, Parmesan cheese, and a hint of truffle oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Arborio Rice",
+          "Wild Mushrooms",
+          "Shallots",
+          "White Wine",
+          "Parmesan Cheese",
+          "Truffle Oil"
+        ],
+        "calories": 480,
+        "tags": ["Italian", "Risotto", "Mushrooms"]
+      },
+      {
+        "id": 7,
+        "name": "Chicken Marsala",
+        "spicy": false,
+        "price": 19,
+        "description": "Tender chicken breasts cooked in Marsala wine sauce with mushrooms. Served with mashed potatoes.",
+        "vegetarian": false,
+        "ingredients": [
+          "Chicken Breasts",
+          "Marsala Wine",
+          "Mushrooms",
+          "Mashed Potatoes"
+        ],
+        "calories": 520,
+        "tags": ["Italian", "Chicken", "Marsala"]
+      },
+      {
+        "id": 8,
+        "name": "Caprese Salad",
+        "spicy": false,
+        "price": 9,
+        "description": "A simple salad made with fresh tomatoes, mozzarella cheese, basil leaves, and a drizzle of balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Tomatoes",
+          "Mozzarella Cheese",
+          "Basil Leaves",
+          "Balsamic Glaze"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Salad", "Caprese"]
+      },
+      {
+        "id": 9,
+        "name": "Fettuccine Alfredo",
+        "spicy": false,
+        "price": 16,
+        "description": "Creamy Alfredo pasta with fettuccine noodles, butter, heavy cream, and Parmesan cheese. Simple and indulgent.",
+        "vegetarian": true,
+        "ingredients": [
+          "Fettuccine Pasta",
+          "Butter",
+          "Heavy Cream",
+          "Parmesan Cheese"
+        ],
+        "calories": 590,
+        "tags": ["Italian", "Pasta", "Alfredo"]
+      },
+      {
+        "id": 10,
+        "name": "Vegetarian Pesto Pizza",
+        "spicy": false,
+        "price": 15,
+        "description": "Thin-crust pizza topped with pesto sauce, cherry tomatoes, artichoke hearts, olives, and mozzarella cheese.",
+        "vegetarian": true,
+        "ingredients": [
+          "Pizza Dough",
+          "Pesto Sauce",
+          "Cherry Tomatoes",
+          "Artichoke Hearts",
+          "Olives",
+          "Mozzarella Cheese"
+        ],
+        "calories": 520,
+        "tags": ["Italian", "Pizza", "Vegetarian"]
+      }
+    ],
+    "appetizer": [
+      {
+        "id": 1,
+        "name": "Bruschetta",
+        "spicy": false,
+        "price": 8,
+        "description": "Toasted slices of baguette topped with diced tomatoes, fresh basil, garlic, and olive oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Baguette",
+          "Tomatoes",
+          "Fresh Basil",
+          "Garlic",
+          "Olive Oil"
+        ],
+        "calories": 120,
+        "tags": ["Italian", "Appetizer", "Tomatoes"]
+      },
+      {
+        "id": 2,
+        "name": "Arancini",
+        "spicy": false,
+        "price": 10,
+        "description": "Fried rice balls stuffed with mozzarella cheese and served with marinara sauce. A delicious Italian snack.",
+        "vegetarian": true,
+        "ingredients": ["Rice", "Mozzarella Cheese", "Marinara Sauce"],
+        "calories": 180,
+        "tags": ["Italian", "Appetizer", "Fried"]
+      },
+      {
+        "id": 3,
+        "name": "Calamari Fritti",
+        "spicy": false,
+        "price": 12,
+        "description": "Crispy fried calamari rings served with lemon wedges and marinara sauce.",
+        "vegetarian": false,
+        "ingredients": ["Calamari", "Flour", "Lemon", "Marinara Sauce"],
+        "calories": 320,
+        "tags": ["Italian", "Appetizer", "Seafood"]
+      },
+      {
+        "id": 4,
+        "name": "Caprese Skewers",
+        "spicy": false,
+        "price": 9,
+        "description": "Skewers of fresh mozzarella cheese, cherry tomatoes, and basil leaves drizzled with balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Mozzarella Cheese",
+          "Cherry Tomatoes",
+          "Basil Leaves",
+          "Balsamic Glaze"
+        ],
+        "calories": 180,
+        "tags": ["Italian", "Appetizer", "Skewers"]
+      },
+      {
+        "id": 5,
+        "name": "Minestrone Soup",
+        "spicy": false,
+        "price": 8,
+        "description": "A hearty Italian vegetable soup with tomatoes, beans, pasta, and a blend of herbs and spices.",
+        "vegetarian": true,
+        "ingredients": ["Tomatoes", "Beans", "Pasta", "Herbs", "Spices"],
+        "calories": 240,
+        "tags": ["Italian", "Soup", "Vegetarian"]
+      },
+      {
+        "id": 6,
+        "name": "Prosciutto-Wrapped Asparagus",
+        "spicy": false,
+        "price": 11,
+        "description": "Asparagus spears wrapped in thin slices of prosciutto and roasted to perfection.",
+        "vegetarian": false,
+        "ingredients": ["Asparagus", "Prosciutto"],
+        "calories": 150,
+        "tags": ["Italian", "Appetizer", "Asparagus"]
+      },
+      {
+        "id": 7,
+        "name": "Eggplant Parmesan",
+        "spicy": false,
+        "price": 13,
+        "description": "Slices of breaded and fried eggplant topped with marinara sauce and melted mozzarella cheese.",
+        "vegetarian": true,
+        "ingredients": ["Eggplant", "Marinara Sauce", "Mozzarella Cheese"],
+        "calories": 320,
+        "tags": ["Italian", "Appetizer", "Eggplant"]
+      },
+      {
+        "id": 8,
+        "name": "Mushroom Risotto Balls",
+        "spicy": false,
+        "price": 10,
+        "description": "Crispy risotto balls stuffed with mushrooms, Parmesan cheese, and herbs. Served with marinara sauce.",
+        "vegetarian": true,
+        "ingredients": [
+          "Risotto",
+          "Mushrooms",
+          "Parmesan Cheese",
+          "Herbs",
+          "Marinara Sauce"
+        ],
+        "calories": 220,
+        "tags": ["Italian", "Appetizer", "Risotto"]
+      },
+      {
+        "id": 9,
+        "name": "Caprese Crostini",
+        "spicy": false,
+        "price": 9,
+        "description": "Toasted baguette slices topped with fresh mozzarella, cherry tomatoes, basil, and balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Baguette",
+          "Mozzarella Cheese",
+          "Cherry Tomatoes",
+          "Basil",
+          "Balsamic Glaze"
+        ],
+        "calories": 160,
+        "tags": ["Italian", "Appetizer", "Crostini"]
+      },
+      {
+        "id": 10,
+        "name": "Zucchini Fritters",
+        "spicy": false,
+        "price": 10,
+        "description": "Crispy fritters made with grated zucchini, Parmesan cheese, and fresh herbs. Served with a yogurt-based dipping sauce.",
+        "vegetarian": true,
+        "ingredients": ["Zucchini", "Parmesan Cheese", "Herbs", "Yogurt Sauce"],
+        "calories": 190,
+        "tags": ["Italian", "Appetizer", "Zucchini"]
+      }
+    ],
+    "dessert": [
+      {
+        "id": 1,
+        "name": "Tiramisu",
+        "price": 8,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Ladyfingers",
+          "Mascarpone Cheese",
+          "Espresso",
+          "Cocoa Powder"
+        ],
+        "calories": 320,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 2,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 3,
+        "name": "Panna Cotta",
+        "price": 7,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
+        "calories": 220,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 4,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 5,
+        "name": "Panna Cotta",
+        "price": 7,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
+        "calories": 220,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 6,
+        "name": "Tartufo",
+        "price": 9,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Chocolate Gelato", "Cherry", "Cocoa Powder"],
+        "calories": 280,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 7,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"]
+      },
+      {
+        "id": 8,
+        "name": "Tiramisu",
+        "price": 8,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Ladyfingers",
+          "Mascarpone Cheese",
+          "Espresso",
+          "Cocoa Powder"
+        ],
+        "calories": 320,
+        "tags": ["Italian", "Dessert"]
+      }
+    ],
+    "drinks": {
+      "wine": [
         {
-            "id": 1,
-            "name": "Fried Rice",
-            "spicy": true,
-            "price": 15,
-            "description": "A delicious and savory dish made with stir-fried rice, mixed vegetables, and your choice of protein. Our secret blend of spices gives it a spicy kick that will tantalize your taste buds.",
-            "vegetarian": false,
-            "ingredients": [
-                "Rice",
-                "Mixed Vegetables",
-                "Protein of Choice",
-                "Spices"
-            ],
-            "calories": 350,
-            "tags": ["Asian", "Rice Dish", "Spicy"]
+          "id": 1,
+          "name": "Chianti",
+          "price": 25,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Red Wine"],
+          "calories": 120,
+          "tags": ["Italian", "Red Wine", "Alcoholic"]
         },
         {
-            "id": 2,
-            "name": "Yakisoba",
-            "spicy": false,
-            "price": 17,
-            "description": "Yakisoba is a Japanese stir-fried noodle dish loaded with fresh vegetables and your choice of meat or tofu. It's a savory and satisfying meal that's not too spicy.",
-            "vegetarian": true,
-            "ingredients": [
-                "Wheat Noodles",
-                "Fresh Vegetables",
-                "Choice of Protein or Tofu",
-                "Yakisoba Sauce"
-            ],
-            "calories": 400,
-            "tags": ["Japanese", "Noodle Dish", "Vegetarian"]
+          "id": 2,
+          "name": "Pinot Grigio",
+          "price": 28,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["White Wine"],
+          "calories": 110,
+          "tags": ["Italian", "White Wine", "Alcoholic"]
         },
         {
-            "id": 3,
-            "name": "Burger",
-            "spicy": false,
-            "price": 11,
-            "description": "Our classic burger is a juicy masterpiece. It features a flame-grilled beef patty, fresh lettuce, tomato, onion, and a special sauce, all served on a toasted sesame seed bun.",
-            "vegetarian": false,
-            "ingredients": [
-                "Beef Patty",
-                "Lettuce",
-                "Tomato",
-                "Onion",
-                "Special Sauce",
-                "Sesame Seed Bun"
-            ],
-            "calories": 550,
-            "tags": ["American", "Burger", "Beef"]
+          "id": 3,
+          "name": "Barolo",
+          "price": 45,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Red Wine"],
+          "calories": 130,
+          "tags": ["Italian", "Red Wine", "Alcoholic"]
         },
         {
-            "id": 4,
-            "name": "Salad",
-            "spicy": false,
-            "price": 8,
-            "description": "Our garden-fresh salad is a light and healthy choice. It's a colorful mix of crisp lettuce, cherry tomatoes, cucumber, carrots, and your choice of dressing.",
-            "vegetarian": true,
-            "ingredients": [
-                "Lettuce",
-                "Cherry Tomatoes",
-                "Cucumber",
-                "Carrots",
-                "Dressing of Choice"
-            ],
-            "calories": 200,
-            "tags": ["Healthy", "Salad", "Vegetarian"]
+          "id": 4,
+          "name": "Prosecco",
+          "price": 30,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Sparkling Wine"],
+          "calories": 90,
+          "tags": ["Italian", "Sparkling Wine", "Alcoholic"]
         },
         {
-            "id": 5,
-            "name": "Shishito Pepper",
-            "spicy": true,
-            "price": 8,
-            "description": "Shishito peppers are a delightful appetizer with a mild smoky flavor. Served blistered and seasoned with our special spicy seasoning, they're perfect for those who enjoy a little heat.",
-            "vegetarian": true,
-            "ingredients": [
-                "Shishito Peppers",
-                "Spicy Seasoning"
-            ],
-            "calories": 80,
-            "tags": ["Appetizer", "Spicy", "Vegetarian"]
+          "id": 5,
+          "name": "Moscato",
+          "price": 22,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["White Wine"],
+          "calories": 100,
+          "tags": ["Italian", "White Wine", "Alcoholic"]
         }
-    ]
+      ],
+      "cocktail": [
+        {
+          "id": 6,
+          "name": "Negroni",
+          "price": 12,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Gin", "Campari", "Vermouth"],
+          "calories": 190,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        },
+        {
+          "id": 7,
+          "name": "Aperol Spritz",
+          "price": 10,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Aperol", "Prosecco", "Soda Water"],
+          "calories": 150,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        },
+        {
+          "id": 8,
+          "name": "Bellini",
+          "price": 11,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Prosecco", "Peach Puree"],
+          "calories": 130,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        },
+        {
+          "id": 9,
+          "name": "Martini",
+          "price": 14,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Gin", "Dry Vermouth"],
+          "calories": 160,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        },
+        {
+          "id": 10,
+          "name": "Limoncello Spritz",
+          "price": 10,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Limoncello", "Prosecco", "Soda Water"],
+          "calories": 120,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        }
+      ],
+      "coffee": [
+        {
+          "id": 11,
+          "name": "Espresso",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Ground Coffee Beans"],
+          "calories": 5,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+        },
+        {
+          "id": 12,
+          "name": "Cappuccino",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Steamed Milk", "Foamed Milk"],
+          "calories": 120,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+        },
+        {
+          "id": 13,
+          "name": "Macchiato",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Foamed Milk"],
+          "calories": 80,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+        },
+        {
+          "id": 14,
+          "name": "Mocha",
+          "price": 5,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Steamed Milk", "Chocolate"],
+          "calories": 200,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+        },
+        {
+          "id": 15,
+          "name": "Iced Coffee",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Cold Brew Coffee", "Ice", "Sugar"],
+          "calories": 60,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+        }
+      ],
+      "non-alcoholic": [
+        {
+          "id": 16,
+          "name": "Sparkling Water",
+          "price": 2,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Carbonated Water"],
+          "calories": 0,
+          "tags": ["Italian", "Non-Alcoholic"]
+        },
+        {
+          "id": 17,
+          "name": "Lemonade",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Lemon Juice", "Sugar", "Water"],
+          "calories": 80,
+          "tags": ["Italian", "Non-Alcoholic"]
+        },
+        {
+          "id": 18,
+          "name": "Iced Tea",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Black Tea", "Ice", "Sugar"],
+          "calories": 30,
+          "tags": ["Italian", "Non-Alcoholic"]
+        },
+        {
+          "id": 19,
+          "name": "Orange Juice",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Fresh Orange Juice"],
+          "calories": 110,
+          "tags": ["Italian", "Non-Alcoholic"]
+        },
+        {
+          "id": 20,
+          "name": "Cranberry Spritzer",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Cranberry Juice", "Soda Water", "Lime"],
+          "calories": 70,
+          "tags": ["Italian", "Non-Alcoholic"]
+        }
+      ]
+    }
+  }
 }

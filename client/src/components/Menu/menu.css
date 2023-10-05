@@ -1,3 +1,4 @@
+
 .menu-container {
     position: relative;
 }
@@ -6,9 +7,15 @@
     text-align: center;
 }
 
+.entree > h3,.appetizer > h3 {
+    padding: 20px;
+    background-color: var(--color-wood-brown);
+    color: var(--color-light-cream);
+}
+
 .card-container {
     display: flex;
-    padding: 50px;
+    padding: 0px;
     background-color: #a69f5e11;
     width: max-content;
     max-width: 100%;

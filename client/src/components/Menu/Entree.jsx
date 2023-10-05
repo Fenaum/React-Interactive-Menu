@@ -1,7 +1,7 @@
 import MenuService from "../../utils/menuService"
 import { useEffect, useRef } from "react";
 
-export function MenuItem() {
+export default function Entree() {
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export function MenuItem() {
     }, []);
 
     // Use the MenuService singleton instance to access its methods
-    const menuItems = MenuService.getMenuItems();
+    const menuItems = MenuService.getMenuItems().entree;
 
     const menuItemsList = menuItems.map((menuItem) => (
         <div className="item-card" key={menuItem.id}>
