@@ -5,7 +5,7 @@ export default function Menu() {
     return (
         <main>
             <h2>
-                this is a menu
+                Our Menu
             </h2>
             <MenuItem />
         </main>

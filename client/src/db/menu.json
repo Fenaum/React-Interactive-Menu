@@ -1,34 +1,85 @@
 {
     "menu": [
         {
-        "id": 1,
-        "name": "Fried Rice",
-        "spicy": true,
-        "price": 15
+            "id": 1,
+            "name": "Fried Rice",
+            "spicy": true,
+            "price": 15,
+            "description": "A delicious and savory dish made with stir-fried rice, mixed vegetables, and your choice of protein. Our secret blend of spices gives it a spicy kick that will tantalize your taste buds.",
+            "vegetarian": false,
+            "ingredients": [
+                "Rice",
+                "Mixed Vegetables",
+                "Protein of Choice",
+                "Spices"
+            ],
+            "calories": 350,
+            "tags": ["Asian", "Rice Dish", "Spicy"]
         },
         {
-        "id": 2,
-        "name": "Yakisoba",
-        "spicy": false,
-        "price": 17
+            "id": 2,
+            "name": "Yakisoba",
+            "spicy": false,
+            "price": 17,
+            "description": "Yakisoba is a Japanese stir-fried noodle dish loaded with fresh vegetables and your choice of meat or tofu. It's a savory and satisfying meal that's not too spicy.",
+            "vegetarian": true,
+            "ingredients": [
+                "Wheat Noodles",
+                "Fresh Vegetables",
+                "Choice of Protein or Tofu",
+                "Yakisoba Sauce"
+            ],
+            "calories": 400,
+            "tags": ["Japanese", "Noodle Dish", "Vegetarian"]
         },
         {
-        "id": 3,
-        "name": "Burger",
-        "spicy": false,
-        "price": 11
+            "id": 3,
+            "name": "Burger",
+            "spicy": false,
+            "price": 11,
+            "description": "Our classic burger is a juicy masterpiece. It features a flame-grilled beef patty, fresh lettuce, tomato, onion, and a special sauce, all served on a toasted sesame seed bun.",
+            "vegetarian": false,
+            "ingredients": [
+                "Beef Patty",
+                "Lettuce",
+                "Tomato",
+                "Onion",
+                "Special Sauce",
+                "Sesame Seed Bun"
+            ],
+            "calories": 550,
+            "tags": ["American", "Burger", "Beef"]
         },
         {
-        "id": 4,
-        "name": "Salad",
-        "spicy": false,
-        "price": 8
+            "id": 4,
+            "name": "Salad",
+            "spicy": false,
+            "price": 8,
+            "description": "Our garden-fresh salad is a light and healthy choice. It's a colorful mix of crisp lettuce, cherry tomatoes, cucumber, carrots, and your choice of dressing.",
+            "vegetarian": true,
+            "ingredients": [
+                "Lettuce",
+                "Cherry Tomatoes",
+                "Cucumber",
+                "Carrots",
+                "Dressing of Choice"
+            ],
+            "calories": 200,
+            "tags": ["Healthy", "Salad", "Vegetarian"]
         },
         {
-        "id": 5,
-        "name": "Shishito Pepper",
-        "spicy": true,
-        "price": 8
+            "id": 5,
+            "name": "Shishito Pepper",
+            "spicy": true,
+            "price": 8,
+            "description": "Shishito peppers are a delightful appetizer with a mild smoky flavor. Served blistered and seasoned with our special spicy seasoning, they're perfect for those who enjoy a little heat.",
+            "vegetarian": true,
+            "ingredients": [
+                "Shishito Peppers",
+                "Spicy Seasoning"
+            ],
+            "calories": 80,
+            "tags": ["Appetizer", "Spicy", "Vegetarian"]
         }
     ]
 }
