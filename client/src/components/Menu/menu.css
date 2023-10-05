@@ -1,0 +1,13 @@
+.menu-container {
+    position: relative;
+}
+
+.menu-title {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    padding: 50px;
+    background-color: #a69f5e11;
+}

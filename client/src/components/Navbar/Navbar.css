@@ -8,7 +8,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: 0px;
-    background-color: tan;
+    background-color: var(--color-cream);
     padding: 20px;
     position: relative;
     z-index: 999;
@@ -63,7 +63,7 @@ a {
     position: absolute;
     overflow: hidden; /* Hides the overflow of content inside the menu */
     z-index: 999; /* Adjust the z-index as needed to control stacking order */
-    background-color: tan;
+    background-color: var(--color-cream);
     font-size: 30px;
     padding-top: 10vh;
     list-style: none;
