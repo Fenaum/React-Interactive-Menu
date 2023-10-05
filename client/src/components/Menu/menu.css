@@ -30,11 +30,18 @@
 }
 
 .item-card {
+    position: relative;
     flex: 0 0 auto;
     display: grid;
     padding: 20px;
     margin: 20px;
     max-height: 300px;
     max-width: 300px;
-    background-color: var(--color-darker-wood);
+}
+
+.item-img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
 }

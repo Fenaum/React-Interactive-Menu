@@ -26,7 +26,7 @@ export default function Entree() {
         <div className="item-card" key={menuItem.id}>
             <h2>{menuItem.name}</h2>
             <p className="price">Price: ${menuItem.price}</p>
-            <img className="item-img" src="" alt="item-img" />
+            <img className="item-img" src={menuItem.imgURL} alt="item-img" />
 
             <p>{menuItem.description}</p>
             {/* Add additional data rendering here */}

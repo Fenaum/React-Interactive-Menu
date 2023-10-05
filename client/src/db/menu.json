@@ -16,7 +16,8 @@
           "Black Pepper"
         ],
         "calories": 450,
-        "tags": ["Italian", "Pasta", "Creamy"]
+        "tags": ["Italian", "Pasta", "Creamy"],
+        "imgURL": "https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": 2,
@@ -33,7 +34,8 @@
           "Olive Oil"
         ],
         "calories": 600,
-        "tags": ["Italian", "Pizza", "Margherita"]
+        "tags": ["Italian", "Pizza", "Margherita"],
+        "imgURL": ""
       },
       {
         "id": 3,
@@ -53,7 +55,8 @@
           "Risotto Milanese"
         ],
         "calories": 620,
-        "tags": ["Italian", "Braised", "Veal"]
+        "tags": ["Italian", "Braised", "Veal"],
+        "imgURL": ""
       },
       {
         "id": 4,
@@ -71,7 +74,8 @@
           "Fresh Basil"
         ],
         "calories": 700,
-        "tags": ["Italian", "Pasta", "Lasagna"]
+        "tags": ["Italian", "Pasta", "Lasagna"],
+        "imgURL": ""
       },
       {
         "id": 5,
@@ -87,7 +91,8 @@
           "Fresh Basil"
         ],
         "calories": 550,
-        "tags": ["Italian", "Pasta", "Gnocchi"]
+        "tags": ["Italian", "Pasta", "Gnocchi"],
+        "imgURL": ""
       },
       {
         "id": 6,
@@ -105,7 +110,8 @@
           "Truffle Oil"
         ],
         "calories": 480,
-        "tags": ["Italian", "Risotto", "Mushrooms"]
+        "tags": ["Italian", "Risotto", "Mushrooms"],
+        "imgURL": ""
       },
       {
         "id": 7,
@@ -121,7 +127,8 @@
           "Mashed Potatoes"
         ],
         "calories": 520,
-        "tags": ["Italian", "Chicken", "Marsala"]
+        "tags": ["Italian", "Chicken", "Marsala"],
+        "imgURL": ""
       },
       {
         "id": 8,
@@ -137,7 +144,8 @@
           "Balsamic Glaze"
         ],
         "calories": 250,
-        "tags": ["Italian", "Salad", "Caprese"]
+        "tags": ["Italian", "Salad", "Caprese"],
+        "imgURL": ""
       },
       {
         "id": 9,
@@ -153,7 +161,8 @@
           "Parmesan Cheese"
         ],
         "calories": 590,
-        "tags": ["Italian", "Pasta", "Alfredo"]
+        "tags": ["Italian", "Pasta", "Alfredo"],
+        "imgURL": ""
       },
       {
         "id": 10,
@@ -171,7 +180,8 @@
           "Mozzarella Cheese"
         ],
         "calories": 520,
-        "tags": ["Italian", "Pizza", "Vegetarian"]
+        "tags": ["Italian", "Pizza", "Vegetarian"],
+        "imgURL": ""
       }
     ],
     "appetizer": [
@@ -190,7 +200,8 @@
           "Olive Oil"
         ],
         "calories": 120,
-        "tags": ["Italian", "Appetizer", "Tomatoes"]
+        "tags": ["Italian", "Appetizer", "Tomatoes"],
+        "imgURL": "https://images.pexels.com/photos/6605644/pexels-photo-6605644.jpeg"
       },
       {
         "id": 2,
@@ -201,7 +212,8 @@
         "vegetarian": true,
         "ingredients": ["Rice", "Mozzarella Cheese", "Marinara Sauce"],
         "calories": 180,
-        "tags": ["Italian", "Appetizer", "Fried"]
+        "tags": ["Italian", "Appetizer", "Fried"],
+        "imgURL": ""
       },
       {
         "id": 3,
@@ -212,7 +224,8 @@
         "vegetarian": false,
         "ingredients": ["Calamari", "Flour", "Lemon", "Marinara Sauce"],
         "calories": 320,
-        "tags": ["Italian", "Appetizer", "Seafood"]
+        "tags": ["Italian", "Appetizer", "Seafood"],
+        "imgURL": ""
       },
       {
         "id": 4,
@@ -228,7 +241,8 @@
           "Balsamic Glaze"
         ],
         "calories": 180,
-        "tags": ["Italian", "Appetizer", "Skewers"]
+        "tags": ["Italian", "Appetizer", "Skewers"],
+        "imgURL": "https://images.pexels.com/photos/2773942/pexels-photo-2773942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": 5,
@@ -239,7 +253,8 @@
         "vegetarian": true,
         "ingredients": ["Tomatoes", "Beans", "Pasta", "Herbs", "Spices"],
         "calories": 240,
-        "tags": ["Italian", "Soup", "Vegetarian"]
+        "tags": ["Italian", "Soup", "Vegetarian"],
+        "imgURL": ""
       },
       {
         "id": 6,
@@ -250,7 +265,8 @@
         "vegetarian": false,
         "ingredients": ["Asparagus", "Prosciutto"],
         "calories": 150,
-        "tags": ["Italian", "Appetizer", "Asparagus"]
+        "tags": ["Italian", "Appetizer", "Asparagus"],
+        "imgURL": ""
       },
       {
         "id": 7,
@@ -261,7 +277,8 @@
         "vegetarian": true,
         "ingredients": ["Eggplant", "Marinara Sauce", "Mozzarella Cheese"],
         "calories": 320,
-        "tags": ["Italian", "Appetizer", "Eggplant"]
+        "tags": ["Italian", "Appetizer", "Eggplant"],
+        "imgURL": ""
       },
       {
         "id": 8,
@@ -278,7 +295,8 @@
           "Marinara Sauce"
         ],
         "calories": 220,
-        "tags": ["Italian", "Appetizer", "Risotto"]
+        "tags": ["Italian", "Appetizer", "Risotto"],
+        "imgURL": ""
       },
       {
         "id": 9,
@@ -295,7 +313,8 @@
           "Balsamic Glaze"
         ],
         "calories": 160,
-        "tags": ["Italian", "Appetizer", "Crostini"]
+        "tags": ["Italian", "Appetizer", "Crostini"],
+        "imgURL": ""
       },
       {
         "id": 10,
@@ -306,7 +325,8 @@
         "vegetarian": true,
         "ingredients": ["Zucchini", "Parmesan Cheese", "Herbs", "Yogurt Sauce"],
         "calories": 190,
-        "tags": ["Italian", "Appetizer", "Zucchini"]
+        "tags": ["Italian", "Appetizer", "Zucchini"],
+        "imgURL": ""
       }
     ],
     "dessert": [
@@ -323,7 +343,8 @@
           "Cocoa Powder"
         ],
         "calories": 320,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 2,
@@ -337,7 +358,8 @@
           "Chocolate Chips"
         ],
         "calories": 250,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 3,
@@ -347,7 +369,8 @@
         "dairy": true,
         "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
         "calories": 220,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 4,
@@ -361,7 +384,8 @@
           "Chocolate Chips"
         ],
         "calories": 250,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 5,
@@ -371,7 +395,8 @@
         "dairy": true,
         "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
         "calories": 220,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 6,
@@ -381,7 +406,8 @@
         "dairy": true,
         "ingredients": ["Chocolate Gelato", "Cherry", "Cocoa Powder"],
         "calories": 280,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 7,
@@ -395,7 +421,8 @@
           "Chocolate Chips"
         ],
         "calories": 250,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       },
       {
         "id": 8,
@@ -410,7 +437,8 @@
           "Cocoa Powder"
         ],
         "calories": 320,
-        "tags": ["Italian", "Dessert"]
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
       }
     ],
     "drinks": {
@@ -423,7 +451,8 @@
           "dairy-free": true,
           "ingredients": ["Red Wine"],
           "calories": 120,
-          "tags": ["Italian", "Red Wine", "Alcoholic"]
+          "tags": ["Italian", "Red Wine", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 2,
@@ -433,7 +462,8 @@
           "dairy-free": true,
           "ingredients": ["White Wine"],
           "calories": 110,
-          "tags": ["Italian", "White Wine", "Alcoholic"]
+          "tags": ["Italian", "White Wine", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 3,
@@ -443,7 +473,8 @@
           "dairy-free": true,
           "ingredients": ["Red Wine"],
           "calories": 130,
-          "tags": ["Italian", "Red Wine", "Alcoholic"]
+          "tags": ["Italian", "Red Wine", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 4,
@@ -463,7 +494,8 @@
           "dairy-free": true,
           "ingredients": ["White Wine"],
           "calories": 100,
-          "tags": ["Italian", "White Wine", "Alcoholic"]
+          "tags": ["Italian", "White Wine", "Alcoholic"],
+          "imgURL": ""
         }
       ],
       "cocktail": [
@@ -475,7 +507,8 @@
           "dairy-free": true,
           "ingredients": ["Gin", "Campari", "Vermouth"],
           "calories": 190,
-          "tags": ["Italian", "Cocktail", "Alcoholic"]
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 7,
@@ -485,7 +518,8 @@
           "dairy-free": true,
           "ingredients": ["Aperol", "Prosecco", "Soda Water"],
           "calories": 150,
-          "tags": ["Italian", "Cocktail", "Alcoholic"]
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 8,
@@ -495,7 +529,8 @@
           "dairy-free": true,
           "ingredients": ["Prosecco", "Peach Puree"],
           "calories": 130,
-          "tags": ["Italian", "Cocktail", "Alcoholic"]
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 9,
@@ -515,7 +550,8 @@
           "dairy-free": true,
           "ingredients": ["Limoncello", "Prosecco", "Soda Water"],
           "calories": 120,
-          "tags": ["Italian", "Cocktail", "Alcoholic"]
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
         }
       ],
       "coffee": [
@@ -527,7 +563,8 @@
           "dairy-free": true,
           "ingredients": ["Ground Coffee Beans"],
           "calories": 5,
-          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 12,
@@ -537,7 +574,8 @@
           "dairy-free": false,
           "ingredients": ["Espresso", "Steamed Milk", "Foamed Milk"],
           "calories": 120,
-          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 13,
@@ -547,7 +585,8 @@
           "dairy-free": false,
           "ingredients": ["Espresso", "Foamed Milk"],
           "calories": 80,
-          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 14,
@@ -557,7 +596,8 @@
           "dairy-free": false,
           "ingredients": ["Espresso", "Steamed Milk", "Chocolate"],
           "calories": 200,
-          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 15,
@@ -567,7 +607,8 @@
           "dairy-free": true,
           "ingredients": ["Cold Brew Coffee", "Ice", "Sugar"],
           "calories": 60,
-          "tags": ["Italian", "Coffee", "Non-Alcoholic"]
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
         }
       ],
       "non-alcoholic": [
@@ -579,7 +620,8 @@
           "dairy-free": true,
           "ingredients": ["Carbonated Water"],
           "calories": 0,
-          "tags": ["Italian", "Non-Alcoholic"]
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 17,
@@ -589,7 +631,8 @@
           "dairy-free": true,
           "ingredients": ["Lemon Juice", "Sugar", "Water"],
           "calories": 80,
-          "tags": ["Italian", "Non-Alcoholic"]
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 18,
@@ -599,7 +642,8 @@
           "dairy-free": true,
           "ingredients": ["Black Tea", "Ice", "Sugar"],
           "calories": 30,
-          "tags": ["Italian", "Non-Alcoholic"]
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
         },
         {
           "id": 19,
@@ -619,7 +663,8 @@
           "dairy-free": true,
           "ingredients": ["Cranberry Juice", "Soda Water", "Lime"],
           "calories": 70,
-          "tags": ["Italian", "Non-Alcoholic"]
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
         }
       ]
     }
