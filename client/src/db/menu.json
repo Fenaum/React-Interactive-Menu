@@ -17,7 +17,7 @@
         ],
         "calories": 450,
         "tags": ["Italian", "Pasta", "Creamy"],
-        "imgURL": "https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "imgURL": "https://media-cdn2.greatbritishchefs.com/media/zvmpbhuw/img56078.jpg"
       },
       {
         "id": 2,
@@ -35,7 +35,7 @@
         ],
         "calories": 600,
         "tags": ["Italian", "Pizza", "Margherita"],
-        "imgURL": ""
+        "imgURL": "https://assets.bonappetit.com/photos/5cd32ef32c3537178c3c8f03/1:1/w_1920,c_limit/BA-Perfect-Pizza.jpg"
       },
       {
         "id": 3,
@@ -56,7 +56,7 @@
         ],
         "calories": 620,
         "tags": ["Italian", "Braised", "Veal"],
-        "imgURL": ""
+        "imgURL": "https://s3-eu-west-1.amazonaws.com/tscmediumimages/2014/12/18/18det8znu5_Ossobucco.jpg"
       },
       {
         "id": 4,
@@ -213,7 +213,7 @@
         "ingredients": ["Rice", "Mozzarella Cheese", "Marinara Sauce"],
         "calories": 180,
         "tags": ["Italian", "Appetizer", "Fried"],
-        "imgURL": ""
+        "imgURL": "https://images.unsplash.com/photo-1690642109209-18176b898182?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
       },
       {
         "id": 3,
@@ -225,7 +225,7 @@
         "ingredients": ["Calamari", "Flour", "Lemon", "Marinara Sauce"],
         "calories": 320,
         "tags": ["Italian", "Appetizer", "Seafood"],
-        "imgURL": ""
+        "imgURL": "https://www.thespruceeats.com/thmb/BSYlH-mloaBfGESJrYjXxOtJmeU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fried-calamari-2019531-hero-01-e294f265d7e84c0f89d4b5759759ffbf.jpg"
       },
       {
         "id": 4,
@@ -254,7 +254,7 @@
         "ingredients": ["Tomatoes", "Beans", "Pasta", "Herbs", "Spices"],
         "calories": 240,
         "tags": ["Italian", "Soup", "Vegetarian"],
-        "imgURL": ""
+        "imgURL": "https://familystylefood.com/wp-content/uploads/2022/09/Homemade-Minestrone-Soup.jpg"
       },
       {
         "id": 6,
@@ -266,7 +266,7 @@
         "ingredients": ["Asparagus", "Prosciutto"],
         "calories": 150,
         "tags": ["Italian", "Appetizer", "Asparagus"],
-        "imgURL": ""
+        "imgURL": "https://www.joyfulhealthyeats.com/wp-content/uploads/2016/11/Easy-Prosciutto-Wrapped-Asparagus-web-5.jpg"
       },
       {
         "id": 7,
@@ -278,7 +278,7 @@
         "ingredients": ["Eggplant", "Marinara Sauce", "Mozzarella Cheese"],
         "calories": 320,
         "tags": ["Italian", "Appetizer", "Eggplant"],
-        "imgURL": ""
+        "imgURL": "https://fitfoodiefinds.com/wp-content/uploads/2021/07/eggplant-parmesan-10-scaled.jpg"
       },
       {
         "id": 8,
@@ -296,7 +296,7 @@
         ],
         "calories": 220,
         "tags": ["Italian", "Appetizer", "Risotto"],
-        "imgURL": ""
+        "imgURL": "https://cookingwithcocktailrings.com/wp-content/uploads/2021/02/40_image-asset.jpg"
       },
       {
         "id": 9,
@@ -314,7 +314,7 @@
         ],
         "calories": 160,
         "tags": ["Italian", "Appetizer", "Crostini"],
-        "imgURL": ""
+        "imgURL": "https://www.besthealthmag.ca/wp-content/uploads/2016/11/Avocado-Caprese-Crostini.jpg?resize=768%2C538"
       },
       {
         "id": 10,

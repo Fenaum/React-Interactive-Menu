@@ -5,7 +5,7 @@ export default function MessageInterface() {
     return (
         <div>
             <div></div>
-            <button>
+            <button className="chat-button" >
                 <img className="chat-icon" src={chat} alt="chat-icon" />
             </button>
         </div>

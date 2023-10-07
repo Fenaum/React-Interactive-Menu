@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Menu from "./components/Menu/Menu";
 import Cart from "./components/Cart/Cart";
 import MessageInterface from "./components/MessageInterface/MessageInterface"
+import Footer from "./components/Footer/Footer";
 import "./assets/style.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         </Routes>
       </Router>
       <MessageInterface />
+      <Footer />
     </>
   );
 }
