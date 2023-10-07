@@ -5,18 +5,26 @@
 
 .menu-title {
     text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--color-light-gray);
+    color: var(--color-light-cream);
+    font-weight: 250;
+
 }
 
 .entree > h3,.appetizer > h3 {
+    margin: -1px;
     padding: 20px;
-    background-color: var(--color-wood-brown);
+    background-color: var(--color-light-gray);
     color: var(--color-light-cream);
+    font-weight: 200;
 }
 
 .card-container {
     display: flex;
     padding: 0px;
-    background-color: #a69f5e11;
+    background-color: var(--color-light-gray);
     width: max-content;
     max-width: 100%;
     overflow-x: auto;
@@ -33,15 +41,57 @@
     position: relative;
     flex: 0 0 auto;
     display: grid;
-    padding: 20px;
+    grid-template-columns: 3fr 2fr; /* This creates two columns. */
+    grid-template-rows: auto auto auto; /* This creates three rows. */
     margin: 20px;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+    background-color: var(--color-light-gray);
+    color: var(--color-text-dark);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.item-card > :first-child {
+    grid-column: 1;
+    grid-row: 1 / span 3; /* This makes the first child span 3 rows. */
+}
+
+.item-card > :nth-child(n+2) {
+    grid-column: 2;
+    /* This places the rest of the children in the second column. */
 }
 
 .item-img {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    z-index: -1;
+    width: 100%; /* This will make the image take up the full width of its grid cell. */
+    height: 100%; /* This will make the image take up the full height of its grid cell. */
+    object-fit: cover; /* This will scale the image to maintain its aspect ratio while filling the box. */https://open.spotify.com/track/7JWVoYwmKrFWpHaXCCcyiH
+    border-radius: 25px 0px 0px 25px;
 }
+
+.promotion {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    width: 90vw;
+    height: 40vh;
+    margin: auto;
+}
+
+.promotion > h2, .promotion > p {
+    padding: 4rem;
+}
+
+.promotion-img {
+    object-fit: cover;
+    border-radius: 0px 25px 25px 0px;
+    height: 40vh;
+    width: 40vw;
+    margin-left: auto;
+}
+

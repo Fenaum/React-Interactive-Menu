@@ -1,6 +1,6 @@
 a {
     text-decoration: none;
-    color: var(--color-primary-cream);
+    color: var(--color-wood-brown);
 }
 
 .header {
@@ -9,7 +9,7 @@ a {
     align-items: center;
     margin: 0px;
     padding: 20px;
-    background-color: var(--color-darker-wood);
+    background-color: var(--color-light-gray);
     position: relative;
     z-index: 999;
     width: 100%;
@@ -19,8 +19,6 @@ a {
 .logo {
     width: 100px;
     height: 100px;
-    position: absolute;
-    top: 10px
 }
 
 .menu {
@@ -65,11 +63,11 @@ a {
     position: absolute;
     overflow: hidden; /* Hides the overflow of content inside the menu */
     z-index: 999; /* Adjust the z-index as needed to control stacking order */
-    background-color: var(--color-darker-wood);
+    background-color: var(--color-light-gray);
     color: var(--color-primary-cream);
     font-weight: 200;
     font-size: 30px;
-    padding-top: 10vh;
+    padding-top: 5vh;
     list-style: none;
     z-index: 1;
 }

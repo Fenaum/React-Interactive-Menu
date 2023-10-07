@@ -24,9 +24,9 @@ export default function Appetizer() {
 
   const menuItemsList = menuItems.map((menuItem) => (
     <div className="item-card" key={menuItem.id}>
+      <img className="item-img" src={menuItem.imgURL} alt="item-img" />
       <h2>{menuItem.name}</h2>
       <p className="price">Price: ${menuItem.price}</p>
-      <img className="item-img" src={menuItem.imgURL} alt="item-img" />
 
       <p>{menuItem.description}</p>
       {/* Add additional data rendering here */}

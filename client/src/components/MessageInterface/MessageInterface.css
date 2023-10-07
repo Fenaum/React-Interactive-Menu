@@ -1,10 +1,12 @@
-.chat-icon {
+.chat-icon, .chat-button {
     height: 50px;
     width: 50px;
     position: fixed;
     left: 0;
-    right: 0;
+    right: 10px;
     top: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: auto 0px 0px auto;
+    background-color: transparent;
+    border: none;
 }
