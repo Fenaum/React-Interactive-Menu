@@ -8,9 +8,35 @@ export default function Promotion() {
   console.log(promotionItem);
 
   return (
-    <div className="promotion" >
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum sunt nemo at laborum quas quam velit nisi fuga cupiditate cum id quisquam, harum reprehenderit consectetur assumenda asperiores repellendus doloremque rem?</p>
-        <img src={promotionItem.imgURL} alt="Promotion" className="promotion-img" />
+    <div className="promotion">
+      <div className="promotion-section" >
+        <h2>Introducing Our exquisite Osso Buco Special!</h2>
+        <ul>
+          <li>
+            Tender veal shanks braised to perfection in a savory white wine
+            and broth reduction.
+          </li>
+          <li>
+            Complemented by the rich flavors of onions, carrots, and celery.
+          </li>
+          <li>
+            Served over a bed of creamy risotto milanese for an unforgettable
+            Italian experience.
+          </li>
+          <li>Finished with gremolata for that perfect zest.</li>
+        </ul>
+        <p>
+          Indulge in this Italian classic, crafted with love and passion by our
+          skilled chefs. Osso Buco is the ultimate comfort food, and it's
+          available now for a limited time. Don't miss out on this exquisite
+          culinary journey!
+        </p>
+      </div>
+      <img
+        src={promotionItem.imgURL}
+        alt="Promotion"
+        className="promotion-img"
+      />
     </div>
   );
 }
