@@ -10,6 +10,9 @@ export default function Menu() {
             <h2 className="menu-title" >
                 Menu
             </h2>
+            <div>
+                
+            </div>
             <div className="appetizer">
                 <h3>Appetizer</h3>
                 <Appetizer />
