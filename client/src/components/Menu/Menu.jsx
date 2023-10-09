@@ -1,7 +1,8 @@
 import Entree from "./Entree"
 import Appetizer from "./Appetizer"
 import Promotion from "./Promotion"
-import "./menu.css"
+import "./Menu.css"
+import "./MenuResponsive.css"
 
 export default function Menu() {
     return (

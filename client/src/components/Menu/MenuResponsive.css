@@ -1,0 +1,24 @@
+@media only screen and (max-width: 585px) {
+
+  .item-card {
+    /* Add your responsive styles here */
+        max-height: 15rem;
+        max-width: 15rem;
+        font-size: .6rem;
+  }
+
+.promotion {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Creates 2 rows */
+    grid-template-columns: 1fr 1fr; /* Creates 2 columns */
+    align-items: center;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    width: 90vw;
+    height: 40vh;
+    margin: auto;
+    font-size: .6rem;
+}
+
+
+}
