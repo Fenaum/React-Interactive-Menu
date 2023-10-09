@@ -1,3 +1,78 @@
+.chat-interface {
+    position: fixed;
+    bottom: 4rem;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-wood-brown);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-messages {
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-wood-brown);
+}
+
+.chat-messages p {
+    background-color: var(--color-soft-olive);
+    color: var(--color-text-light);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-wood-brown);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+form input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-wood-brown);
+    margin-right: 10px;
+}
+
+form button {
+    background-color: var(--color-wood-brown);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--color-darker-wood);
+}
+
 .chat-icon, .chat-button {
     height: 50px;
     width: 50px;

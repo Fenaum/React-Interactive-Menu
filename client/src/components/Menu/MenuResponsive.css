@@ -1,24 +1,44 @@
 @media only screen and (max-width: 585px) {
-
   .item-card {
     /* Add your responsive styles here */
-        max-height: 15rem;
-        max-width: 15rem;
-        font-size: .6rem;
+    max-height: 15rem;
+    max-width: 15rem;
+    font-size: 0.6rem;
   }
 
-.promotion {
+  .promotion {
     display: grid;
     grid-template-rows: 1fr 1fr; /* Creates 2 rows */
     grid-template-columns: 1fr 1fr; /* Creates 2 columns */
     align-items: center;
     border-radius: 35px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    width: 90vw;
-    height: 40vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 20rem;
+    height: 20rem;
     margin: auto;
-    font-size: .6rem;
-}
+    font-size: 0.6rem;
+  }
 
+  .promotion-section {
+    padding: 3rem;
+    object-fit: scale-down;
+  }
 
+  .promotion-section > h2 {
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .promotion-section > ul {
+    list-style: none;
+    font-size: 0.9rem;
+  }
+
+  .promotion-img {
+    object-fit: cover;
+    border-radius: 0px 35px 35px 0px;
+    height: 15rem;
+    width: 15rem;
+    margin-left: auto;
+  }
 }
