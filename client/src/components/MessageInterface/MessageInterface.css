@@ -1,9 +1,11 @@
 .chat-interface {
     position: fixed;
     bottom: 4rem;
+    left: 0;
     right: 0;
-    width: 300px;
-    height: 400px;
+    margin: auto;
+    width: 60vw;
+    height: 80vh;
     background-color: var(--color-cream);
     border: 1px solid var(--color-wood-brown);
     border-radius: 10px;

@@ -23,6 +23,10 @@ a {
 
 .menu {
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .menu-button {
@@ -40,10 +44,14 @@ a {
     transition: transform 0.3s ease-in-out;    
 }
 
+.user-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+}
 
-.menu-logo {
-    width: 75px;
-    height: 75px;
+.menu-icon {
+    width: 5rem;
+    height: 5rem;
 }
 
 .menu-items {

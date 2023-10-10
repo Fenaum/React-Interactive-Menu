@@ -10,7 +10,7 @@ export default function Promotion() {
   return (
     <div className="promotion">
       <div className="promotion-section" >
-        <h2>Introducing Our exquisite Osso Buco Special!</h2>
+        <h2>Introducing Our Exquisite Osso Buco Special!</h2>
         <ul>
           <li>
             Tender veal shanks braised to perfection in a savory white wine
