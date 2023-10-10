@@ -1,4 +1,4 @@
-@media only screen and (max-width: 585px) {
+@media only screen and (max-width: 700px) {
   .item-card {
     /* Add your responsive styles here */
     max-height: 15rem;
@@ -9,36 +9,47 @@
   .promotion {
     display: grid;
     grid-template-rows: 1fr 1fr; /* Creates 2 rows */
-    grid-template-columns: 1fr 1fr; /* Creates 2 columns */
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "img"
+      "content";
     align-items: center;
     border-radius: 35px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 20rem;
-    height: 20rem;
+    height: 40rem;
     margin: auto;
     font-size: 0.6rem;
+    overflow: auto;
   }
 
   .promotion-section {
     padding: 3rem;
     object-fit: scale-down;
   }
+  
+  .promotion-section > .content-section {
+    overflow: auto;
+    grid-area: content;
+  }
 
-  .promotion-section > h2 {
+  .content-section > h2 {
     text-align: center;
     font-weight: 400;
   }
 
-  .promotion-section > ul {
+  .content-section ul {
+    grid-area: content;
     list-style: none;
     font-size: 0.9rem;
   }
 
   .promotion-img {
+    grid-area: img;
     object-fit: cover;
     border-radius: 0px 35px 35px 0px;
-    height: 15rem;
-    width: 15rem;
+    height: 100%;
+    width: 100%;
     margin-left: auto;
   }
 }

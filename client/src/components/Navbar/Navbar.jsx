@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.svg";
+import userLogo from "../../assets/images/user.svg"
 import menuLogo from "../../assets/images/menu.svg";
 import About from "../About/About"
 
@@ -16,14 +17,19 @@ export default function Navbar() {
     <>
       <header className="header">
         <nav>
-          <img className="logo" src={logo} alt="logo-img" />
+          <Link to="./">
+            <img className="logo" src={logo} alt="logo-img" />
+          </Link>
         </nav>
         <div className="menu">
+          <Link to="/login">
+            <img className="icon user-icon" src={userLogo} alt="userLogo" />
+          </Link>
           <button
             className={`menu-button ${isMenuOpen ? "rotate" : ""}`}
             onClick={handleClick}
           >
-            <img className="menu-logo" src={menuLogo} alt="menu-logo" />
+            <img className="icon menu-icon" src={menuLogo} alt="menu-icon" />
           </button>
         </div>
       </header>
@@ -36,6 +42,9 @@ export default function Navbar() {
         </li>
         <li>
           <Link to="/about">ABOUT</Link>
+        </li>
+        <li>
+          <Link to="/about">CONTACT</Link>
         </li>
       </ul>
     </>

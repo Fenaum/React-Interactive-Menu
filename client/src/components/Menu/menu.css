@@ -106,3 +106,15 @@
     margin-left: auto;
 }
 
+.menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-darker-wood);
+    padding: 1.5rem;
+}
+
+.menu-link {
+    margin: 0px 1rem;
+    color: var(--color-text-light);
+}

@@ -75,7 +75,7 @@
         ],
         "calories": 700,
         "tags": ["Italian", "Pasta", "Lasagna"],
-        "imgURL": ""
+        "imgURL": "https://www.southernliving.com/thmb/aF5ditmc5n-HNd-uUKh7dZyjezc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Extra_Easy_Lasagna_006_4x3-41b0a478514c43e9baed0659bd362625.jpg"
       },
       {
         "id": 5,
@@ -92,7 +92,7 @@
         ],
         "calories": 550,
         "tags": ["Italian", "Pasta", "Gnocchi"],
-        "imgURL": ""
+        "imgURL": "https://www.seriouseats.com/thmb/qHBQPg1u0Ir4D7Izhl8R1DkV4CQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210201-gnocchi-alla-sorrentina-daniel-gritzer-16-de0b8433e7974d4c959dcff2ffa95359.jpg"
       },
       {
         "id": 6,
@@ -111,7 +111,7 @@
         ],
         "calories": 480,
         "tags": ["Italian", "Risotto", "Mushrooms"],
-        "imgURL": ""
+        "imgURL": "https://media-assets.lacucinaitaliana.it/photos/61fb19a9a9db3736d06bbc03/1:1/w_1280,c_limit/empty"
       },
       {
         "id": 7,
@@ -128,7 +128,7 @@
         ],
         "calories": 520,
         "tags": ["Italian", "Chicken", "Marsala"],
-        "imgURL": ""
+        "imgURL": "https://i0.wp.com/chefsavvy.com/wp-content/uploads/Easy-Chicken-Marsala.jpg?w=665&ssl=1"
       },
       {
         "id": 8,
@@ -145,7 +145,7 @@
         ],
         "calories": 250,
         "tags": ["Italian", "Salad", "Caprese"],
-        "imgURL": ""
+        "imgURL": "https://www.modernhoney.com/wp-content/uploads/2021/07/Caprese-Salad-1-scaled.jpg"
       },
       {
         "id": 9,
@@ -162,7 +162,7 @@
         ],
         "calories": 590,
         "tags": ["Italian", "Pasta", "Alfredo"],
-        "imgURL": ""
+        "imgURL": "https://www.bhg.com/thmb/vplIQVP-q-N4a8ysNm7NThYusXM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fettuccine-alfredo-01-hero-faa24a6af80a49a2ba44aa58e7d6e182.jpg"
       },
       {
         "id": 10,
@@ -181,7 +181,7 @@
         ],
         "calories": 520,
         "tags": ["Italian", "Pizza", "Vegetarian"],
-        "imgURL": ""
+        "imgURL": "https://www.budgetbytes.com/wp-content/uploads/2019/03/Quick-Fix-Broccoli-Pesto-Pizza-V3-768x1024.jpg"
       }
     ],
     "appetizer": [
