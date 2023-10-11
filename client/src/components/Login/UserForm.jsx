@@ -6,7 +6,7 @@ export default function UserForm({
   setPassword,
 }) {
   return (
-    <form onSubmit={onSubmit}>
+    <form className="login-form" onSubmit={onSubmit}>
       <label>
         Username:
         <input

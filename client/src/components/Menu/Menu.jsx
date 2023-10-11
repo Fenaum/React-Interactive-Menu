@@ -19,7 +19,9 @@ export default function Menu() {
         <h3>Appetizer</h3>
         <Appetizer />
       </div>
-      <Promotion />
+      <div className="promotion-container" >
+        <Promotion />
+      </div>
       <div className="entree">
         <h3>Entree</h3>
         <Entree />
