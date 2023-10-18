@@ -1,8 +1,11 @@
 import MenuService from "../../utils/menuService"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import fetchMenuItems from "../../utils/menuService";
+const fetchEntree = fetchMenuItems.fetchEntree;
 
 export default function Entree() {
     const containerRef = useRef(null);
+    const [ entreeData, setEntreeData ] = useState([])
 
     useEffect(() => {
         const container = containerRef.current;
@@ -19,11 +22,17 @@ export default function Entree() {
         }
     }, []);
 
-    // Use the MenuService singleton instance to access its methods
-    const menuItems = MenuService.getMenuItems().entree;
+    //fetching data and store in in state
+    useEffect(() => {
+        fetchEntree()
+        .then(data => {
+            setEntreeData(data);
+        })
+        .catch( err => console.error(err))
+    }, []);
 
-    const menuItemsList = menuItems.map((menuItem) => (
-        <div className="item-card" key={menuItem.id}>
+    const EntreeItemsList = entreeData.map((menuItem) => (
+        <div className="item-card" key={menuItem._id}>
             <img className="item-img" src={menuItem.imgURL} alt="item-img" />
             <h2>{menuItem.name}</h2>
             <p className="price">Price: ${menuItem.price}</p>
@@ -37,7 +46,7 @@ export default function Entree() {
         <div 
             className="card-container" id="card-container" ref={containerRef} 
         >
-            {menuItemsList}
+            {EntreeItemsList}
         </div>
     );
 }
