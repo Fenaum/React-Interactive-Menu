@@ -1,0 +1,672 @@
+{
+  "menu": {
+    "entree": [
+      {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "spicy": false,
+        "price": 14,
+        "description": "A classic Roman pasta dish made with eggs, Pecorino Romano cheese, pancetta, and black pepper. Creamy and flavorful.",
+        "vegetarian": false,
+        "ingredients": [
+          "Spaghetti",
+          "Eggs",
+          "Pecorino Romano Cheese",
+          "Pancetta",
+          "Black Pepper"
+        ],
+        "calories": 450,
+        "tags": ["Italian", "Pasta", "Creamy"],
+        "imgURL": "https://media-cdn2.greatbritishchefs.com/media/zvmpbhuw/img56078.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Margherita Pizza",
+        "spicy": false,
+        "price": 16,
+        "description": "A classic Neapolitan pizza with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Pizza Dough",
+          "Tomato Sauce",
+          "Fresh Mozzarella Cheese",
+          "Basil Leaves",
+          "Olive Oil"
+        ],
+        "calories": 600,
+        "tags": ["Italian", "Pizza", "Margherita"],
+        "imgURL": "https://assets.bonappetit.com/photos/5cd32ef32c3537178c3c8f03/1:1/w_1920,c_limit/BA-Perfect-Pizza.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Osso Buco",
+        "spicy": false,
+        "price": 28,
+        "description": "Tender veal shanks braised with white wine, broth, onions, carrots, celery, and gremolata. Served with risotto milanese.",
+        "vegetarian": false,
+        "ingredients": [
+          "Veal Shanks",
+          "White Wine",
+          "Broth",
+          "Onions",
+          "Carrots",
+          "Celery",
+          "Gremolata",
+          "Risotto Milanese"
+        ],
+        "calories": 620,
+        "tags": ["Italian", "Braised", "Veal"],
+        "imgURL": "https://s3-eu-west-1.amazonaws.com/tscmediumimages/2014/12/18/18det8znu5_Ossobucco.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Lasagna",
+        "spicy": false,
+        "price": 18,
+        "description": "Layered pasta dish with ricotta cheese, mozzarella, Parmesan, Bolognese sauce, and fresh basil. Baked to perfection.",
+        "vegetarian": false,
+        "ingredients": [
+          "Lasagna Noodles",
+          "Ricotta Cheese",
+          "Mozzarella Cheese",
+          "Parmesan Cheese",
+          "Bolognese Sauce",
+          "Fresh Basil"
+        ],
+        "calories": 700,
+        "tags": ["Italian", "Pasta", "Lasagna"],
+        "imgURL": "https://www.southernliving.com/thmb/aF5ditmc5n-HNd-uUKh7dZyjezc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Extra_Easy_Lasagna_006_4x3-41b0a478514c43e9baed0659bd362625.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Gnocchi Sorrentina",
+        "spicy": false,
+        "price": 20,
+        "description": "Soft potato gnocchi baked with tomato sauce, mozzarella cheese, and fresh basil. Comfort food at its finest.",
+        "vegetarian": true,
+        "ingredients": [
+          "Potato Gnocchi",
+          "Tomato Sauce",
+          "Mozzarella Cheese",
+          "Fresh Basil"
+        ],
+        "calories": 550,
+        "tags": ["Italian", "Pasta", "Gnocchi"],
+        "imgURL": "https://www.seriouseats.com/thmb/qHBQPg1u0Ir4D7Izhl8R1DkV4CQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210201-gnocchi-alla-sorrentina-daniel-gritzer-16-de0b8433e7974d4c959dcff2ffa95359.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Risotto ai Funghi",
+        "spicy": false,
+        "price": 22,
+        "description": "Creamy risotto with wild mushrooms, shallots, white wine, Parmesan cheese, and a hint of truffle oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Arborio Rice",
+          "Wild Mushrooms",
+          "Shallots",
+          "White Wine",
+          "Parmesan Cheese",
+          "Truffle Oil"
+        ],
+        "calories": 480,
+        "tags": ["Italian", "Risotto", "Mushrooms"],
+        "imgURL": "https://media-assets.lacucinaitaliana.it/photos/61fb19a9a9db3736d06bbc03/1:1/w_1280,c_limit/empty"
+      },
+      {
+        "id": 7,
+        "name": "Chicken Marsala",
+        "spicy": false,
+        "price": 19,
+        "description": "Tender chicken breasts cooked in Marsala wine sauce with mushrooms. Served with mashed potatoes.",
+        "vegetarian": false,
+        "ingredients": [
+          "Chicken Breasts",
+          "Marsala Wine",
+          "Mushrooms",
+          "Mashed Potatoes"
+        ],
+        "calories": 520,
+        "tags": ["Italian", "Chicken", "Marsala"],
+        "imgURL": "https://i0.wp.com/chefsavvy.com/wp-content/uploads/Easy-Chicken-Marsala.jpg?w=665&ssl=1"
+      },
+      {
+        "id": 8,
+        "name": "Caprese Salad",
+        "spicy": false,
+        "price": 9,
+        "description": "A simple salad made with fresh tomatoes, mozzarella cheese, basil leaves, and a drizzle of balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Tomatoes",
+          "Mozzarella Cheese",
+          "Basil Leaves",
+          "Balsamic Glaze"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Salad", "Caprese"],
+        "imgURL": "https://www.modernhoney.com/wp-content/uploads/2021/07/Caprese-Salad-1-scaled.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Fettuccine Alfredo",
+        "spicy": false,
+        "price": 16,
+        "description": "Creamy Alfredo pasta with fettuccine noodles, butter, heavy cream, and Parmesan cheese. Simple and indulgent.",
+        "vegetarian": true,
+        "ingredients": [
+          "Fettuccine Pasta",
+          "Butter",
+          "Heavy Cream",
+          "Parmesan Cheese"
+        ],
+        "calories": 590,
+        "tags": ["Italian", "Pasta", "Alfredo"],
+        "imgURL": "https://www.bhg.com/thmb/vplIQVP-q-N4a8ysNm7NThYusXM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fettuccine-alfredo-01-hero-faa24a6af80a49a2ba44aa58e7d6e182.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Vegetarian Pesto Pizza",
+        "spicy": false,
+        "price": 15,
+        "description": "Thin-crust pizza topped with pesto sauce, cherry tomatoes, artichoke hearts, olives, and mozzarella cheese.",
+        "vegetarian": true,
+        "ingredients": [
+          "Pizza Dough",
+          "Pesto Sauce",
+          "Cherry Tomatoes",
+          "Artichoke Hearts",
+          "Olives",
+          "Mozzarella Cheese"
+        ],
+        "calories": 520,
+        "tags": ["Italian", "Pizza", "Vegetarian"],
+        "imgURL": "https://www.budgetbytes.com/wp-content/uploads/2019/03/Quick-Fix-Broccoli-Pesto-Pizza-V3-768x1024.jpg"
+      }
+    ],
+    "appetizer": [
+      {
+        "id": 1,
+        "name": "Bruschetta",
+        "spicy": false,
+        "price": 8,
+        "description": "Toasted slices of baguette topped with diced tomatoes, fresh basil, garlic, and olive oil.",
+        "vegetarian": true,
+        "ingredients": [
+          "Baguette",
+          "Tomatoes",
+          "Fresh Basil",
+          "Garlic",
+          "Olive Oil"
+        ],
+        "calories": 120,
+        "tags": ["Italian", "Appetizer", "Tomatoes"],
+        "imgURL": "https://images.pexels.com/photos/6605644/pexels-photo-6605644.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Arancini",
+        "spicy": false,
+        "price": 10,
+        "description": "Fried rice balls stuffed with mozzarella cheese and served with marinara sauce. A delicious Italian snack.",
+        "vegetarian": true,
+        "ingredients": ["Rice", "Mozzarella Cheese", "Marinara Sauce"],
+        "calories": 180,
+        "tags": ["Italian", "Appetizer", "Fried"],
+        "imgURL": "https://images.unsplash.com/photo-1690642109209-18176b898182?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+      },
+      {
+        "id": 3,
+        "name": "Calamari Fritti",
+        "spicy": false,
+        "price": 12,
+        "description": "Crispy fried calamari rings served with lemon wedges and marinara sauce.",
+        "vegetarian": false,
+        "ingredients": ["Calamari", "Flour", "Lemon", "Marinara Sauce"],
+        "calories": 320,
+        "tags": ["Italian", "Appetizer", "Seafood"],
+        "imgURL": "https://www.thespruceeats.com/thmb/BSYlH-mloaBfGESJrYjXxOtJmeU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fried-calamari-2019531-hero-01-e294f265d7e84c0f89d4b5759759ffbf.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Caprese Skewers",
+        "spicy": false,
+        "price": 9,
+        "description": "Skewers of fresh mozzarella cheese, cherry tomatoes, and basil leaves drizzled with balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Mozzarella Cheese",
+          "Cherry Tomatoes",
+          "Basil Leaves",
+          "Balsamic Glaze"
+        ],
+        "calories": 180,
+        "tags": ["Italian", "Appetizer", "Skewers"],
+        "imgURL": "https://images.pexels.com/photos/2773942/pexels-photo-2773942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id": 5,
+        "name": "Minestrone Soup",
+        "spicy": false,
+        "price": 8,
+        "description": "A hearty Italian vegetable soup with tomatoes, beans, pasta, and a blend of herbs and spices.",
+        "vegetarian": true,
+        "ingredients": ["Tomatoes", "Beans", "Pasta", "Herbs", "Spices"],
+        "calories": 240,
+        "tags": ["Italian", "Soup", "Vegetarian"],
+        "imgURL": "https://familystylefood.com/wp-content/uploads/2022/09/Homemade-Minestrone-Soup.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Prosciutto-Wrapped Asparagus",
+        "spicy": false,
+        "price": 11,
+        "description": "Asparagus spears wrapped in thin slices of prosciutto and roasted to perfection.",
+        "vegetarian": false,
+        "ingredients": ["Asparagus", "Prosciutto"],
+        "calories": 150,
+        "tags": ["Italian", "Appetizer", "Asparagus"],
+        "imgURL": "https://www.joyfulhealthyeats.com/wp-content/uploads/2016/11/Easy-Prosciutto-Wrapped-Asparagus-web-5.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Eggplant Parmesan",
+        "spicy": false,
+        "price": 13,
+        "description": "Slices of breaded and fried eggplant topped with marinara sauce and melted mozzarella cheese.",
+        "vegetarian": true,
+        "ingredients": ["Eggplant", "Marinara Sauce", "Mozzarella Cheese"],
+        "calories": 320,
+        "tags": ["Italian", "Appetizer", "Eggplant"],
+        "imgURL": "https://fitfoodiefinds.com/wp-content/uploads/2021/07/eggplant-parmesan-10-scaled.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Mushroom Risotto Balls",
+        "spicy": false,
+        "price": 10,
+        "description": "Crispy risotto balls stuffed with mushrooms, Parmesan cheese, and herbs. Served with marinara sauce.",
+        "vegetarian": true,
+        "ingredients": [
+          "Risotto",
+          "Mushrooms",
+          "Parmesan Cheese",
+          "Herbs",
+          "Marinara Sauce"
+        ],
+        "calories": 220,
+        "tags": ["Italian", "Appetizer", "Risotto"],
+        "imgURL": "https://cookingwithcocktailrings.com/wp-content/uploads/2021/02/40_image-asset.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Caprese Crostini",
+        "spicy": false,
+        "price": 9,
+        "description": "Toasted baguette slices topped with fresh mozzarella, cherry tomatoes, basil, and balsamic glaze.",
+        "vegetarian": true,
+        "ingredients": [
+          "Baguette",
+          "Mozzarella Cheese",
+          "Cherry Tomatoes",
+          "Basil",
+          "Balsamic Glaze"
+        ],
+        "calories": 160,
+        "tags": ["Italian", "Appetizer", "Crostini"],
+        "imgURL": "https://www.besthealthmag.ca/wp-content/uploads/2016/11/Avocado-Caprese-Crostini.jpg?resize=768%2C538"
+      },
+      {
+        "id": 10,
+        "name": "Zucchini Fritters",
+        "spicy": false,
+        "price": 10,
+        "description": "Crispy fritters made with grated zucchini, Parmesan cheese, and fresh herbs. Served with a yogurt-based dipping sauce.",
+        "vegetarian": true,
+        "ingredients": ["Zucchini", "Parmesan Cheese", "Herbs", "Yogurt Sauce"],
+        "calories": 190,
+        "tags": ["Italian", "Appetizer", "Zucchini"],
+        "imgURL": "https://foolproofliving.com/wp-content/uploads/2021/06/Baked-Zucchini-Fritters-with-bread-crumbs.jpg"
+      }
+    ],
+    "dessert": [
+      {
+        "id": 1,
+        "name": "Tiramisu",
+        "price": 8,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Ladyfingers",
+          "Mascarpone Cheese",
+          "Espresso",
+          "Cocoa Powder"
+        ],
+        "calories": 320,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 2,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 3,
+        "name": "Panna Cotta",
+        "price": 7,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
+        "calories": 220,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 4,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 5,
+        "name": "Panna Cotta",
+        "price": 7,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
+        "calories": 220,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 6,
+        "name": "Tartufo",
+        "price": 9,
+        "gluten-free": true,
+        "dairy": true,
+        "ingredients": ["Chocolate Gelato", "Cherry", "Cocoa Powder"],
+        "calories": 280,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 7,
+        "name": "Cannoli",
+        "price": 6,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Crispy Pastry Shell",
+          "Ricotta Cheese",
+          "Chocolate Chips"
+        ],
+        "calories": 250,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      },
+      {
+        "id": 8,
+        "name": "Tiramisu",
+        "price": 8,
+        "gluten-free": false,
+        "dairy": true,
+        "ingredients": [
+          "Ladyfingers",
+          "Mascarpone Cheese",
+          "Espresso",
+          "Cocoa Powder"
+        ],
+        "calories": 320,
+        "tags": ["Italian", "Dessert"],
+        "imgURL": ""
+      }
+    ],
+    "drinks": {
+      "wine": [
+        {
+          "id": 1,
+          "name": "Chianti",
+          "price": 25,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Red Wine"],
+          "calories": 120,
+          "tags": ["Italian", "Red Wine", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 2,
+          "name": "Pinot Grigio",
+          "price": 28,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["White Wine"],
+          "calories": 110,
+          "tags": ["Italian", "White Wine", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 3,
+          "name": "Barolo",
+          "price": 45,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Red Wine"],
+          "calories": 130,
+          "tags": ["Italian", "Red Wine", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 4,
+          "name": "Prosecco",
+          "price": 30,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Sparkling Wine"],
+          "calories": 90,
+          "tags": ["Italian", "Sparkling Wine", "Alcoholic"]
+        },
+        {
+          "id": 5,
+          "name": "Moscato",
+          "price": 22,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["White Wine"],
+          "calories": 100,
+          "tags": ["Italian", "White Wine", "Alcoholic"],
+          "imgURL": ""
+        }
+      ],
+      "cocktail": [
+        {
+          "id": 6,
+          "name": "Negroni",
+          "price": 12,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Gin", "Campari", "Vermouth"],
+          "calories": 190,
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 7,
+          "name": "Aperol Spritz",
+          "price": 10,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Aperol", "Prosecco", "Soda Water"],
+          "calories": 150,
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 8,
+          "name": "Bellini",
+          "price": 11,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Prosecco", "Peach Puree"],
+          "calories": 130,
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 9,
+          "name": "Martini",
+          "price": 14,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Gin", "Dry Vermouth"],
+          "calories": 160,
+          "tags": ["Italian", "Cocktail", "Alcoholic"]
+        },
+        {
+          "id": 10,
+          "name": "Limoncello Spritz",
+          "price": 10,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Limoncello", "Prosecco", "Soda Water"],
+          "calories": 120,
+          "tags": ["Italian", "Cocktail", "Alcoholic"],
+          "imgURL": ""
+        }
+      ],
+      "coffee": [
+        {
+          "id": 11,
+          "name": "Espresso",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Ground Coffee Beans"],
+          "calories": 5,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 12,
+          "name": "Cappuccino",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Steamed Milk", "Foamed Milk"],
+          "calories": 120,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 13,
+          "name": "Macchiato",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Foamed Milk"],
+          "calories": 80,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 14,
+          "name": "Mocha",
+          "price": 5,
+          "gluten-free": true,
+          "dairy-free": false,
+          "ingredients": ["Espresso", "Steamed Milk", "Chocolate"],
+          "calories": 200,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 15,
+          "name": "Iced Coffee",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Cold Brew Coffee", "Ice", "Sugar"],
+          "calories": 60,
+          "tags": ["Italian", "Coffee", "Non-Alcoholic"],
+          "imgURL": ""
+        }
+      ],
+      "non-alcoholic": [
+        {
+          "id": 16,
+          "name": "Sparkling Water",
+          "price": 2,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Carbonated Water"],
+          "calories": 0,
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 17,
+          "name": "Lemonade",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Lemon Juice", "Sugar", "Water"],
+          "calories": 80,
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 18,
+          "name": "Iced Tea",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Black Tea", "Ice", "Sugar"],
+          "calories": 30,
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
+        },
+        {
+          "id": 19,
+          "name": "Orange Juice",
+          "price": 3,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Fresh Orange Juice"],
+          "calories": 110,
+          "tags": ["Italian", "Non-Alcoholic"]
+        },
+        {
+          "id": 20,
+          "name": "Cranberry Spritzer",
+          "price": 4,
+          "gluten-free": true,
+          "dairy-free": true,
+          "ingredients": ["Cranberry Juice", "Soda Water", "Lime"],
+          "calories": 70,
+          "tags": ["Italian", "Non-Alcoholic"],
+          "imgURL": ""
+        }
+      ]
+    }
+  }
+}
