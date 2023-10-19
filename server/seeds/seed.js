@@ -11,16 +11,19 @@ mongoose.connect("mongodb://localhost:27017/Menu-Master", {
 
 const entrees = menuData.menu.entree.map(({ id, ...rest }) => rest);
 const appetizers = menuData.menu.appetizer.map(({ id, ...rest }) => rest);
+const desserts = menuData.menu.dessert.map(({ id, ...rest }) => rest);
 
 const seedDatabase = async () => {
     try {
         // Remove existing data from the collections
         await db.Entree.deleteMany({});
         await db.Appetizer.deleteMany({});
+        await db.Appetizer.deleteMany({});
 
         // Create Entrees and Appetizers
         const createEntrees = await db.Entree.create(entrees);
         const createAppetizers = await db.Appetizer.create(appetizers);
+        const createDesserts = await db.Dessert.create(desserts);
 
         console.log("Seed data inserted successfully!")
         process.exit(1);
