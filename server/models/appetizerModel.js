@@ -31,6 +31,10 @@ const appetizerSchema = new mongoose.Schema(
         message: "Spicy level must be a number between 0 and 5.",
       },
     },
+    promotion: {
+      type: Boolean,
+      default: false,
+    },
     tags: [String],
     imgURL: String,
     description: String,

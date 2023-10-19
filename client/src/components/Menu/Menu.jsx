@@ -17,10 +17,10 @@ export default function Menu() {
       </div>
       <div className="appetizer">
         <h3>Appetizer</h3>
-        {/* <Appetizer /> */}
+        <Appetizer />
       </div>
       <div className="promotion-container" >
-        {/* <Promotion /> */}
+        <Promotion />
       </div>
       <div className="entree">
         <h3>Entree</h3>

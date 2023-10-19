@@ -4,7 +4,7 @@
       {
         "id": 1,
         "name": "Spaghetti Carbonara",
-        "spicy": false,
+        "spicy": 0,
         "price": 14,
         "description": "A classic Roman pasta dish made with eggs, Pecorino Romano cheese, pancetta, and black pepper. Creamy and flavorful.",
         "vegetarian": false,
@@ -22,7 +22,7 @@
       {
         "id": 2,
         "name": "Margherita Pizza",
-        "spicy": false,
+        "spicy": 0,
         "price": 16,
         "description": "A classic Neapolitan pizza with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil.",
         "vegetarian": true,
@@ -40,7 +40,7 @@
       {
         "id": 3,
         "name": "Osso Buco",
-        "spicy": false,
+        "spicy": 0,
         "price": 28,
         "description": "Tender veal shanks braised with white wine, broth, onions, carrots, celery, and gremolata. Served with risotto milanese.",
         "vegetarian": false,
@@ -55,13 +55,14 @@
           "Risotto Milanese"
         ],
         "calories": 620,
+        "promotion": true,
         "tags": ["Italian", "Braised", "Veal"],
         "imgURL": "https://s3-eu-west-1.amazonaws.com/tscmediumimages/2014/12/18/18det8znu5_Ossobucco.jpg"
       },
       {
         "id": 4,
         "name": "Lasagna",
-        "spicy": false,
+        "spicy": 0,
         "price": 18,
         "description": "Layered pasta dish with ricotta cheese, mozzarella, Parmesan, Bolognese sauce, and fresh basil. Baked to perfection.",
         "vegetarian": false,
@@ -80,7 +81,7 @@
       {
         "id": 5,
         "name": "Gnocchi Sorrentina",
-        "spicy": false,
+        "spicy": 0,
         "price": 20,
         "description": "Soft potato gnocchi baked with tomato sauce, mozzarella cheese, and fresh basil. Comfort food at its finest.",
         "vegetarian": true,
@@ -97,7 +98,7 @@
       {
         "id": 6,
         "name": "Risotto ai Funghi",
-        "spicy": false,
+        "spicy": 0,
         "price": 22,
         "description": "Creamy risotto with wild mushrooms, shallots, white wine, Parmesan cheese, and a hint of truffle oil.",
         "vegetarian": true,
@@ -116,7 +117,7 @@
       {
         "id": 7,
         "name": "Chicken Marsala",
-        "spicy": false,
+        "spicy": 0,
         "price": 19,
         "description": "Tender chicken breasts cooked in Marsala wine sauce with mushrooms. Served with mashed potatoes.",
         "vegetarian": false,
@@ -133,7 +134,7 @@
       {
         "id": 8,
         "name": "Caprese Salad",
-        "spicy": false,
+        "spicy": 0,
         "price": 9,
         "description": "A simple salad made with fresh tomatoes, mozzarella cheese, basil leaves, and a drizzle of balsamic glaze.",
         "vegetarian": true,
@@ -150,7 +151,7 @@
       {
         "id": 9,
         "name": "Fettuccine Alfredo",
-        "spicy": false,
+        "spicy": 0,
         "price": 16,
         "description": "Creamy Alfredo pasta with fettuccine noodles, butter, heavy cream, and Parmesan cheese. Simple and indulgent.",
         "vegetarian": true,
@@ -167,7 +168,7 @@
       {
         "id": 10,
         "name": "Vegetarian Pesto Pizza",
-        "spicy": false,
+        "spicy": 0,
         "price": 15,
         "description": "Thin-crust pizza topped with pesto sauce, cherry tomatoes, artichoke hearts, olives, and mozzarella cheese.",
         "vegetarian": true,
@@ -188,7 +189,7 @@
       {
         "id": 1,
         "name": "Bruschetta",
-        "spicy": false,
+        "spicy": 0,
         "price": 8,
         "description": "Toasted slices of baguette topped with diced tomatoes, fresh basil, garlic, and olive oil.",
         "vegetarian": true,
@@ -206,7 +207,7 @@
       {
         "id": 2,
         "name": "Arancini",
-        "spicy": false,
+        "spicy": 0,
         "price": 10,
         "description": "Fried rice balls stuffed with mozzarella cheese and served with marinara sauce. A delicious Italian snack.",
         "vegetarian": true,
@@ -218,7 +219,7 @@
       {
         "id": 3,
         "name": "Calamari Fritti",
-        "spicy": false,
+        "spicy": 0,
         "price": 12,
         "description": "Crispy fried calamari rings served with lemon wedges and marinara sauce.",
         "vegetarian": false,
@@ -230,7 +231,7 @@
       {
         "id": 4,
         "name": "Caprese Skewers",
-        "spicy": false,
+        "spicy": 0,
         "price": 9,
         "description": "Skewers of fresh mozzarella cheese, cherry tomatoes, and basil leaves drizzled with balsamic glaze.",
         "vegetarian": true,
@@ -247,7 +248,7 @@
       {
         "id": 5,
         "name": "Minestrone Soup",
-        "spicy": false,
+        "spicy": 0,
         "price": 8,
         "description": "A hearty Italian vegetable soup with tomatoes, beans, pasta, and a blend of herbs and spices.",
         "vegetarian": true,
@@ -259,7 +260,7 @@
       {
         "id": 6,
         "name": "Prosciutto-Wrapped Asparagus",
-        "spicy": false,
+        "spicy": 0,
         "price": 11,
         "description": "Asparagus spears wrapped in thin slices of prosciutto and roasted to perfection.",
         "vegetarian": false,
@@ -271,7 +272,7 @@
       {
         "id": 7,
         "name": "Eggplant Parmesan",
-        "spicy": false,
+        "spicy": 0,
         "price": 13,
         "description": "Slices of breaded and fried eggplant topped with marinara sauce and melted mozzarella cheese.",
         "vegetarian": true,
@@ -283,7 +284,7 @@
       {
         "id": 8,
         "name": "Mushroom Risotto Balls",
-        "spicy": false,
+        "spicy": 0,
         "price": 10,
         "description": "Crispy risotto balls stuffed with mushrooms, Parmesan cheese, and herbs. Served with marinara sauce.",
         "vegetarian": true,
@@ -301,7 +302,7 @@
       {
         "id": 9,
         "name": "Caprese Crostini",
-        "spicy": false,
+        "spicy": 0,
         "price": 9,
         "description": "Toasted baguette slices topped with fresh mozzarella, cherry tomatoes, basil, and balsamic glaze.",
         "vegetarian": true,
@@ -319,7 +320,7 @@
       {
         "id": 10,
         "name": "Zucchini Fritters",
-        "spicy": false,
+        "spicy": 0,
         "price": 10,
         "description": "Crispy fritters made with grated zucchini, Parmesan cheese, and fresh herbs. Served with a yogurt-based dipping sauce.",
         "vegetarian": true,
@@ -334,7 +335,7 @@
         "id": 1,
         "name": "Tiramisu",
         "price": 8,
-        "gluten-free": false,
+        "glutenFree": false,
         "dairy": true,
         "ingredients": [
           "Ladyfingers",
@@ -350,7 +351,7 @@
         "id": 2,
         "name": "Cannoli",
         "price": 6,
-        "gluten-free": false,
+        "glutenFree": false,
         "dairy": true,
         "ingredients": [
           "Crispy Pastry Shell",
@@ -365,7 +366,7 @@
         "id": 3,
         "name": "Panna Cotta",
         "price": 7,
-        "gluten-free": true,
+        "glutenFree": true,
         "dairy": true,
         "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
         "calories": 220,
@@ -376,7 +377,7 @@
         "id": 4,
         "name": "Cannoli",
         "price": 6,
-        "gluten-free": false,
+        "glutenFree": false,
         "dairy": true,
         "ingredients": [
           "Crispy Pastry Shell",
@@ -391,7 +392,7 @@
         "id": 5,
         "name": "Panna Cotta",
         "price": 7,
-        "gluten-free": true,
+        "glutenFree": true,
         "dairy": true,
         "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
         "calories": 220,
@@ -402,7 +403,7 @@
         "id": 6,
         "name": "Tartufo",
         "price": 9,
-        "gluten-free": true,
+        "glutenFree": true,
         "dairy": true,
         "ingredients": ["Chocolate Gelato", "Cherry", "Cocoa Powder"],
         "calories": 280,
@@ -413,7 +414,7 @@
         "id": 7,
         "name": "Cannoli",
         "price": 6,
-        "gluten-free": false,
+        "glutenFree": false,
         "dairy": true,
         "ingredients": [
           "Crispy Pastry Shell",
@@ -428,7 +429,7 @@
         "id": 8,
         "name": "Tiramisu",
         "price": 8,
-        "gluten-free": false,
+        "glutenFree": false,
         "dairy": true,
         "ingredients": [
           "Ladyfingers",

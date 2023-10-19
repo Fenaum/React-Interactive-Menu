@@ -1,8 +1,10 @@
-import MenuService from "../../utils/menuService";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import fetchMenuItems from "../../utils/menuService";
+const fetchAppetizer = fetchMenuItems.fetchAppetizer;
 
 export default function Appetizer() {
   const containerRef = useRef(null);
+  const [appetizerData, setAppetizerData] = useState([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -19,23 +21,27 @@ export default function Appetizer() {
     }
   }, []);
 
-  // Use the MenuService singleton instance to access its methods
-  const menuItems = MenuService.getMenuItems().appetizer;
+  //fetching data and store in in state
+  useEffect(() => {
+    fetchAppetizer()
+      .then((data) => setAppetizerData(data))
+      .catch((err) => console.error(err));
+  }, []);
 
-  const menuItemsList = menuItems.map((menuItem) => (
-    <div className="item-card" key={menuItem.id}>
-      <img className="item-img" src={menuItem.imgURL} alt="item-img" />
-      <h2>{menuItem.name}</h2>
-      <p className="price">Price: ${menuItem.price}</p>
+  const appetizerItemsList = appetizerData.map((appetizerItem) => (
+    <div className="item-card" key={appetizerItem._id}>
+      <img className="item-img" src={appetizerItem.imgURL} alt="item-img" />
+      <h2>{appetizerItem.name}</h2>
+      <p className="price">Price: ${appetizerItem.price}</p>
 
-      <p>{menuItem.description}</p>
+      <p>{appetizerItem.description}</p>
       {/* Add additional data rendering here */}
     </div>
   ));
 
   return (
     <div className="card-container" id="card-container" ref={containerRef}>
-      {menuItemsList}
+      {appetizerItemsList}
     </div>
   );
 }

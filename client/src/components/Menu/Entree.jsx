@@ -1,4 +1,3 @@
-import MenuService from "../../utils/menuService"
 import { useEffect, useRef, useState } from "react";
 import fetchMenuItems from "../../utils/menuService";
 const fetchEntree = fetchMenuItems.fetchEntree;
@@ -31,16 +30,16 @@ export default function Entree() {
         .catch( err => console.error(err))
     }, []);
 
-    const EntreeItemsList = entreeData.map((menuItem) => (
-        <div className="item-card" key={menuItem._id}>
-            <img className="item-img" src={menuItem.imgURL} alt="item-img" />
-            <h2>{menuItem.name}</h2>
-            <p className="price">Price: ${menuItem.price}</p>
+    const EntreeItemsList = entreeData.map((entreeItem) => (
+      <div className="item-card" key={entreeItem._id}>
+        <img className="item-img" src={entreeItem.imgURL} alt="item-img" />
+        <h2>{entreeItem.name}</h2>
+        <p className="price">Price: ${entreeItem.price}</p>
 
-            <p>{menuItem.description}</p>
-            {/* Add additional data rendering here */}
-        </div>
-        ));
+        <p>{entreeItem.description}</p>
+        {/* Add additional data rendering here */}
+      </div>
+    ));
 
     return (
         <div 
