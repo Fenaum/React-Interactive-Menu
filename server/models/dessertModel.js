@@ -13,7 +13,7 @@ const dessertSchema = new mongoose.Schema(
         price: Number,
         glutenFree: {
             type: Boolean,
-            required: [true, "Is This Item Gluten-free?"],
+            default: false,
         },
         dairy: {
             type: Boolean,
