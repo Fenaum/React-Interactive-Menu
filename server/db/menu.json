@@ -345,48 +345,7 @@
         ],
         "calories": 320,
         "tags": ["Italian", "Dessert"],
-        "imgURL": ""
-      },
-      {
-        "id": 2,
-        "name": "Cannoli",
-        "price": 6,
-        "glutenFree": false,
-        "dairy": true,
-        "ingredients": [
-          "Crispy Pastry Shell",
-          "Ricotta Cheese",
-          "Chocolate Chips"
-        ],
-        "calories": 250,
-        "tags": ["Italian", "Dessert"],
-        "imgURL": ""
-      },
-      {
-        "id": 3,
-        "name": "Panna Cotta",
-        "price": 7,
-        "glutenFree": true,
-        "dairy": true,
-        "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
-        "calories": 220,
-        "tags": ["Italian", "Dessert"],
-        "imgURL": ""
-      },
-      {
-        "id": 4,
-        "name": "Cannoli",
-        "price": 6,
-        "glutenFree": false,
-        "dairy": true,
-        "ingredients": [
-          "Crispy Pastry Shell",
-          "Ricotta Cheese",
-          "Chocolate Chips"
-        ],
-        "calories": 250,
-        "tags": ["Italian", "Dessert"],
-        "imgURL": ""
+        "imgURL": "https://www.inspiredtaste.net/wp-content/uploads/2016/07/Tiramisu-Recipe-1-1200.jpg"
       },
       {
         "id": 5,
@@ -397,7 +356,7 @@
         "ingredients": ["Cream", "Sugar", "Gelatin", "Vanilla"],
         "calories": 220,
         "tags": ["Italian", "Dessert"],
-        "imgURL": ""
+        "imgURL": "https://media-cdn2.greatbritishchefs.com/media/cxdf2tx0/img9718.whqc_768x512q80.webp"
       },
       {
         "id": 6,
@@ -408,7 +367,7 @@
         "ingredients": ["Chocolate Gelato", "Cherry", "Cocoa Powder"],
         "calories": 280,
         "tags": ["Italian", "Dessert"],
-        "imgURL": ""
+        "imgURL": "https://www.everest-icecream.com.au/static/uploads/images/tartufo-crop-wfjfdwzbpeag.jpg?autorotate=true&height=937&mode=crop&upscale=true&width=940"
       },
       {
         "id": 7,
@@ -423,23 +382,7 @@
         ],
         "calories": 250,
         "tags": ["Italian", "Dessert"],
-        "imgURL": ""
-      },
-      {
-        "id": 8,
-        "name": "Tiramisu",
-        "price": 8,
-        "glutenFree2": false,
-        "dairy": true,
-        "ingredients": [
-          "Ladyfingers",
-          "Mascarpone Cheese",
-          "Espresso",
-          "Cocoa Powder"
-        ],
-        "calories": 320,
-        "tags": ["Italian", "Dessert"],
-        "imgURL": ""
+        "imgURL": "https://img.jamieoliver.com/jamieoliver/recipe-database/98CeBNYx4pM9Rvn8dDS9T0.jpg?tr=w-800,h-1066"
       }
     ],
     "drinks": {

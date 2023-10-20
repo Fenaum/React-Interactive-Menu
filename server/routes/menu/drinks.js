@@ -8,7 +8,7 @@ const {
   addItemToCategory,
   updateItemInCategory,
   deleteItemInCategory,
-} = require("../../controllers/drink-controller");
+} = require("../../controllers/drink-controlller");
 
 // Define your routes for each category
 router.get("/wine", getAllWine);
