@@ -13,17 +13,28 @@ const entrees = menuData.menu.entree.map(({ id, ...rest }) => rest);
 const appetizers = menuData.menu.appetizer.map(({ id, ...rest }) => rest);
 const desserts = menuData.menu.dessert.map(({ id, ...rest }) => rest);
 
+const drinks = {
+  wine: menuData.menu.drinks.wine.map(({ id, ...rest }) => rest),
+  cocktail: menuData.menu.drinks.cocktail.map(({ id, ...rest }) => rest),
+  coffee: menuData.menu.drinks.coffee.map(({ id, ...rest }) => rest),
+  nonAlcoholic: menuData.menu.drinks.nonalcoholic.map(
+    ({ id, ...rest }) => rest
+  ),
+};
+
 const seedDatabase = async () => {
     try {
         // Remove existing data from the collections
         await db.Entree.deleteMany({});
         await db.Appetizer.deleteMany({});
-        await db.Appetizer.deleteMany({});
+        await db.Dessert.deleteMany({});
+        await db.Drink.deleteMany({});
 
         // Create Entrees and Appetizers
         const createEntrees = await db.Entree.create(entrees);
         const createAppetizers = await db.Appetizer.create(appetizers);
         const createDesserts = await db.Dessert.create(desserts);
+        const createDrinks = await db.Drink.create(drinks);
 
         console.log("Seed data inserted successfully!")
         process.exit(1);
