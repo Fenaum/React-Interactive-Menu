@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const menuRoutes = require('./menu');
+const serviceRoutes = require('./service')
 
 router.use("/menu", menuRoutes);
+router.use("/service", serviceRoutes);
 
 // if user does not reach an endpoint
 router.use((req, res) => {
