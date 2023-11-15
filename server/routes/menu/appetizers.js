@@ -6,7 +6,7 @@ const {
   addOneAppetizer,
   updateAppetizer,
   deleteAppetizer
-} = require("../../controllers/appetizer-controller");
+} = require("../../controllers/appetizerController");
 
 router.route("/").get(getAllAppetizer).post(addOneAppetizer);
 router.route("/:id").get(getOneAppetizer).put(updateAppetizer).delete(deleteAppetizer);

@@ -1,6 +1,6 @@
 const bcrypt = require("../utils/passwordUtils");
 const { User } = require("../models"); //
-const passport = require("../config/passport.js");
+const passport = require("../config/passportConfig");
 
 const authController = {
   async userRegistration(req, res) {

@@ -6,7 +6,7 @@ const {
   addOneDessert,
   updateDessert,
   deleteDessert,
-} = require("../../controllers/dessert-controller");
+} = require("../../controllers/dessertController");
 
 router.route("/").get(getAllDessert).post(addOneDessert);
 router.route("/:id").get(getOneDessert).put(updateDessert).delete(deleteDessert);

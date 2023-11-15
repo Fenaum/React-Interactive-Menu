@@ -4,11 +4,10 @@ const secretKey = process.env.SECRET_KEY;
 console.log(secretKey);
 
 const express = require("express");
-const passport = require("./config/passport"); // Your passport configuration
+const passport = require("./config/passportConfig"); // Your passport configuration
 const session = require("express-session");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo");
-const session = require("express-session");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
