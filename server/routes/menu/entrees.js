@@ -6,7 +6,7 @@ const {
     addOneEntree,
     updateEntree,
     deleteEntree
-} = require('../../controllers/entree-controller')
+} = require('../../controllers/entreeController')
 
 router.route('/').get(getAllEntree).post(addOneEntree);
 router.route('/:id').get(getOneEntree).put(updateEntree).delete(deleteEntree);
