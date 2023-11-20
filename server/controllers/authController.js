@@ -63,7 +63,6 @@ const authController = {
   },
 
   userLogin(req, res, next) {
-    // Use Passport's local authentication strategy
     passport.authenticate("local", (err, user, info) => {
       if (err) {
         console.error("Login Error:", err);
@@ -75,15 +74,14 @@ const authController = {
           : res.status(401).json({ error: info.message });
       }
 
-      // Log in the user
       req.login(user, (err) => {
         if (err) {
           console.error("Login Error:", err);
           return res.status(500).json({ error: "Error during login" });
         }
-        return res.status(200).json({ message: "User login successful" });
+        return res.redirect("/"); // Redirect to home page on successful login
       });
-    })(req, res, next); // Invoking the middleware
+    })(req, res, next);
   },
 
   userLogout(req, res) {
