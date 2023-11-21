@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Entree from "./Entree";
 import Appetizer from "./Appetizer";
 import Promotion from "./Promotion";
-import "./Menu.css";
+import "./menu.css";
 import "./MenuResponsive.css";
 
 export default function Menu() {
