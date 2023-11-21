@@ -74,17 +74,26 @@ const authController = {
           : res.status(401).json({ error: info.message });
       }
 
+      // Check if user already has an active session
+      if (req.sessionStore.sessions[user.id]) {
+        return res.status(400).json({ error: "User is already logged in" });
+      }
+
       req.login(user, (err) => {
         if (err) {
           console.error("Login Error:", err);
           return res.status(500).json({ error: "Error during login" });
         }
+        // Store user id in session store
+        req.sessionStore.sessions[user.id] = req.sessionID;
         return res.redirect("/"); // Redirect to home page on successful login
       });
     })(req, res, next);
   },
 
   userLogout(req, res) {
+    // Remove user id from session store
+    delete req.sessionStore.sessions[req.user.id];
     req.logout();
     return res.status(200).json({ message: "User logout successful" });
   },
