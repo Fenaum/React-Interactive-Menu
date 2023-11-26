@@ -4,7 +4,7 @@ const passport = require("../config/passportConfig");
 
 const authController = {
   async userRegistration(req, res) {
-    const { username, password, email } = req.body;
+    const { username, password, email, role } = req.body;
 
     // Check if email is provided
     if (!email) {
@@ -33,7 +33,7 @@ const authController = {
       const hash = await bcrypt.hash(password, 10);
 
       // Create new user
-      const user = await User.create({ username, password: hash, email });
+      const user = await User.create({ username, password: hash, email, role });
 
       // Automatically log the user in after registration
       req.login(user, (err) => {

@@ -17,7 +17,9 @@ const userSchema = new mongoose.Schema(
     hash: String,
     role: {
       type: String,
+      enum: ["user", "employee", "manager"], // Add more roles here
       default: "user", // Default user role
+      required: [true, "Please select a role"]
     },
     email: {
       type: String,

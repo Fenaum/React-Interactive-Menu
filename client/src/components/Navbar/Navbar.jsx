@@ -6,12 +6,43 @@ import userLogo from "../../assets/images/user.svg"
 import menuLogo from "../../assets/images/menu.svg";
 import About from "../About/About"
 
-export default function Navbar() {
+export default function Navbar(prop) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const user = prop.user;
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  let link;
+  switch (user.role) {
+    case "manager":
+      link = (
+        <Link to="/manager-dashboard">
+          <H2>Manager Dashboard</H2>
+        </Link>
+      );
+      break;
+    case "employee":
+      link = (
+        <Link to="/employee-dashboard">
+          <h2>Employee Dashboard</h2>
+        </Link>
+      );
+      break;
+    case "user":
+      link = (
+        <Link to="/user-dashboard">
+          <img className="icon user-icon" src={userLogo} alt="userLogo" />
+        </Link>
+      );
+    default:
+      link = (
+        <Link to="/login">
+          <img className="icon user-icon" src={userLogo} alt="userLogo" />
+        </Link>
+      );
+  }
 
   return (
     <>
@@ -22,9 +53,7 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="menu">
-          <Link to="/login">
-            <img className="icon user-icon" src={userLogo} alt="userLogo" />
-          </Link>
+          {link}
           <button
             className={`menu-button ${isMenuOpen ? "rotate" : ""}`}
             onClick={handleClick}
