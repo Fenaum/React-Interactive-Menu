@@ -3,6 +3,7 @@ const {
   userRegistration,
   userLogin,
   userLogout,
+  userProfile,
 } = require("../../controllers/authController");
 
 // Check for session
@@ -18,5 +19,8 @@ router.get("/check-session", (req, res) => {
 router.post("/register", userRegistration);
 router.post("/login", userLogin);
 router.post("/logout", userLogout);
+
+// User profiles
+router.get('/profile', userProfile);
 
 module.exports = router;

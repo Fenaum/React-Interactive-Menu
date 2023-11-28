@@ -97,6 +97,14 @@ const authController = {
     req.logout();
     return res.status(200).json({ message: "User logout successful" });
   },
-};
+
+  userProfile(req, res) {
+    if (req.user) {
+      res.json(req.user);
+    } else {
+      res.status(401).json({ error: 'Not authenticated' });
+    }
+  }
+}
 
 module.exports = authController;
