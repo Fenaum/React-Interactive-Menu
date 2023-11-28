@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import menuService from "./utils/menuService";
+import { useState, useEffect } from 'react'
 import Navbar from "./components/Navbar/Navbar";
 import Menu from "./components/Menu/Menu";
 // import Cart from "./components/Cart/Cart";
@@ -9,12 +11,23 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import "./assets/style.css";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      const userData = await menuService.fetchUser();
+      setUser(userData);
+    };
+
+    fetchUserProfile();
+  }, []);
+
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Menu />} />
+          <Route path="/" element={<Menu user={user} />} />
           {/* <Route path="/cart" element={<Cart />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
