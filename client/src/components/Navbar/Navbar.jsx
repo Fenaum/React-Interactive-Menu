@@ -15,33 +15,42 @@ export default function Navbar(prop) {
   };
 
   let link;
-  switch (user.role) {
-    case "manager":
-      link = (
-        <Link to="/manager-dashboard">
-          <H2>Manager Dashboard</H2>
-        </Link>
-      );
-      break;
-    case "employee":
-      link = (
-        <Link to="/employee-dashboard">
-          <h2>Employee Dashboard</h2>
-        </Link>
-      );
-      break;
-    case "user":
-      link = (
-        <Link to="/user-dashboard">
-          <img className="icon user-icon" src={userLogo} alt="userLogo" />
-        </Link>
-      );
-    default:
-      link = (
-        <Link to="/login">
-          <img className="icon user-icon" src={userLogo} alt="userLogo" />
-        </Link>
-      );
+  if (user) {
+    switch (user.role) {
+      case "manager":
+        link = (
+          <Link to="/manager-dashboard">
+            <H2>Manager Dashboard</H2>
+          </Link>
+        );
+        break;
+      case "employee":
+        link = (
+          <Link to="/employee-dashboard">
+            <h2>Employee Dashboard</h2>
+          </Link>
+        );
+        break;
+      case "user":
+        link = (
+          <Link to="/user-dashboard">
+            <img className="icon user-icon" src={userLogo} alt="userLogo" />
+          </Link>
+        );
+        break;
+      default:
+        link = (
+          <Link to="/login">
+            <img className="icon user-icon" src={userLogo} alt="userLogo" />
+          </Link>
+        );
+    }
+  } else {
+    link = (
+      <Link to="/login">
+        <img className="icon user-icon" src={userLogo} alt="userLogo" />
+      </Link>
+    );
   }
 
   return (

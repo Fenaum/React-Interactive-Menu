@@ -22,12 +22,14 @@ function App() {
     fetchUserProfile();
   }, []);
 
+  console.log(user);
+
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<Menu user={user} />} />
+          <Route path="/" element={<Menu/>} />
           {/* <Route path="/cart" element={<Cart />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
