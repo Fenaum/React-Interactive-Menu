@@ -80,53 +80,5 @@ const fetchMenuItems = {
   }
 };
 
-const fetchUser = async function() {
-  try {
-    const response = await axios.get('http://localhost:5000/service/user/profile');
-    return response.data;
-  } catch (err) {
-    console.log('Failed to load user information:', err);
-    throw err;
-  }
-}
-
-const postUserLogin = async function (username, password,) {
-  try {
-    const response = await axios.post("http://localhost:5000/service/user/login", {
-      username,
-      password,
-    });
-    return response.data;
-  } catch (err) {
-    console.error("Failed to post user login:", err);
-    throw err;
-  }
-};
-
-const postUserRegistration = async function (username, password, email, role) {
-  try {
-    const response = await axios.post("http://localhost:5000/service/user/register", {
-      username,
-      password,
-      email,
-      role,
-    });
-    return response.data;
-  } catch (err) {
-    console.error("Failed to post user registration:", err);
-    throw err;
-  }
-};
-
-const postUserLogout = async function () {
-  try {
-    const response = await axios.post("http://localhost:5000/service/userlogout");
-    return response.data;
-  } catch (err) {
-    console.error("Failed to post user logout:", err);
-    throw err;
-  }
-};
-
 export default fetchMenuItems;
 
