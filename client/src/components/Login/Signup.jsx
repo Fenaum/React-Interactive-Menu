@@ -5,36 +5,46 @@ import UserForm from "./UserForm";
 const { postUserRegistration } = menuService
 
 export default function Signup() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
+  const [formState, setFormState] = useState({
+    username: "",
+    password: "",
+    email: "",
+    role: ""
+  });
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-
+    const { name } = event.target
+    setFormState((prevFormState) => ({
+      ...prevFormState,
+      [name]: event.target.value
+    }))
   };
-
+  
+  console.log(formState);
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       // Send a POST request to your server
-      const response = await postUserRegistration();
+      const response = await postUserRegistration(formState);
+      navigate.push('/dashboard')
     } catch (err) {
       console.error("Failed to register")
       alert("Failed to register user. Please try again later.");
+      throw err;
     };
-    setUsername(response);
   };
 
   return (
     <UserForm 
-    username={username}
-    password={password}
-    email={email}
-    role={role}
+    username={formState.username}
+    password={formState.password}
+    email={formState.email}
+    role={formState.role}
     formType="signup"
-    onChange={handleChange}
+    handleChange={handleChange}
+    handleSubmit={handleSubmit}
     />
   );
 }

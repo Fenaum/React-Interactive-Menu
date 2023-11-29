@@ -1,22 +1,21 @@
 export default function UserForm({
-  onSubmit,
   username,
   password,
-  setPassword,
   formType,
   email,
-  setEmail,
-  selectedRole,
-  handleChange
+  role,
+  handleChange,
+  handleSubmit,
 }) {
   return (
-    <form className="login-form" onSubmit={onSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
       <label>
         Username:
         <input
           type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={handleChange}
+          name="username"
         />
       </label>
       <label>
@@ -24,7 +23,8 @@ export default function UserForm({
         <input
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleChange}
+          name="password"
         />
       </label>
       {formType === "signup" && (
@@ -34,12 +34,13 @@ export default function UserForm({
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
+              name="email"
             />
           </label>
           <label>
             Select a role:
-            <select value={selectedRole} onChange={handleChange}>
+            <select value={role} onChange={handleChange} name="role">
               <option value="">Select...</option>
               <option value="user">User</option>
               <option value="employee">Employee</option>
