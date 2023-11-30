@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import menuService from "../../utils/menuService"
 import UserForm from "./UserForm";
-const { postUserRegistration } = menuService
+const { postUserRegistration } = menuService;
 
 export default function Signup() {
   const [formState, setFormState] = useState({
@@ -11,7 +11,7 @@ export default function Signup() {
     email: "",
     role: ""
   });
-  
+
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -29,7 +29,7 @@ export default function Signup() {
     try {
       // Send a POST request to your server
       const response = await postUserRegistration(formState);
-      navigate('/dashboard');
+      navigate('/user-dashboard');
     } catch (err) {
       console.error("Failed to register")
       alert("Failed to register user. Please try again later.");

@@ -9,10 +9,13 @@ import Signup from "./components/Login/Signup"
 import MessageInterface from "./components/MessageInterface/MessageInterface"
 import Footer from "./components/Footer/Footer";
 import Dashboard from "./components/Dashboard/Dashboard";
+import UserDashboard from "./components/Dashboard/UserDashboard"
 import "./assets/style.css";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [lastLoginLogoutTime, setLastLoginLogoutTime] = useState(Date.now());
+
 
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -21,7 +24,7 @@ function App() {
     };
 
     fetchUserProfile();
-  }, []);
+  }, [lastLoginLogoutTime]);
 
   console.log(user);
 
@@ -30,11 +33,26 @@ function App() {
       <Router>
         <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<Menu/>} />
+          <Route path="/" element={<Menu />} />
           {/* <Route path="/cart" element={<Cart />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/login"
+            element={<Login setLastLoginLogoutTime={setLastLoginLogoutTime} />}
+          />
+          <Route
+            path="/signup"
+            element={<Signup setLastLoginLogoutTime={setLastLoginLogoutTime} />}
+          />
           <Route path="/dashboard/*" element={<Dashboard />} />
+          <Route
+            path="/user-dashboard/*"
+            element={
+              <UserDashboard
+                setUser={setUser}
+                setLastLoginLogoutTime={setLastLoginLogoutTime}
+              />
+            }
+          />
         </Routes>
       </Router>
       <MessageInterface />
