@@ -5,7 +5,7 @@ import "./User.css";
 import fetchMenuItems from "../../utils/menuService";
 const { postUserLogin } = fetchMenuItems;
 
-export default function Login() {
+export default function Login({ setLastLoginLogoutTime }) {
   const [formState, setFormState] = useState({
     username: "",
     password: "",
@@ -28,26 +28,26 @@ export default function Login() {
       [name]: event.target.value,
     }));
   };
-  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const user = await postUserLogin(formState);
       console.log(user);
+      setLastLoginLogoutTime(Date.now());
       // handle successful login here
       // for example, you can redirect the user to their dashboard
-      navigate("/dashboard"); // Redirect to the "/dashboard" route
+      navigate("/user-dashboard"); // Redirect to the "/dashboard" route
     } catch (err) {
       // handle error here
       // for example, you can show an error message to the user
-        console.error("Failed to log in");
-        alert("Failed to log in user. Please try again later.");
-        throw err;
+      console.error("Failed to log in");
+      alert("Failed to log in user. Please try again later.");
+      throw err;
     }
   };
 
-  console.log(formState)
+  console.log(formState);
 
   return (
     <>

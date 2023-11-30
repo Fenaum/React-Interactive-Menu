@@ -86,7 +86,7 @@ const authController = {
         }
         // Store user id in session
         req.session.userId = user.id;
-          return res.status(200).json( { success: "succesfully logged in!"})
+        return res.status(200).json({ success: "succesfully logged in!" });
       });
     })(req, res, next);
   },
