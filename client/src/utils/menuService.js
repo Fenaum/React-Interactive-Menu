@@ -33,14 +33,11 @@ const fetchMenuItems = {
     }
   },
 
-  async postUserLogin() {
+  async postUserLogin(userData) {
     try {
       const response = await axios.post(
         "http://localhost:5000/service/user/login",
-        {
-          username,
-          password,
-        }
+        userData
       );
       return response.data;
     } catch (err) {
@@ -49,16 +46,11 @@ const fetchMenuItems = {
     }
   },
 
-  async postUserRegistration() {
+  async postUserRegistration(userData) {
     try {
       const response = await axios.post(
         "http://localhost:5000/service/user/register",
-        {
-          username,
-          password,
-          email,
-          role,
-        }
+        userData
       );
       return response.data;
     } catch (err) {
