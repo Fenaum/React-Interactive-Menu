@@ -11,6 +11,7 @@ export default function Signup() {
     email: "",
     role: ""
   });
+  
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -28,7 +29,7 @@ export default function Signup() {
     try {
       // Send a POST request to your server
       const response = await postUserRegistration(formState);
-      navigate.push('/dashboard')
+      navigate('/dashboard');
     } catch (err) {
       console.error("Failed to register")
       alert("Failed to register user. Please try again later.");
