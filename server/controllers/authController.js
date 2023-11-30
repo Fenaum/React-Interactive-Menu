@@ -75,7 +75,7 @@ const authController = {
       }
 
       // Check if user already has an active session
-      if (req.sessionStore.sessions[user.id]) {
+      if (req.session.userId) {
         return res.status(400).json({ error: "User is already logged in" });
       }
 
@@ -84,27 +84,36 @@ const authController = {
           console.error("Login Error:", err);
           return res.status(500).json({ error: "Error during login" });
         }
-        // Store user id in session store
-        req.sessionStore.sessions[user.id] = req.sessionID;
-        return res.redirect("/"); // Redirect to home page on successful login
+        // Store user id in session
+        req.session.userId = user.id;
+          return res.status(200).json( { success: "succesfully logged in!"})
       });
     })(req, res, next);
   },
 
   userLogout(req, res) {
-    // Remove user id from session store
-    delete req.sessionStore.sessions[req.user.id];
-    req.logout();
-    return res.status(200).json({ message: "User logout successful" });
+    // Remove user id from session
+    req.session.userId = null;
+
+    // Use req.logout with a callback function
+    req.logout((err) => {
+      if (err) {
+        return res
+          .status(500)
+          .json({ message: "Error during logout", error: err });
+      }
+
+      return res.status(200).json({ message: "User logout successful" });
+    });
   },
 
   userProfile(req, res) {
     if (req.user) {
       res.json(req.user);
     } else {
-      res.status(401).json({ error: 'Not authenticated' });
+      res.status(401).json({ error: "Not authenticated" });
     }
-  }
-}
+  },
+};
 
 module.exports = authController;

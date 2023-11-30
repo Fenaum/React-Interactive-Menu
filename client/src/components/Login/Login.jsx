@@ -6,41 +6,60 @@ import fetchMenuItems from "../../utils/menuService";
 const { postUserLogin } = fetchMenuItems;
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formState, setFormState] = useState({
+    username: "",
+    password: "",
+  });
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const savedUsername = localStorage.getItem("username");
     const savedPassword = localStorage.getItem("password");
     if (savedUsername && savedPassword) {
-      handleLogin(savedUsername, savedPassword);
+      handleLogin(formState);
     }
   }, []);
 
-  const handleLogin = async (username, password) => {
+  const handleChange = (event) => {
+    const { name } = event.target;
+    setFormState((prevFormState) => ({
+      ...prevFormState,
+      [name]: event.target.value,
+    }));
+  };
+  
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const user = await postUserLogin(username, password);
+      const user = await postUserLogin(formState);
+      console.log(user);
       // handle successful login here
       // for example, you can redirect the user to their dashboard
-      navigate.push("/dashboard"); // Redirect to the "/dashboard" route
+      navigate("/dashboard"); // Redirect to the "/dashboard" route
     } catch (err) {
       // handle error here
       // for example, you can show an error message to the user
+        console.error("Failed to log in");
+        alert("Failed to log in user. Please try again later.");
+        throw err;
     }
   };
+
+  console.log(formState)
 
   return (
     <>
       <UserForm
         onSubmit={() => handleLogin(username, password)}
-        username={username}
-        setUsername={setUsername}
-        password={password}
-        setPassword={setPassword}
+        username={formState.username}
+        password={formState.password}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
         formType="login"
       />
-      <Link to="/signup" >
+      <Link to="/signup">
         <h2>Register here</h2>
       </Link>
     </>

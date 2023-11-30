@@ -13,7 +13,7 @@ const fetchMenuItems = {
 
   async fetchAppetizer() {
     try {
-      const response = await axios.get("http://localhost:5000/menu/appetizers");
+      const response = await axios.get("http://localhost:5000/menu/appetizers",);
       return response.data;
     } catch (err) {
       console.error('Failed to load Entree Items:', err);
@@ -24,7 +24,8 @@ const fetchMenuItems = {
   async fetchUser() {
     try {
       const response = await axios.get(
-        "http://localhost:5000/service/user/profile"
+        "http://localhost:5000/service/user/profile",
+        { withCredentials: true }
       );
       return response.data;
     } catch (err) {
@@ -37,11 +38,13 @@ const fetchMenuItems = {
     try {
       const response = await axios.post(
         "http://localhost:5000/service/user/login",
-        userData
+        userData,
+        { withCredentials: true }
       );
       return response.data;
     } catch (err) {
       console.error("Failed to post user login:", err);
+      console.error("Error details:", err.response.data);
       throw err;
     }
   },
@@ -50,7 +53,8 @@ const fetchMenuItems = {
     try {
       const response = await axios.post(
         "http://localhost:5000/service/user/register",
-        userData
+        userData,
+        { withCredentials: true }
       );
       return response.data;
     } catch (err) {
@@ -62,7 +66,8 @@ const fetchMenuItems = {
   async postUserLogout() {
     try {
       const response = await axios.post(
-        "http://localhost:5000/service/userlogout"
+        "http://localhost:5000/service/user/logout",
+        { withCredentials: true }
       );
       return response.data;
     } catch (err) {
