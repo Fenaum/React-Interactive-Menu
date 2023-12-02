@@ -92,26 +92,24 @@ const authController = {
   },
 
   userLogout(req, res) {
-    // Remove user id from session
-    req.session.userId = null;
-
-    // Use req.logout with a callback function
-    req.logout((err) => {
-      if (err) {
-        return res
-          .status(500)
-          .json({ message: "Error during logout", error: err });
+    // Destroy the session
+    req.session.destroy((logoutError) => {
+      if (logoutError) {
+        console.error("Error during logout", logoutError);
+        return res.status(500).json({ message: "Error during logout", error: logoutError });
       }
-
+      // Clear session cookie
+      res.clearCookie("userCookie");
+      console.log("User logout successful");
       return res.status(200).json({ message: "User logout successful" });
     });
   },
 
   userProfile(req, res) {
-    if (req.user) {
+    if (req.user && req.session.userId) {
       res.json(req.user);
     } else {
-      res.status(401).json({ error: "Not authenticated" });
+      res.status(401).json({ error: "Not authenticated, please log in!" });
     }
   },
 };

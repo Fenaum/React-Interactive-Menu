@@ -19,10 +19,14 @@ function App() {
 
   useEffect(() => {
     const fetchUserProfile = async () => {
-      const userData = await menuService.fetchUser();
-      setUser(userData);
-    };
-
+      try {
+        const userData = await menuService.fetchUser();
+        setUser(userData);
+      } catch (err) {
+        console.error({error: "no user logged in"})
+        throw err;
+      }
+    }
     fetchUserProfile();
   }, [lastLoginLogoutTime]);
 

@@ -25,11 +25,15 @@ const fetchMenuItems = {
     try {
       const response = await axios.get(
         "http://localhost:5000/service/user/profile",
-        { withCredentials: true }
+        { withCredentials: true, }
       );
       return response.data;
     } catch (err) {
-      console.log("Failed to load user information:", err);
+      if (err.response && err.response.status === 401) {
+        console.log('No user is currently logged in');
+      } else {
+        console.log("Failed to load user information:", err);
+      }
       throw err;
     }
   },
