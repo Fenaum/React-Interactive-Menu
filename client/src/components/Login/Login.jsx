@@ -47,8 +47,6 @@ export default function Login({ setLastLoginLogoutTime }) {
     }
   };
 
-  console.log(formState);
-
   return (
     <>
       <UserForm

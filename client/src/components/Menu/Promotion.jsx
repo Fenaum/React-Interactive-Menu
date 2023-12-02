@@ -7,7 +7,6 @@ export default function Promotion() {
   const entreeData = useFetch(fetchMenuItems.fetchEntree);
 
   const promotionItem = entreeData.find((item) => item.promotion === true)
-  console.log(promotionItem);
 
   return (
     <div className="promotion">
