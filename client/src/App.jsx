@@ -1,22 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import menuService from "./utils/menuService";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Menu from "./components/Menu/Menu";
 // import Cart from "./components/Cart/Cart";
 import Login from "./components/Login/Login";
-import Signup from "./components/Login/Signup"
-import MessageInterface from "./components/MessageInterface/MessageInterface"
+import Signup from "./components/Login/Signup";
+import MessageInterface from "./components/MessageInterface/MessageInterface";
 import Footer from "./components/Footer/Footer";
-import Dashboard from "./components/Dashboard/Dashboard";
-import ManagerDashboard from "./components/Dashboard/ManagerDashboard"
-import UserDashboard from "./components/Dashboard/UserDashboard"
+import ManagerDashboard from "./components/Dashboard/Manager/ManagerDashboard";
+import UserDashboard from "./components/Dashboard/User/UserDashboard";
 import "./assets/style.css";
 
 function App() {
   const [user, setUser] = useState(null);
   const [lastLoginLogoutTime, setLastLoginLogoutTime] = useState(Date.now());
-
 
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -26,7 +24,7 @@ function App() {
       } catch (err) {
         throw err;
       }
-    }
+    };
     fetchUserProfile();
   }, [lastLoginLogoutTime]);
 
@@ -47,7 +45,6 @@ function App() {
             path="/signup"
             element={<Signup setLastLoginLogoutTime={setLastLoginLogoutTime} />}
           />
-          <Route path="/dashboard/*" element={<Dashboard />} />
           <Route
             path="/user-dashboard/*"
             element={
