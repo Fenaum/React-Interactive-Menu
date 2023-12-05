@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import menuService from "../../utils/menuService"
+import menuService from "../../utils/menuService";
 import UserForm from "./UserForm";
 const { postUserRegistration } = menuService;
 
@@ -22,15 +22,25 @@ export default function Signup({ setLastLoginLogoutTime }) {
     }));
   };
 
-  console.log(formState);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       // Send a POST request to your server
-      const response = await postUserRegistration(formState);
+      const user = await postUserRegistration(formState);
+      console.log(user);
       setLastLoginLogoutTime(Date.now());
-      navigate("/user-dashboard");
+      switch (user.role) {
+        case "manager":
+          navigate('/manager-dashboard')
+          break;
+          case "employee":
+          navigate('/employee-dashboard')
+          break;
+          case "user":
+          navigate('/user-dashboard')
+          break;
+        default:
+      }
     } catch (err) {
       console.error("Failed to register");
       alert("Failed to register user. Please try again later.");

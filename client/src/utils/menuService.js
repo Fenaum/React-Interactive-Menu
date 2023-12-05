@@ -67,10 +67,11 @@ const fetchMenuItems = {
     }
   },
 
-  async postUserLogout() {
+  async postUserLogout(userData) {
     try {
       const response = await axios.post(
         "http://localhost:5000/service/user/logout",
+        userData,
         { withCredentials: true }
       );
       return response.data;

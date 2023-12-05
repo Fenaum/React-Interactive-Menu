@@ -2,7 +2,11 @@ import { useNavigate } from "react-router-dom";
 import menuService from "../../utils/menuService";
 const { postUserLogout } = menuService;
 
-export default function UserDashboard({ user, setUser, setLastLoginLogoutTime }) {
+export default function ManagerDashboard({
+  user,
+  setUser,
+  setLastLoginLogoutTime,
+}) {
   const navigate = useNavigate();
 
   function handleClick(event) {
@@ -21,7 +25,7 @@ export default function UserDashboard({ user, setUser, setLastLoginLogoutTime })
 
   return (
     <>
-      <div>User Dahsboard</div>
+      <div>Manager Dashboard</div>
       <button onClick={handleClick}>Log Out</button>
     </>
   );

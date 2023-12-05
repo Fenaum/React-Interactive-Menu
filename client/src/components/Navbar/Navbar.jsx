@@ -20,7 +20,7 @@ export default function Navbar(prop) {
       case "manager":
         link = (
           <Link to="/manager-dashboard">
-            <H2>Manager Dashboard</H2>
+            <h2>Manager Dashboard</h2>
           </Link>
         );
         break;

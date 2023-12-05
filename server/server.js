@@ -46,7 +46,7 @@ app.use(
     }), // Use MongoStore and pass the mongoose connection
     cookie: {
       maxAge: 1000 * 60 * 10, // 1000 milliseconds * 60 seconds * 60 minutes * 24 hours * 14 days
-      name: "userCookie"
+      secure: false,
     },
   })
 );
