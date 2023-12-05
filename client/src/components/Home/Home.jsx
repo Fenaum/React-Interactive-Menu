@@ -1,6 +1,4 @@
-
-
-export default function Menu() {
+export default function Home() {
     return (
         <main>
 

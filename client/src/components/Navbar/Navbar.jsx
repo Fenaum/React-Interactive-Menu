@@ -20,14 +20,14 @@ export default function Navbar(prop) {
       case "manager":
         link = (
           <Link to="/manager-dashboard">
-            <h2>Manager Dashboard</h2>
+            <h2>{user.username}</h2>
           </Link>
         );
         break;
       case "employee":
         link = (
           <Link to="/employee-dashboard">
-            <h2>Employee Dashboard</h2>
+            <h2>{user.username}</h2>
           </Link>
         );
         break;
@@ -73,16 +73,16 @@ export default function Navbar(prop) {
       </header>
       <ul className={`menu-items ${isMenuOpen ? "show" : ""}`}>
         <li>
-          <Link to="/cart">CART</Link>
+          <Link onClick={handleClick} to="/cart">CART</Link>
         </li>
         <li>
-          <Link to="/service">SERVICES</Link>
+          <Link onClick={handleClick} to="/service">SERVICES</Link>
         </li>
         <li>
-          <Link to="/about">ABOUT</Link>
+          <Link onClick={handleClick} to="/about">ABOUT</Link>
         </li>
         <li>
-          <Link to="/about">CONTACT</Link>
+          <Link onClick={handleClick} to="/about">CONTACT</Link>
         </li>
       </ul>
     </>
