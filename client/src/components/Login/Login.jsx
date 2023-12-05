@@ -37,7 +37,18 @@ export default function Login({ setLastLoginLogoutTime }) {
       setLastLoginLogoutTime(Date.now());
       // handle successful login here
       // for example, you can redirect the user to their dashboard
-      navigate("/user-dashboard"); // Redirect to the "/dashboard" route
+      switch (user.role) {
+        case "manager":
+          navigate("/manager-dashboard");
+          break;
+        case "employee":
+          navigate("/employee-dashboard");
+          break;
+        case "user":
+          navigate("/user-dashboard");
+          break;
+        default:
+      }
     } catch (err) {
       // handle error here
       // for example, you can show an error message to the user

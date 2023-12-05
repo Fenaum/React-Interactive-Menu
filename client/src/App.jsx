@@ -9,6 +9,7 @@ import Signup from "./components/Login/Signup"
 import MessageInterface from "./components/MessageInterface/MessageInterface"
 import Footer from "./components/Footer/Footer";
 import Dashboard from "./components/Dashboard/Dashboard";
+import ManagerDashboard from "./components/Dashboard/ManagerDashboard"
 import UserDashboard from "./components/Dashboard/UserDashboard"
 import "./assets/style.css";
 
@@ -23,7 +24,6 @@ function App() {
         const userData = await menuService.fetchUser();
         setUser(userData);
       } catch (err) {
-        console.error({error: "no user logged in"})
         throw err;
       }
     }
@@ -52,6 +52,17 @@ function App() {
             path="/user-dashboard/*"
             element={
               <UserDashboard
+                user={user}
+                setUser={setUser}
+                setLastLoginLogoutTime={setLastLoginLogoutTime}
+              />
+            }
+          />
+          <Route
+            path="/manager-dashboard/*"
+            element={
+              <ManagerDashboard
+                user={user}
                 setUser={setUser}
                 setLastLoginLogoutTime={setLastLoginLogoutTime}
               />

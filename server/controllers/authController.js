@@ -43,10 +43,12 @@ const authController = {
             .status(500)
             .json({ error: "Error logging in after registration" });
         }
-
+        console.log("Login session ID:", req.sessionID);
+        console.log("Login user ID:", req.session.userId);
+        req.session.userId = user.id;
         return res
           .status(200)
-          .json({ message: "User registration successful" });
+          .json({ message: "User registration successful", role: user.role });
       });
     } catch (err) {
       console.error("Registration Error:", err);
@@ -76,6 +78,8 @@ const authController = {
 
       // Check if user already has an active session
       if (req.session.userId) {
+        console.log("Login session ID:", req.sessionID);
+        console.log("Login user ID:", req.session.userId);
         return res.status(400).json({ error: "User is already logged in" });
       }
 
@@ -84,14 +88,20 @@ const authController = {
           console.error("Login Error:", err);
           return res.status(500).json({ error: "Error during login" });
         }
+        console.log("Login session ID:", req.sessionID);
+        console.log("Login user ID:", req.session.userId);
         // Store user id in session
         req.session.userId = user.id;
-        return res.status(200).json({ success: "succesfully logged in!" });
+        return res
+          .status(200)
+          .json({ success: "succesfully logged in!", role: user.role });
       });
     })(req, res, next);
   },
 
   userLogout(req, res) {
+    console.log("Logout session ID:", req.sessionID);
+    console.log("Logout user ID:", req.session.userId);
     // Destroy the session
     req.session.destroy((logoutError) => {
       if (logoutError) {
@@ -99,13 +109,15 @@ const authController = {
         return res.status(500).json({ message: "Error during logout", error: logoutError });
       }
       // Clear session cookie
-      res.clearCookie("userCookie");
+      res.clearCookie("connect.sid");
       console.log("User logout successful");
       return res.status(200).json({ message: "User logout successful" });
     });
   },
 
   userProfile(req, res) {
+    console.log("Profile session ID:", req.sessionID);
+    console.log("Profile user ID:", req.session.userId);
     if (req.user && req.session.userId) {
       res.json(req.user);
     } else {
