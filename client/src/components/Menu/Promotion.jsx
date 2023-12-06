@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import fetchMenuItems from "../../utils/menuService";
+import menuAPI from "../../utils/menuService";
 import { useFetch } from "../../hooks/useFetch";
 
 export default function Promotion() {
-  const appetizerData = useFetch(fetchMenuItems.fetchAppetizer);
-  const entreeData = useFetch(fetchMenuItems.fetchEntree);
+  const appetizerData = useFetch(menuAPI.fetchAppetizer);
+  const entreeData = useFetch(menuAPI.fetchEntree);
 
   const promotionItem = entreeData.find((item) => item.promotion === true)
 
   return (
     <div className="promotion">
       <div className="promotion-section">
-        <h2>Introducing Our Exquisite Osso Buco Special!</h2>
+        <h2 className="promotion-title">Introducing Our Exquisite Osso Buco Special!</h2>
         <div className="content-section">
-          <ul>
+          <ul className="promotion-description">
             <li>
               Tender veal shanks braised to perfection in a savory white wine
               and broth reduction.

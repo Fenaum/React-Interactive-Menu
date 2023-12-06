@@ -14,7 +14,7 @@ const {
 router.get("/wine", getAllWine);
 router.get("/cocktail", getAllCocktail);
 router.get("/coffee", getAllCoffee);
-router.get("/nonAlcoholic", getAllNonAlcoholic);
+router.get("/nonalcoholic", getAllNonAlcoholic);
 
 // Add an item to a specific category
 router.post("/:category", addItemToCategory);

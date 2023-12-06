@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fetchMenuItems = {
+const menuAPI = {
   async fetchEntree() {
     try {
       const response = await axios.get("http://localhost:5000/menu/entrees");
@@ -14,7 +14,7 @@ const fetchMenuItems = {
   async addEntree(entreeData) {
     try {
       const response = await axios.post(
-        "http://localhost:5000/entrees/",
+        "http://localhost:5000/menu/entrees",
         entreeData,
         { withCredentials: true }
       );
@@ -28,7 +28,7 @@ const fetchMenuItems = {
   async updateEntree(id, entreeData) {
     try {
       const response = await axios.put(
-        `http://localhost:5000/entrees/${id}`,
+        `http://localhost:5000/menu/entrees/${id}`,
         entreeData,
         { withCredentials: true }
       );
@@ -42,7 +42,7 @@ const fetchMenuItems = {
   async deleteEntree(id) {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/entrees/${id}`,
+        `http://localhost:5000/menu/entrees/${id}`,
         { withCredentials: true }
       );
       return response.data;
@@ -51,41 +51,41 @@ const fetchMenuItems = {
       throw err;
     }
   },
-  
+
   async fetchAppetizer() {
     try {
       const response = await axios.get("http://localhost:5000/menu/appetizers");
       return response.data;
     } catch (err) {
-      console.error("Failed to load Entree Items:", err);
-      throw err;
-    }
-  },
-  
-  async addAppetizer(entreeData) {
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/appetizers/",
-        entreeData,
-        { withCredentials: true }
-      );
-      return response.data;
-    } catch (err) {
-      console.error("Failed to add entree:", err);
+      console.error("Failed to load appetizer Items:", err);
       throw err;
     }
   },
 
-  async updateAppetizer(id, entreeData) {
+  async addAppetizer(appetizerData) {
     try {
-      const response = await axios.put(
-        `http://localhost:5000/appetizers/${id}`,
-        entreeData,
+      const response = await axios.post(
+        "http://localhost:5000/menu/appetizers",
+        appetizerData,
         { withCredentials: true }
       );
       return response.data;
     } catch (err) {
-      console.error("Failed to update entree:", err);
+      console.error("Failed to add appetizer:", err);
+      throw err;
+    }
+  },
+
+  async updateAppetizer(id, appetizerData) {
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/menu/appetizers/${id}`,
+        appetizerData,
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to update appetizer:", err);
       throw err;
     }
   },
@@ -93,12 +93,154 @@ const fetchMenuItems = {
   async deleteAppetizer(id) {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/appetizers/${id}`,
+        `http://localhost:5000/menu/appetizers/${id}`,
         { withCredentials: true }
       );
       return response.data;
     } catch (err) {
-      console.error("Failed to delete entree:", err);
+      console.error("Failed to delete appetizer:", err);
+      throw err;
+    }
+  },
+
+  async fetchDessert() {
+    try {
+      const response = await axios.get("http://localhost:5000/menu/desserts");
+      return response.data;
+    } catch (err) {
+      console.error("Failed to load dessert Items:", err);
+      throw err;
+    }
+  },
+
+  async addDessert(dessertData) {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/menu/desserts",
+        dessertData,
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to add dessert:", err);
+      throw err;
+    }
+  },
+
+  async updateDessert(id, dessertData) {
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/menu/desserts/${id}`,
+        dessertData,
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to update dessert:", err);
+      throw err;
+    }
+  },
+
+  async deleteDessert(id) {
+    try {
+      const response = await axios.delete(
+        `http://localhost:5000/menu/desserts/${id}`,
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to delete dessert:", err);
+      throw err;
+    }
+  },
+
+  async fetchAllWine() {
+    try {
+      const response = await axios.get("http://localhost:5000/menu/drinks/wine", {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to load wine items:", err);
+      throw err;
+    }
+  },
+
+  async fetchAllCocktail() {
+    try {
+      const response = await axios.get("http://localhost:5000/menu/drinks/cocktail", {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to load cocktail items:", err);
+      throw err;
+    }
+  },
+
+  async fetchAllCoffee() {
+    try {
+      const response = await axios.get("http://localhost:5000/menu/drinks/coffee", {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to load coffee items:", err);
+      throw err;
+    }
+  },
+
+  async fetchAllNonAlcoholic() {
+    try {
+      const response = await axios.get("http://localhost:5000/menu/drinks/nonalcoholic", {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to load non-alcoholic items:", err);
+      throw err;
+    }
+  },
+
+  async addDrink(drinkData, category) {
+    try {
+      const response = await axios.post(`http://localhost:5000/menu/drinks/${category}`,
+      drinkData,
+      {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to add drink item:", err);
+      throw err;
+    }
+  },
+
+  async updateDrink(drinkData, id, category) {
+    try {
+      const response = await axios.post(`http://localhost:5000/menu/drinks/${category}/${id}`,
+      drinkData,
+      {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (err) {
+      console.error("Failed to update drink item:", err);
+      throw err;
+    }
+  },
+
+  async deleteDrink(category, id) {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/menu/drinks/${category}/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to delete drink item:", err);
       throw err;
     }
   },
@@ -164,4 +306,4 @@ const fetchMenuItems = {
   },
 };
 
-export default fetchMenuItems;
+export default menuAPI;

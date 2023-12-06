@@ -5,7 +5,7 @@ const drinkController = {
   async getAllWine(req, res) {
     try {
       const wineItems = await Drink.find({}, "wine");
-      res.status(200).json(wineItems);
+      res.status(200).json(wineItems[0].wine);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: err.message });
@@ -15,7 +15,7 @@ const drinkController = {
   async getAllCocktail(req, res) {
     try {
       const cocktailItems = await Drink.find({}, "cocktail");
-      res.status(200).json(cocktailItems);
+      res.status(200).json(cocktailItems[0].cocktail);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: err.message });
@@ -25,7 +25,7 @@ const drinkController = {
   async getAllCoffee(req, res) {
     try {
       const coffeeItems = await Drink.find({}, "coffee");
-      res.status(200).json(coffeeItems);
+      res.status(200).json(coffeeItems[0].coffee);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: err.message });
@@ -35,7 +35,7 @@ const drinkController = {
   async getAllNonAlcoholic(req, res) {
     try {
       const nonAlcoholicItems = await Drink.find({}, "nonAlcoholic");
-      res.status(200).json(nonAlcoholicItems);
+      res.status(200).json(nonAlcoholicItems[0].nonAlcoholic);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: err.message });

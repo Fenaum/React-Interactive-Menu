@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import menuService from "../../../utils/menuService";
+import menuAPI from "../../../utils/menuService";
 import { Route, Routes } from "react-router-dom";
 import DashMenu from "./DashMenu";
-import MenuManager from "./MenuManager";
+import MenuManager from "./MenuManager/MenuManager";
 import Home from "./Home/Home";
 import "../dashboard.css";
-const { postUserLogout } = menuService;
+const { postUserLogout } = menuAPI;
 
 export default function ManagerDashboard({
   user,

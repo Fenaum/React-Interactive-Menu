@@ -6,7 +6,7 @@ export default function DashMenu({ handleClick }) {
       <h3>Tools</h3>
       <ul className="dash-menu-list">
         <li>
-          <Link to="/menu">Manage Menus</Link>
+          <Link to="menu/*">Manage Menus</Link>
         </li>
         <li>
           <Link to="/inventory">Inventory</Link>

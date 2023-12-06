@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import menuService from "../../utils/menuService";
+import menuAPI from "../../utils/menuService";
 import UserForm from "./UserForm";
-const { postUserRegistration } = menuService;
+const { postUserRegistration } = menuAPI;
 
 export default function Signup({ setLastLoginLogoutTime }) {
   const [formState, setFormState] = useState({
