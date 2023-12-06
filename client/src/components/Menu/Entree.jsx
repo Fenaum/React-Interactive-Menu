@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import fetchMenuItems from "../../utils/menuService";
-const fetchEntree = fetchMenuItems.fetchEntree;
+import menuAPI from "../../utils/menuService";
+const fetchEntree = menuAPI.fetchEntree;
 
 export default function Entree() {
     const containerRef = useRef(null);

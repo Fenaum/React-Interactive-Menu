@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom"; 
 import UserForm from "./UserForm.jsx";
 import "./User.css";
-import fetchMenuItems from "../../utils/menuService";
-const { postUserLogin } = fetchMenuItems;
+import menuAPI from "../../utils/menuService";
+const { postUserLogin } = menuAPI;
 
 export default function Login({ setLastLoginLogoutTime }) {
   const [formState, setFormState] = useState({
