@@ -49,14 +49,16 @@ export default function Signup({ setLastLoginLogoutTime }) {
   };
 
   return (
-    <UserForm
-      username={formState.username}
-      password={formState.password}
-      email={formState.email}
-      role={formState.role}
-      formType="signup"
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-    />
+    <div className="login-container">
+      <UserForm
+        username={formState.username}
+        password={formState.password}
+        email={formState.email}
+        role={formState.role}
+        formType="signup"
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+    </div>
   );
 }

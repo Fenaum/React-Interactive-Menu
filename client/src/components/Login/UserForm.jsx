@@ -49,7 +49,7 @@ export default function UserForm({
           </label>
         </>
       )}
-      { formType === "login" ? <input type="submit" value="Log In" /> : <input type="submit" value="Register" />}
+      { formType === "login" ? <input type="submit" value="Login" /> : <input type="submit" value="Register" />}
     </form>
   );
 } 

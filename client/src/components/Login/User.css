@@ -2,18 +2,23 @@
     background-color: var(--color-darker-wood);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
+    max-width: 25rem;
+    max-height: 50rem;
+    height: auto;
+    width: 30rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .login-form input {
     display: block;
     width: 100%; /* Adjust as needed */
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -32,8 +37,65 @@
     color: var(--color-text-light);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1rem;
+    height: 2rem;
+    width: 5rem;
+    margin: 1.2rem auto;
+    text-align: center;
 }
 
 .login-form input[type="submit"]:hover {
     background-color: var(--color-gold);
+}
+
+.login-form select {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+    font-size: 1rem;
+}
+
+.login-form select option {
+    padding: 0.5rem;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 70vh;
+}
+
+.login-container > a > h3 {
+    font-weight: 300;
+    text-decoration:underline;
+}
+
+@media screen and (max-width: 768px) {
+  .login-form {
+    max-width: 90%;
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .login-form input {
+    margin: 0.5rem 0;
+    padding: 0.50rem;
+  }
+
+  .login-form input[type="submit"] {
+    height: 2rem;
+    width: auto;
+    margin: 0.6rem auto;
+  }
+
+  .login-container {
+    height: 100vh;
+  }
 }

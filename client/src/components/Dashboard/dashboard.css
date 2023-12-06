@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 9fr;
 }
 
+.dashboard {
+    background-color: var(--color-cream);
+}
+
 .dash-menu-list {
     list-style: none;
 }
@@ -19,9 +23,9 @@
     align-items: center;
     justify-content: space-between;
     height: 70vh;
-    width: 240px; /* Set the width of the sidebar */
+    width: 15rem; /* Set the width of the sidebar */
     background-color: var(--color-wood-brown); /* Use the wood brown color from your style.css */
-    padding: 30px;
+    padding: 30px 0px;
     overflow-x: hidden; /* Disable horizontal scroll */
     color: var(--color-cream); /* Light text color for better visibility */
 }
@@ -34,6 +38,7 @@
 }
 
 .dash-menu-list li {
+    margin-left: 2rem;
     padding: 10px 0;
     color: var(--color-cream); /* Use the cream color from your style.css for the text color */
 }
@@ -55,6 +60,7 @@
     margin-top: 20px; /* Add some margin at the top */
     cursor: pointer; /* Change the cursor when hovering over the button */
     transition: background-color 0.3s ease; /* Add a transition effect when hovering over the button */
+    width: 100%;
 }
 
 .dash-menu-logout:hover {

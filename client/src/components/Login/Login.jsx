@@ -59,7 +59,7 @@ export default function Login({ setLastLoginLogoutTime }) {
   };
 
   return (
-    <>
+    <div className="login-container">
       <UserForm
         onSubmit={() => handleLogin(username, password)}
         username={formState.username}
@@ -69,8 +69,8 @@ export default function Login({ setLastLoginLogoutTime }) {
         formType="login"
       />
       <Link to="/signup">
-        <h2>Register here</h2>
+        <h3>Register here</h3>
       </Link>
-    </>
+    </div>
   );
 }
