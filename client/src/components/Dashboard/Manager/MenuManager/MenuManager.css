@@ -1,0 +1,43 @@
+.menu-manager-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: var(--color-light-gray);
+    width: 100%;
+    max-width: 100%;
+}
+
+.menu-manager-item-card {
+    position: relative;
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* This creates two columns. */
+    grid-template-rows: auto auto auto; /* This creates three rows. */
+    margin: 20px;
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 25px;
+    background-color: var(--color-light-gray);
+    color: var(--color-text-dark);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.menu-manager-item-card > :first-child {
+    grid-column: 1;
+    grid-row: 1 / span 3; /* This makes the first child span 3 rows. */
+}
+
+.menu-manager-item-card > :nth-child(n+2) {
+    grid-column: 2;
+    /* This places the rest of the children in the second column. */
+}
+
+.menu-manager-item-img {
+    width: 100%; /* This will make the image take up the full width of its grid cell. */
+    height: 100%; /* This will make the image take up the full height of its grid cell. */
+    object-fit: contain; /* This will scale the image to maintain its aspect ratio while filling the box. */
+    border-radius: 25px 0px 0px 25px;
+}
