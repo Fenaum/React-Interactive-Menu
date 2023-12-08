@@ -218,7 +218,7 @@ const menuAPI = {
 
   async updateDrink(drinkData, id, category) {
     try {
-      const response = await axios.post(`http://localhost:5000/menu/drinks/${category}/${id}`,
+      const response = await axios.put(`http://localhost:5000/menu/drinks/${category}/${id}`,
       drinkData,
       {
         withCredentials: true,
@@ -232,7 +232,7 @@ const menuAPI = {
 
   async deleteDrink(category, id) {
     try {
-      const response = await axios.get(
+      const response = await axios.delete(
         `http://localhost:5000/menu/drinks/${category}/${id}`,
         {
           withCredentials: true,
