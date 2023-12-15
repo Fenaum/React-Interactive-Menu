@@ -10,12 +10,12 @@ export default function MenuManager() {
   const [editedItem, setEditedItem] = useState({});
   const [currentItemID, setCurrentItemID] = useState({});
 
-  function getCurrentItem(category) {
-    const currentItem = category.find((item) => {
-      return item.id === currentItemID;
-    })
-    return currentItem;
-  }
+  // function getCurrentItem(category) {
+  //   const currentItem = category.find((item) => {
+  //     return item.id === currentItemID;
+  //   })
+  //   return currentItem;
+  // }
 
   const handleAddItem = () => {
     
