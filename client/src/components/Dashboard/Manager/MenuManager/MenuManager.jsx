@@ -10,6 +10,12 @@ export default function MenuManager() {
   const [editedItem, setEditedItem] = useState({});
   const [currentItemID, setCurrentItemID] = useState({});
 
+ const handleEdit = (id, item) => {
+   setCurrentItemID(id);
+   setEditedItem(item);
+ };
+
+
   // function getCurrentItem(category) {
   //   const currentItem = category.find((item) => {
   //     return item.id === currentItemID;
@@ -84,7 +90,8 @@ export default function MenuManager() {
             key={item.id}
             item={item}
             category="appetizer"
-            isEditing={isEditing}
+            handleEdit={() => handleEdit(item.id, item)}
+            isEditing={currentItemID === item.id}
             setEditing={setEditing}
             currentItemID={currentItemID}
             editedItem={editedItem}
