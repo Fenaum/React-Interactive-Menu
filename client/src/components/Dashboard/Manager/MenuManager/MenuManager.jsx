@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./MenuManager.css";
 import MenuItem from "./MenuItem";
+import MenuEditor from "./MenuEditor";
 import useFetchMenuData from "../../../../hooks/useFetchMenuData";
 
 export default function MenuManager() {
@@ -84,6 +85,14 @@ export default function MenuManager() {
         </form>
       </div>
       <h3>Appetizers</h3>
+      {isEditing && (
+        <MenuEditor
+          editedItem={editedItem}
+          setEditedItem={setEditedItem}
+          handleUpdate={handleUpdate}
+          setEditing={setEditing}
+        />
+      )}
       <div className="menu-manager-card-container">
         {appetizers.map((item) => (
           <MenuItem
