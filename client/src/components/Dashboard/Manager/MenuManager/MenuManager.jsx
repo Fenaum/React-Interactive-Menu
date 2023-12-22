@@ -8,7 +8,6 @@ export default function MenuManager() {
   const [dataVersion, setDataVersion] = useState(0);
   const { appetizers, entrees, desserts, drinks } = useFetchMenuData(dataVersion);
   const [isEditing, setEditing] = useState(false);
-  const [editedItem, setEditedItem] = useState({});
   const [currentItemID, setCurrentItemID] = useState({});
 
  const handleEdit = (id, item) => {
