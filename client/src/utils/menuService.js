@@ -156,9 +156,12 @@ const menuAPI = {
 
   async fetchAllWine() {
     try {
-      const response = await axios.get("http://localhost:5000/menu/drinks/wine", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "http://localhost:5000/menu/drinks/wine",
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to load wine items:", err);
@@ -168,9 +171,12 @@ const menuAPI = {
 
   async fetchAllCocktail() {
     try {
-      const response = await axios.get("http://localhost:5000/menu/drinks/cocktail", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "http://localhost:5000/menu/drinks/cocktail",
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to load cocktail items:", err);
@@ -180,9 +186,12 @@ const menuAPI = {
 
   async fetchAllCoffee() {
     try {
-      const response = await axios.get("http://localhost:5000/menu/drinks/coffee", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "http://localhost:5000/menu/drinks/coffee",
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to load coffee items:", err);
@@ -192,9 +201,12 @@ const menuAPI = {
 
   async fetchAllNonAlcoholic() {
     try {
-      const response = await axios.get("http://localhost:5000/menu/drinks/nonalcoholic", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "http://localhost:5000/menu/drinks/nonalcoholic",
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to load non-alcoholic items:", err);
@@ -204,11 +216,13 @@ const menuAPI = {
 
   async addDrink(drinkData, category) {
     try {
-      const response = await axios.post(`http://localhost:5000/menu/drinks/${category}`,
-      drinkData,
-      {
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        `http://localhost:5000/menu/drinks/${category}`,
+        drinkData,
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to add drink item:", err);
@@ -218,11 +232,13 @@ const menuAPI = {
 
   async updateDrink(drinkData, id, category) {
     try {
-      const response = await axios.put(`http://localhost:5000/menu/drinks/${category}/${id}`,
-      drinkData,
-      {
-        withCredentials: true,
-      });
+      const response = await axios.put(
+        `http://localhost:5000/menu/drinks/${category}/${id}`,
+        drinkData,
+        {
+          withCredentials: true,
+        }
+      );
       return response.data;
     } catch (err) {
       console.error("Failed to update drink item:", err);

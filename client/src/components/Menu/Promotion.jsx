@@ -10,7 +10,9 @@ export default function Promotion() {
   return (
     <div className="promotion">
       <div className="promotion-section">
-        <h2 className="promotion-title">Introducing Our Exquisite Osso Buco Special!</h2>
+        <h2 className="promotion-title">
+          Introducing Our Exquisite Osso Buco Special!
+        </h2>
         <div className="content-section">
           <ul className="promotion-description">
             <li>

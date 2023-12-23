@@ -21,6 +21,11 @@ export default function useFetchMenuData(dataVersion) {
     nonAlcoholic: [],
   });
 
+  appetizers.type = "appetizers";
+  entrees.type = "entrees";
+  desserts.type = "desserts";
+  drinks.type = "drinks";
+
   useEffect(() => {
     fetchAppetizer().then(setAppetizers);
     fetchEntree().then(setEntrees);

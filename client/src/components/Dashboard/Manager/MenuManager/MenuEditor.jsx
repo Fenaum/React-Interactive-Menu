@@ -7,7 +7,7 @@ export default function MenuEditor({
   handleUpdate,
   setEditing,
   currentCategory,
-  currentItemID,
+  setCurrentCategory,
 }) {
   let currentItem = getCurrentItem(currentCategory);
 
@@ -22,7 +22,7 @@ export default function MenuEditor({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleUpdate(currentItemID, editedItem);
+    handleUpdate();
     setEditing(false);
   };
 
@@ -33,7 +33,7 @@ export default function MenuEditor({
         <input
           type="text"
           name="name"
-          value={editedItem.name}
+          value={editedItem ? editedItem.name : ""}
           onChange={handleChange}
         />
       </label>
@@ -42,7 +42,7 @@ export default function MenuEditor({
         <input
           type="text"
           name="description"
-          value={editedItem.description}
+          value={editedItem ? editedItem.description: ""}
           onChange={handleChange}
         />
       </label>
@@ -51,7 +51,7 @@ export default function MenuEditor({
         <input
           type="number"
           name="price"
-          value={editedItem.price}
+          value={editedItem ? editedItem.price: ""}
           onChange={handleChange}
         />
       </label>
@@ -61,7 +61,10 @@ export default function MenuEditor({
       <button
         className="item-editor-cancelBtn"
         type="button"
-        onClick={() => setEditing(false)}
+        onClick={() => {
+          setCurrentCategory(null);
+          setEditing(false);
+        }}
       >
         Cancel
       </button>

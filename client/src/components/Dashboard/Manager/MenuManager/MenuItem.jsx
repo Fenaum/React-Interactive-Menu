@@ -1,7 +1,7 @@
 export default function MenuItem({
   item,
   handleDelete,
-  setCurrentItemID,
+  setCurrentItemId,
   setEditing,
   category,
   setCurrentCategory,
@@ -19,9 +19,10 @@ export default function MenuItem({
           className="menu-manager-edit-btn"
           onClick={(e) => {
             e.preventDefault();
-            setCurrentItemID(item._id);
+            setCurrentItemId(item._id);
             setEditing(true);
             setCurrentCategory(category);
+            console.log(category);
           }}
         >
           Edit
