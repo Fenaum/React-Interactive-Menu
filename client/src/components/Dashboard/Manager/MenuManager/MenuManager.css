@@ -1,77 +1,76 @@
 .menu-manager-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    background-color: var(--color-light-gray);
-    width: 100%;
-    max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: var(--color-light-gray);
+  width: 100%;
+  max-width: 100%;
 }
 
 .menu-manager-item-card {
-    position: relative;
-    flex: 0 0 auto;
-    display: grid;
-    grid-template-columns: 3fr 2fr; /* This creates two columns. */
-    grid-template-rows: auto auto auto; /* This creates three rows. */
-    margin: 20px;
-    max-height: 300px;
-    max-width: 300px;
-    border-radius: 25px;
-    background-color: var(--color-light-gray);
-    color: var(--color-text-dark);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+  position: relative;
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* This creates two columns. */
+  grid-template-rows: auto auto auto; /* This creates three rows. */
+  margin: 20px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 25px;
+  background-color: var(--color-light-gray);
+  color: var(--color-text-dark);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
 }
 
-.menu-manager-item-card >.manager-item-img {
-    grid-column: 1;
-    grid-row: 1 / span 3; /* This makes the first child span 3 rows. */
-    font-size: 1rem;
+.menu-manager-item-card > .manager-item-img {
+  grid-column: 1;
+  grid-row: 1 / span 3; /* This makes the first child span 3 rows. */
+  font-size: 1rem;
 }
 
 .menu-manager-item-card > .manager-item-content {
-    grid-column: 2;
-    /* This places the rest of the children in the second column. */
+  grid-column: 2;
+  /* This places the rest of the children in the second column. */
 }
 
 .manager-item-content > h2 {
-    font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .manager-item-content > p {
-    font-size: .7rem;
+  font-size: 0.7rem;
 }
 
-
 .menu-manager-item-img {
-    width: 100%; /* This will make the image take up the full width of its grid cell. */
-    height: 100%; /* This will make the image take up the full height of its grid cell. */
-    object-fit: contain; /* This will scale the image to maintain its aspect ratio while filling the box. */
-    border-radius: 25px 0px 0px 25px;
+  width: 100%; /* This will make the image take up the full width of its grid cell. */
+  height: 100%; /* This will make the image take up the full height of its grid cell. */
+  object-fit: contain; /* This will scale the image to maintain its aspect ratio while filling the box. */
+  border-radius: 25px 0px 0px 25px;
 }
 
 .manage-btns {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    gap: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 4px;
 }
 
 .manage-btns button {
-    padding: 5px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-soft-olive);
-    color: var(--color-text-light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-soft-olive);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .manage-btns button:hover {
-    background-color: var(--color-gold);
+  background-color: var(--color-gold);
 }
 
 .item-editor {
@@ -110,7 +109,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   cursor: pointer;
 }

@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
 import menuAPI from "../utils/menuService";
-const {
-  updateAppetizer,
-  updateEntree,
-  updateDessert,
-  updateDrink
-} = menuAPI;
+const { updateAppetizer, updateEntree, updateDessert, updateDrink } = menuAPI;
 
 export default function UpdateMenuData(id, data, category, dataVersion) {
   function updateMenu() {
-    switch (category.type) {
+    switch (category?.type) {
       case "appetizers":
         // update appetizer
         updateAppetizer(id, data)
@@ -31,6 +26,9 @@ export default function UpdateMenuData(id, data, category, dataVersion) {
       case "drinks":
         // update drink
         // add similar code here when you implement updateDrink
+        break;
+      case undefined:
+        console.log("no category selected");
         break;
       default:
         console.error(`Unknown category: ${category.type}`);
