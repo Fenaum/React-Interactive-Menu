@@ -1,44 +1,11 @@
 export default function MenuItem({
   item,
-  category,
-  handleUpdate,
   handleDelete,
-  isEditing,
-  setEditing,
-  editedItem,
-  setEditedItem,
-  currentItemID,
   setCurrentItemID,
-  id
+  setEditing,
+  category,
+  setCurrentCategory,
 }) {
-
-  if (isEditing) {
-    return (
-      <div>
-        <input
-          value={editedItem.name}
-          onChange={(e) =>
-            setEditedItem({ ...editedItem, name: e.target.value })
-          }
-        />
-        <input
-          value={editedItem.description}
-          onChange={(e) =>
-            setEditedItem({ ...editedItem, description: e.target.value })
-          }
-        />
-        <input
-          value={editedItem.price}
-          onChange={(e) =>
-            setEditedItem({ ...editedItem, price: e.target.value })
-          }
-        />
-        <button onClick={handleUpdate}>Update</button>
-        <button>Cancel</button>
-      </div>
-    );
-  }
-
   return (
     <div className="menu-manager-item-card">
       <img className="menu-manager-item-img" src={item.imgURL}></img>
@@ -52,8 +19,9 @@ export default function MenuItem({
           className="menu-manager-edit-btn"
           onClick={(e) => {
             e.preventDefault();
-            setEditing((prevIsEditing) => !prevIsEditing);
-            setCurrentItemID(id);
+            setCurrentItemID(item._id);
+            setEditing(true);
+            setCurrentCategory(category);
           }}
         >
           Edit

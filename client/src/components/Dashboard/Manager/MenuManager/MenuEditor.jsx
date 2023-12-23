@@ -1,24 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function MenuEditor({
+  getCurrentItem,
   editedItem,
   setEditedItem,
   handleUpdate,
   setEditing,
+  currentCategory,
+  currentItemID,
 }) {
+  let currentItem = getCurrentItem(currentCategory);
+
+  // Update editedItem whenever currentItem changes
+  useEffect(() => {
+    setEditedItem(currentItem);
+  }, [currentItem, setEditedItem]);
+
   const handleChange = (e) => {
     setEditedItem({ ...editedItem, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleUpdate();
+    handleUpdate(currentItemID, editedItem);
     setEditing(false);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="item-editor" onSubmit={handleSubmit}>
+      <label className="item-editor-itemName">
         Name:
         <input
           type="text"
@@ -27,7 +37,7 @@ export default function MenuEditor({
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label className="item-editor-itemDescript">
         Description:
         <input
           type="text"
@@ -36,7 +46,7 @@ export default function MenuEditor({
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label className="item-editor-itemPrice">
         Price:
         <input
           type="number"
@@ -45,8 +55,14 @@ export default function MenuEditor({
           onChange={handleChange}
         />
       </label>
-      <button type="submit">Update</button>
-      <button type="button" onClick={() => setEditing(false)}>
+      <button className="item-editor-updateBtn" type="submit">
+        Update
+      </button>
+      <button
+        className="item-editor-cancelBtn"
+        type="button"
+        onClick={() => setEditing(false)}
+      >
         Cancel
       </button>
     </form>

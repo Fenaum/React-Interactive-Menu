@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import menuAPI from "../../utils/menuService";
-import { useFetch } from "../../hooks/useFetch";
+import useFetchMenuData from "../../hooks/useFetchMenuData";
 
 export default function Promotion() {
-  const appetizerData = useFetch(menuAPI.fetchAppetizer);
-  const entreeData = useFetch(menuAPI.fetchEntree);
+  const { appetizers, entrees, desserts, drinks } = useFetchMenuData();
 
-  const promotionItem = entreeData.find((item) => item.promotion === true)
+  const promotionItem = entrees.find((item) => item.promotion === true);
 
   return (
     <div className="promotion">
