@@ -8,18 +8,6 @@ const {
   fetchAllCocktail,
   fetchAllCoffee,
   fetchAllNonAlcoholic,
-  addAppetizer,
-  addEntree,
-  addDessert,
-  addDrink,
-  updateAppetizer,
-  updateEntree,
-  updateDessert,
-  updateDrink,
-  deleteAppetizer,
-  deleteEntree,
-  deleteDessert,
-  deleteDrink,
 } = menuAPI;
 
 export default function useFetchMenuData(dataVersion) {
@@ -56,17 +44,5 @@ export default function useFetchMenuData(dataVersion) {
     entrees,
     desserts,
     drinks,
-    addAppetizer,
-    addEntree,
-    addDessert,
-    addDrink,
-    updateAppetizer,
-    updateEntree,
-    updateDessert,
-    updateDrink,
-    deleteAppetizer,
-    deleteEntree,
-    deleteDessert,
-    deleteDrink
   };
 }

@@ -3,35 +3,38 @@ import "./MenuManager.css";
 import MenuItem from "./MenuItem";
 import MenuEditor from "./MenuEditor";
 import useFetchMenuData from "../../../../hooks/useFetchMenuData";
+import UpdateMenuData from "../../../../hooks/useUpdateMenuData";
 
 export default function MenuManager() {
   const [dataVersion, setDataVersion] = useState(0);
   const { appetizers, entrees, desserts, drinks } = useFetchMenuData(dataVersion);
   const [isEditing, setEditing] = useState(false);
+  const [editedItem, setEditedItem] = useState(null);
   const [currentItemID, setCurrentItemID] = useState({});
+  const [currentCategory, setCurrentCategory] = useState(null);
 
- const handleEdit = (id, item) => {
-   setCurrentItemID(id);
-   setEditedItem(item);
- };
+  appetizers.type = "appetizers";
+  entrees.type = "entrees";
+  desserts.type = "desserts";
+  drinks.type = "drinks";
 
+const updateMenu = updateMenuData(currentItemID, editedItem, currentCategory.type, dataVersion);
 
-  // function getCurrentItem(category) {
-  //   const currentItem = category.find((item) => {
-  //     return item.id === currentItemID;
-  //   })
-  //   return currentItem;
-  // }
+  function getCurrentItem(category) {
+    const currentItem = category.find((item) => {
+      return item._id === currentItemID;
+    })
+    return currentItem;
+  }
 
   const handleAddItem = () => {
     
     setDataVersion(dataVersion + 1);
   };
   
-  const handleUpdate = () => {
-
-    setDataVersion(dataVersion + 1);
-  };
+  function handleUpdateitem() {
+    useUpdateMenuData(currentItemId, data, category, dataVersion)
+  }
 
   const handleDelete = () => {
 
@@ -86,26 +89,24 @@ export default function MenuManager() {
       <h3>Appetizers</h3>
       {isEditing && (
         <MenuEditor
-          editedItem={editedItem}
-          setEditedItem={setEditedItem}
           handleUpdate={handleUpdate}
           setEditing={setEditing}
+          currentItemId={currentItemID}
+          getCurrentItem={getCurrentItem}
+          currentCategory={currentCategory}
+          setEditedItem={setEditedItem}
+          editedItem={editedItem}
         />
       )}
       <div className="menu-manager-card-container">
         {appetizers.map((item) => (
           <MenuItem
-            key={item.id}
+            key={item._id}
             item={item}
-            category="appetizer"
-            handleEdit={() => handleEdit(item.id, item)}
-            isEditing={currentItemID === item.id}
+            category= {appetizers}
+            setCurrentCategory={setCurrentCategory}
             setEditing={setEditing}
-            currentItemID={currentItemID}
-            editedItem={editedItem}
-            setEditedItem={setEditedItem}
             setCurrentItemID={setCurrentItemID}
-            handleUpdate={handleUpdate}
             handleDelete={handleDelete}
           />
         ))}
@@ -114,9 +115,9 @@ export default function MenuManager() {
       <div className="menu-manager-card-container">
         {entrees.map((item) => (
           <MenuItem
-            key={item.id}
+            key={item._id}
             item={item}
-            category="entree"
+            category={entrees}
             handleUpdate={handleUpdate}
             handleDelete={handleDelete}
           />
@@ -126,7 +127,7 @@ export default function MenuManager() {
       <div className="menu-manager-card-container">
         {desserts.map((item) => (
           <MenuItem
-            key={item.id}
+            key={item._id}
             item={item}
             category="desserts"
             handleUpdate={handleUpdate}
@@ -139,7 +140,7 @@ export default function MenuManager() {
         {Object.entries(drinks).map(([category, items]) =>
           items.map((item) => (
             <MenuItem
-              key={item.id}
+              key={item._id}
               id={item}
               item={item}
               category="drinks"
