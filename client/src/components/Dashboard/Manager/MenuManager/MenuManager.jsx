@@ -13,10 +13,10 @@ export default function MenuManager() {
   const [editedItem, setEditedItem] = useState(null);
   const [currentItemId, setCurrentItemId] = useState({});
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [updateMenu, setUpdateMennu] = useState(() => () => {})
 
   function getCurrentItem(category) {
     console.log("currentItemId:", currentItemId);
-
     const currentItem = category.find((item) => {
       return item._id === currentItemId;
     });
@@ -24,13 +24,19 @@ export default function MenuManager() {
     console.log("currentItem:", currentItem);
     return currentItem;
   }
-  
-  const updateMenu = updateMenuData(
-    currentItemId,
-    editedItem,
-    currentCategory?.type,
-    dataVersion
-  );
+  useEffect(() => {
+    if (currentCategory) {
+      setUpdateMennu(() => {
+        updateMenuData(
+          currentItemId,
+          editedItem,
+          currentCategory?.type,
+          dataVersion
+        )
+      })
+    }
+    
+  }, [currentCategory, currentItemId, editedItem, dataVersion])
 
 
   const handleAddItem = () => {

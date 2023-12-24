@@ -35,9 +35,5 @@ export default function UpdateMenuData(id, data, category, dataVersion) {
     }
   }
 
-  useEffect(() => {
-    updateMenu();
-  }, [dataVersion]); // don't forget to include this dependency array
-
   return updateMenu;
 }
