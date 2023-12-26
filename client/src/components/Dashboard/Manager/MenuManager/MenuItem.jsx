@@ -5,6 +5,7 @@ export default function MenuItem({
   setEditing,
   category,
   setCurrentCategory,
+  currentCategory
 }) {
   return (
     <div className="menu-manager-item-card">
@@ -22,7 +23,6 @@ export default function MenuItem({
             setCurrentItemId(item._id);
             setEditing(true);
             setCurrentCategory(category);
-            console.log(category);
           }}
         >
           Edit

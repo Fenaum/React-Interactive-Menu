@@ -13,6 +13,7 @@ export default function MenuManager() {
   const [editedItem, setEditedItem] = useState(null);
   const [currentItemId, setCurrentItemId] = useState({});
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [updateMenu, setUpdateMenu] = useState(() => () => {});
 
   function getCurrentItem(category) {
     console.log("currentItemId:", currentItemId);
@@ -25,12 +26,18 @@ export default function MenuManager() {
     return currentItem;
   }
   
-  const updateMenu = updateMenuData(
-    currentItemId,
-    editedItem,
-    currentCategory?.type,
-    dataVersion
-  );
+  useEffect(() => {
+    if (currentCategory) {
+      setUpdateMenu(() =>
+        updateMenuData(
+          currentItemId,
+          editedItem,
+          currentCategory?.type,
+          dataVersion
+        )
+      );
+    }
+  }, [currentCategory, currentItemId, editedItem, dataVersion]);
 
 
   const handleAddItem = () => {
@@ -109,6 +116,7 @@ export default function MenuManager() {
             item={item}
             category={appetizers}
             setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}
             setEditing={setEditing}
             setCurrentItemId={setCurrentItemId}
             handleDelete={handleDelete}
@@ -123,6 +131,7 @@ export default function MenuManager() {
             item={item}
             category={entrees}
             setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}
             handleUpdate={handleUpdate}
             handleDelete={handleDelete}
             setEditing={setEditing}

@@ -4,7 +4,7 @@ const { updateAppetizer, updateEntree, updateDessert, updateDrink } = menuAPI;
 
 export default function UpdateMenuData(id, data, category, dataVersion) {
   function updateMenu() {
-    switch (category?.type) {
+    switch (category) {
       case "appetizers":
         // update appetizer
         updateAppetizer(id, data)
@@ -34,10 +34,6 @@ export default function UpdateMenuData(id, data, category, dataVersion) {
         console.error(`Unknown category: ${category.type}`);
     }
   }
-
-  useEffect(() => {
-    updateMenu();
-  }, [dataVersion]); // don't forget to include this dependency array
 
   return updateMenu;
 }
