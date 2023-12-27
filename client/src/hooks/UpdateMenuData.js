@@ -4,7 +4,7 @@ const { updateAppetizer, updateEntree, updateDessert, updateDrink } = menuAPI;
 
 export default function UpdateMenuData(id, data, category, dataVersion) {
   function updateMenu() {
-    switch (category?.type) {
+    switch (category) {
       case "appetizers":
         // update appetizer
         updateAppetizer(id, data)
