@@ -40,8 +40,9 @@ export default function MenuManager() {
     setDataVersion(dataVersion + 1);
   };
 
-  function handleUpdate() {
-    updateMenu();
+  async function handleUpdate() {
+    await updateMenu();
+    setDataVersion(dataVersion + 1);
   }
 
   const handleDelete = () => {
