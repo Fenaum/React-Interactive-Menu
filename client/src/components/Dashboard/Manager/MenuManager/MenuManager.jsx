@@ -128,10 +128,9 @@ export default function MenuManager() {
             category={entrees}
             setCurrentCategory={setCurrentCategory}
             currentCategory={currentCategory}
-            handleUpdate={handleUpdate}
-            handleDelete={handleDelete}
             setEditing={setEditing}
             setCurrentItemId={setCurrentItemId}
+            handleDelete={handleDelete}
           />
         ))}
       </div>
@@ -141,8 +140,11 @@ export default function MenuManager() {
           <MenuItem
             key={item._id}
             item={item}
-            category="desserts"
-            handleUpdate={handleUpdate}
+            category={desserts}
+            setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}
+            setEditing={setEditing}
+            setCurrentItemId={setCurrentItemId}
             handleDelete={handleDelete}
           />
         ))}
