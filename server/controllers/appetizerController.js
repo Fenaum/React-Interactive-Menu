@@ -1,4 +1,6 @@
 const { Appetizer } = require("../models");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
 
 const appetizerController = {
   async getAllAppetizer(req, res) {
@@ -33,6 +35,7 @@ const appetizerController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+  
   async updateAppetizer(req, res) {
     try {
       const { id } = req.params;

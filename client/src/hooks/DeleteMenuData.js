@@ -1,27 +1,27 @@
 import menuAPI from "../utils/menuService";
-const { updateAppetizer, updateEntree, updateDessert, updateDrink } = menuAPI;
+const { deleteAppetizer, deleteDessert, deleteEntree, deleteDrink } = menuAPI;
 
-export default function UpdateMenuData(id, data, category) {
-  async function updateMenu() {
+export default function deleteMenuData(id, category) {
+  async function deleteItem() {
     switch (category) {
       case "appetizers":
-        // update appetizer
-        return updateAppetizer(id, data)
+        // delete appetizer
+        return deleteAppetizer(id)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "entrees":
-        // update entree
-        return updateEntree(id, data)
+        // delete entree
+        return deleteEntree(id)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "desserts":
-        // update dessert
-        return updateDessert(id, data)
+        // delete dessert
+        return deleteDessert(id)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "drinks":
-        // update drink
-        // add similar code here when you implement updateDrink
+        // delete drink
+        // add similar code here when you implement deleteDrink
         break;
       case undefined:
         console.log("no category selected");
@@ -31,5 +31,5 @@ export default function UpdateMenuData(id, data, category) {
     }
   }
 
-  return updateMenu;
+  return deleteItem;
 }
