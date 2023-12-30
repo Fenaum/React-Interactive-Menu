@@ -1,11 +1,11 @@
 export default function MenuItem({
   item,
   handleDelete,
+  isDeleting,
   setCurrentItemId,
   setEditing,
   category,
   setCurrentCategory,
-  currentCategory
 }) {
   return (
     <div className="menu-manager-item-card">
@@ -27,7 +27,16 @@ export default function MenuItem({
         >
           Edit
         </button>
-        <button className="menu-manager-delete-btn" onClick={handleDelete}>
+        <button 
+        className="menu-manager-delete-btn" 
+        onClick={(e) => {
+          e.preventDefault();
+          setCurrentItemId(item._id);
+          setCurrentCategory(category);
+          handleDelete();
+        }}
+        disabled={isDeleting}
+        >
           Delete
         </button>
       </div>
