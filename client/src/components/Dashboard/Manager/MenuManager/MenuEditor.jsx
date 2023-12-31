@@ -8,6 +8,7 @@ export default function MenuEditor({
   setEditing,
   currentCategory,
   setCurrentCategory,
+  setSelectedFile
 }) {
   let currentItem = getCurrentItem(currentCategory);
 
@@ -15,6 +16,10 @@ export default function MenuEditor({
   useEffect(() => {
     setEditedItem(currentItem);
   }, [currentItem, setEditedItem]);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
 
   const handleChange = (e) => {
     setEditedItem({ ...editedItem, [e.target.name]: e.target.value });
@@ -27,7 +32,11 @@ export default function MenuEditor({
   };
 
   return (
-    <form className="item-editor" onSubmit={handleSubmit}>
+    <form
+      className="item-editor"
+      encType="multipart/form-data"
+      onSubmit={handleSubmit}
+    >
       <label className="item-editor-itemName">
         Name:
         <input
@@ -42,7 +51,7 @@ export default function MenuEditor({
         <input
           type="text"
           name="description"
-          value={editedItem ? editedItem.description: ""}
+          value={editedItem ? editedItem.description : ""}
           onChange={handleChange}
         />
       </label>
@@ -51,10 +60,11 @@ export default function MenuEditor({
         <input
           type="number"
           name="price"
-          value={editedItem ? editedItem.price: ""}
+          value={editedItem ? editedItem.price : ""}
           onChange={handleChange}
         />
       </label>
+      <input type="file" name="image" onChange={handleFileChange} />
       <button className="item-editor-updateBtn" type="submit">
         Update
       </button>

@@ -62,11 +62,19 @@ const menuAPI = {
     }
   },
 
-  async addAppetizer(appetizerData) {
+  async addAppetizer(appetizerData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(appetizerData).forEach((key) => {
+        formData.append(key, appetizerData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
+
       const response = await axios.post(
         "http://localhost:5000/menu/appetizers",
-        appetizerData,
+        formData,
         { withCredentials: true }
       );
       return response.data;
@@ -76,11 +84,19 @@ const menuAPI = {
     }
   },
 
-  async updateAppetizer(id, appetizerData) {
+  async updateAppetizer(id, appetizerData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(appetizerData).forEach((key) => {
+        formData.append(key, appetizerData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
+
       const response = await axios.put(
         `http://localhost:5000/menu/appetizers/${id}`,
-        appetizerData,
+        formData,
         { withCredentials: true }
       );
       return response.data;

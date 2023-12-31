@@ -31,6 +31,7 @@ app.use(
   })
 );
 
+app.use("/uploads", express.static("public/uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -42,7 +43,7 @@ app.use(
     saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: "mongodb://127.0.0.1:27017/Menu-Master",
-      autoRemove: 'native'
+      autoRemove: "native",
     }), // Use MongoStore and pass the mongoose connection
     cookie: {
       maxAge: 1000 * 60 * 60, // 1000 milliseconds * 60 seconds * 60 minutes * 24 hours * 14 days
@@ -54,7 +55,6 @@ app.use(
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 //Routes
 app.use(routes);
