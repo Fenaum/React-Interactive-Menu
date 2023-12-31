@@ -6,6 +6,7 @@ import NewItem from "./NewItem";
 import useFetchMenuData from "../../../../hooks/useFetchMenuData";
 import updateMenuData from "../../../../hooks/UpdateMenuData";
 import deleteMenuData from "../../../../hooks/DeleteMenuData";
+import addMenuData from "../../../../hooks/AddMenuData";
 
 export default function MenuManager() {
   const [dataVersion, setDataVersion] = useState(0);
@@ -14,11 +15,15 @@ export default function MenuManager() {
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setEditing] = useState(false);
   const [editedItem, setEditedItem] = useState(null);
+  const [newItem, setNewItem] = useState(null);
   const [currentItemId, setCurrentItemId] = useState({});
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [addItem, setAddItem] = useState(() => () => {});
   const [updateMenu, setUpdateMenu] = useState(() => () => {});
   const [deleteItem, setDeleteItem] = useState(() => () => {});
   const [isDeleting, setIsDeleting] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+
 
   function getCurrentItem(category) {
     const currentItem = category.find((item) => {
@@ -31,13 +36,19 @@ export default function MenuManager() {
   useEffect(() => {
     if (currentCategory) {
       setUpdateMenu(() =>
-        updateMenuData(currentItemId, editedItem, currentCategory?.type)
+        updateMenuData(currentItemId, editedItem, selectedFile, currentCategory?.type)
       );
       setDeleteItem(() => deleteMenuData(currentItemId, currentCategory?.type));
     }
-  }, [currentCategory, currentItemId, editedItem, dataVersion]);
 
-  const handleAddItem = () => {
+    setAddItem(() =>
+      addMenuData(newItem, selectedFile)
+    )
+
+  }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion]);
+
+  async function handleAddItem () {
+    await addItem();
     setDataVersion(dataVersion + 1);
   };
 
@@ -64,7 +75,7 @@ export default function MenuManager() {
         {isAdding && (
           <>
             <div className="overlay"></div>
-            <NewItem setIsAdding={setIsAdding} />
+            <NewItem setIsAdding={setIsAdding} selectedFile={selectedFile}/>
           </>
         )}
       </div>
@@ -78,6 +89,7 @@ export default function MenuManager() {
           setCurrentCategory={setCurrentCategory}
           setEditedItem={setEditedItem}
           editedItem={editedItem}
+          setSelectedFile={setSelectedFile}
         />
       )}
       <div className="menu-manager-card-container">

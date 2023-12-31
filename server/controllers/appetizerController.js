@@ -1,6 +1,4 @@
 const { Appetizer } = require("../models");
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
 
 const appetizerController = {
   async getAllAppetizer(req, res) {
@@ -28,21 +26,35 @@ const appetizerController = {
   },
   async addOneAppetizer(req, res) {
     try {
-      const appetizerItem = await Appetizer.create(req.body);
+      const appetizerItem = new Appetizer({
+        ...req.body,
+        imgURL: "/uploads/" + req.file.filename, // Update this URL to point to where your server serves static files
+      });
+      await appetizerItem.save();
       res.status(200).json(appetizerItem);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
-  
+
   async updateAppetizer(req, res) {
     try {
       const { id } = req.params;
-      const appetizerItem = await Appetizer.findByIdAndUpdate(id, req.body);
+      let updateData = req.body;
+      if (req.file) {
+        if (!req.file.filename) {
+          return res.status(400).json({ message: "Image upload failed" });
+        }
+        updateData.imgURL = "/uploads/" + req.file.filename;
+      }
+      const appetizerItem = await Appetizer.findByIdAndUpdate(id, updateData, {
+        new: true,
+      });
       if (!appetizerItem) {
         res.status(404).json({ message: `item does not exist` });
       } else {
+        console.log("name of file", req.file)
         return res
           .status(202)
           .json({ message: "item has been updated", appetizerItem });
@@ -52,6 +64,7 @@ const appetizerController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+
   async deleteAppetizer(req, res) {
     try {
       const { id } = req.params;

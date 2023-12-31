@@ -1,22 +1,22 @@
 import menuAPI from "../utils/menuService";
-const { updateAppetizer, updateEntree, updateDessert, updateDrink } = menuAPI;
+const { addAppetizer, addEntree, addDessert, addDrink } = menuAPI;
 
-export default function UpdateMenuData(id, data, image, category) {
-  async function updateMenu() {
+export default function addMenuData(data, image, category) {
+  async function addItem() {
     switch (category) {
       case "appetizers":
         // update appetizer
-        return updateAppetizer(id, data, image)
+        return addAppetizer(data, image)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "entrees":
         // update entree
-        return updateEntree(id, data, image)
+        return addEntree(data, image)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "desserts":
         // update dessert
-        return updateDessert(id, data, image)
+        return addDessert(data, image)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));
       case "drinks":
@@ -31,5 +31,5 @@ export default function UpdateMenuData(id, data, image, category) {
     }
   }
 
-  return updateMenu;
+  return addItem;
 }
