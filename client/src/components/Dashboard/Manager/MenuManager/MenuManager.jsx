@@ -15,7 +15,11 @@ export default function MenuManager() {
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setEditing] = useState(false);
   const [editedItem, setEditedItem] = useState(null);
-  const [newItem, setNewItem] = useState(null);
+  const [newItem, setNewItem] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
   const [currentItemId, setCurrentItemId] = useState({});
   const [currentCategory, setCurrentCategory] = useState(null);
   const [addItem, setAddItem] = useState(() => () => {});
@@ -23,7 +27,6 @@ export default function MenuManager() {
   const [deleteItem, setDeleteItem] = useState(() => () => {});
   const [isDeleting, setIsDeleting] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
-
 
   function getCurrentItem(category) {
     const currentItem = category.find((item) => {
@@ -36,25 +39,28 @@ export default function MenuManager() {
   useEffect(() => {
     if (currentCategory) {
       setUpdateMenu(() =>
-        updateMenuData(currentItemId, editedItem, selectedFile, currentCategory?.type)
+        updateMenuData(
+          currentItemId,
+          editedItem,
+          selectedFile,
+          currentCategory?.type
+        )
       );
       setDeleteItem(() => deleteMenuData(currentItemId, currentCategory?.type));
     }
 
-    setAddItem(() =>
-      addMenuData(newItem, selectedFile)
-    )
-
+    setAddItem(() => addMenuData(newItem, selectedFile));
   }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion]);
 
-  async function handleAddItem () {
+  async function handleAddItem() {
     await addItem();
     setDataVersion(dataVersion + 1);
-  };
+  }
 
   async function handleUpdate() {
     await updateMenu();
     setDataVersion(dataVersion + 1);
+    setSelectedFile(null); // Reset selectedFile
   }
 
   async function handleDelete() {
@@ -69,13 +75,16 @@ export default function MenuManager() {
     <div className="Menu-manager-container">
       <h2>Menu Manager</h2>
       <div className="card-container">
-        <button
-          onClick={() => setIsAdding(true)}
-        >+ New Item</button>
+        <button onClick={() => setIsAdding(true)}>+ New Item</button>
         {isAdding && (
           <>
             <div className="overlay"></div>
-            <NewItem setIsAdding={setIsAdding} selectedFile={selectedFile}/>
+            <NewItem
+              setIsAdding={setIsAdding}
+              selectedFile={selectedFile}
+              setNewItem={setNewItem}
+              newItem={newItem}
+            />
           </>
         )}
       </div>
