@@ -1,37 +1,48 @@
-import { useState } from "react";
-
 export default function NewItem({
-    setIsAdding
+    selectedFile,
+    setNewItem,
+    handleAddItem
 }) {
 
-    const [category, setCategory] = useState("");
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
-    const [price, setPrice] = useState("");
+    function handleFileChange(event) {
+      setSelectedFile(event.target.files[0]);
+    };
 
-    const handleInputChange = (event) => {
-      switch (event.target.name) {
-        case "category":
-          setCategory(event.target.value);
+    function handleChange(event) {
+      setNewItem();
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const category = e.target.category.value;
+
+      switch (category) {
+        case "appetizer":
+          // Handle appetizer category
           break;
-        case "name":
-          setName(event.target.value);
+        case "entree":
+          // Handle entree category
           break;
-        case "description":
-          setDescription(event.target.value);
+        case "dessert":
+          // Handle dessert category
           break;
-        case "price":
-          setPrice(event.target.value);
+        case "wine":
+          // Handle wine category
+          break;
+        case "cocktail":
+          // Handle cocktail category
+          break;
+        case "coffee":
+          // Handle coffee category
+          break;
+        case "nonAlcoholic":
+          // Handle non-alcoholic category
           break;
         default:
-          break;
+          console.error(`Unknown category: ${category}`);
       }
-    };
-
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      handleAddItem(category, { name, description, price });
-    };
+    }
+ 
 
     return (
       <form
@@ -69,7 +80,7 @@ export default function NewItem({
           Price:
           <input type="number" name="price" />
         </label>
-        <input type="file" name="image" />
+        <input type="file" name="image" onChange={handleFileChange}/>
         <button className="menu-manager-add-btn" type="submit">
           Add
         </button>
