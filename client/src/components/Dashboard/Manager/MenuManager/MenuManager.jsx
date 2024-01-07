@@ -19,6 +19,8 @@ export default function MenuManager() {
     name: "",
     description: "",
     price: "",
+    spicy: "",
+    category: "",
   });
   const [currentItemId, setCurrentItemId] = useState({});
   const [currentCategory, setCurrentCategory] = useState(null);
@@ -49,7 +51,7 @@ export default function MenuManager() {
       setDeleteItem(() => deleteMenuData(currentItemId, currentCategory?.type));
     }
 
-    setAddItem(() => addMenuData(newItem, selectedFile));
+    setAddItem(() => addMenuData(newItem, selectedFile, newItem.category));
   }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion]);
 
   async function handleAddItem() {
@@ -81,9 +83,10 @@ export default function MenuManager() {
             <div className="overlay"></div>
             <NewItem
               setIsAdding={setIsAdding}
-              selectedFile={selectedFile}
+              setSelectedFile={setSelectedFile}
               setNewItem={setNewItem}
               newItem={newItem}
+              handleAddItem={handleAddItem}
             />
           </>
         )}
