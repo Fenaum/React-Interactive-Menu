@@ -7,9 +7,11 @@ export default function MenuItem({
   category,
   setCurrentCategory,
 }) {
-  const imageUrl = item.imgURL.startsWith("http")
-    ? item.imgURL
-    : `http://localhost:5000${item.imgURL}`;
+  
+  const imageUrl =
+    item.imgURL && item.imgURL.startsWith("http")
+      ? item.imgURL
+      : `http://localhost:5000${item.imgURL || ""}`;
 
   return (
     <div className="menu-manager-item-card">
