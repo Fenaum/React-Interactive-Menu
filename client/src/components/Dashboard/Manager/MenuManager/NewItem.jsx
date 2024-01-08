@@ -2,7 +2,8 @@ export default function NewItem({
     setSelectedFile,
     setNewItem,
     newItem,
-    handleAddItem
+    handleAddItem,
+    setIsAdding
 }) {
 
     function handleFileChange(event) {
@@ -10,17 +11,16 @@ export default function NewItem({
     };
 
     function handleChange(event) {
-      if (event.target.name === "spicy") {
-        setNewItem({ ...newItem, spicy: event.target.value === "yes" });
-      } else {
-        setNewItem({ ...newItem, [event.target.name]: event.target.value });
-      }
+      setNewItem({ ...newItem, [event.target.name]: event.target.value });
+      console.log(newItem)
+      console.log(typeof newItem.spicy);
     }
     
     function handleSubmit(e) {
       e.preventDefault();
       handleAddItem();
       console.log(newItem.category)
+      setIsAdding(false)
     }
  
 
@@ -53,15 +53,14 @@ export default function NewItem({
         </label>
         <label>
           Spicy:
-          <input
-            type="radio"
-            name="spicy"
-            value="yes"
-            onChange={handleChange}
-          />
-          Yes
-          <input type="radio" name="spicy" value="no" onChange={handleChange} />
-          No
+            <select name="spicy" onChange={handleChange}>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
         </label>
         <input type="file" name="image" onChange={handleFileChange} />
         <button className="menu-manager-add-btn" type="submit">

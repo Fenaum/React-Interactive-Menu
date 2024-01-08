@@ -10,6 +10,7 @@ const appetizerController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+
   async getOneAppetizer(req, res) {
     try {
       const { id } = req.params;
@@ -24,6 +25,7 @@ const appetizerController = {
       res.status(500).send({ error: err.message });
     }
   },
+
   async addOneAppetizer(req, res) {
     try {
       const appetizerItem = new Appetizer({
