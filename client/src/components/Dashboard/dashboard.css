@@ -3,6 +3,39 @@
   grid-template-columns: 1fr 9fr;
 }
 
+.dashboard {
+   box-shadow: 4px 4px 10px  rgba(0, 0, 0, 0.25);
+   border-radius: 25px;
+   padding: 1rem;
+   max-height: 80vh;
+   max-width: auto;
+   overflow-y: auto;
+   margin-top: 1rem;
+   margin-right: 1rem;
+
+}
+
+/* For Chrome, Safari, and Opera */
+.dashboard::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+.dashboard::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners on the scrollbar thumb */
+}
+
+/* For Firefox */
+.dashboard {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Scrollbar thumb and track */
+}
+
+/* For Internet Explorer and Edge */
+.dashboard {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hiding scrollbar */
+}
+
 .dash-menu-list {
     list-style: none;
 }
@@ -18,13 +51,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 80vh;
     width: 15rem; /* Set the width of the sidebar */
     background-color: var(--color-wood-brown); /* Use the wood brown color from your style.css */
     padding: 30px 0px;
     overflow-x: hidden; /* Disable horizontal scroll */
     color: var(--color-cream); /* Light text color for better visibility */
-    margin-top: -1rem;
+    border-radius: 2rem;
+    margin: 1rem;
 }
 
 .dash-menu-list {

@@ -29,7 +29,6 @@ export default function ManagerDashboard({
   }
   return (
     <>
-      <hr />
       <div className="grid-container">
         <DashMenu handleClick={handleClick} user={user} />
         <div className="dashboard">
