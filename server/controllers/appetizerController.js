@@ -28,9 +28,13 @@ const appetizerController = {
 
   async addOneAppetizer(req, res) {
     try {
+      let imgURL = "";
+      if (req.file) {
+        imgURL = "/uploads/" + req.file.filename;
+      }
       const appetizerItem = new Appetizer({
         ...req.body,
-        imgURL: "/uploads/" + req.file.filename, // Update this URL to point to where your server serves static files
+        imgURL: imgURL,
       });
       await appetizerItem.save();
       res.status(200).json(appetizerItem);
@@ -56,7 +60,7 @@ const appetizerController = {
       if (!appetizerItem) {
         res.status(404).json({ message: `item does not exist` });
       } else {
-        console.log("name of file", req.file)
+        console.log("name of file", req.file);
         return res
           .status(202)
           .json({ message: "item has been updated", appetizerItem });

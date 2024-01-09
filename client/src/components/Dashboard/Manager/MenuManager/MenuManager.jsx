@@ -52,7 +52,7 @@ export default function MenuManager() {
     }
 
     setAddItem(() => addMenuData(newItem, selectedFile, newItem.category));
-  }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion]);
+  }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion, newItem, deleteItem]);
 
   async function handleAddItem() {
     await addItem();

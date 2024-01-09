@@ -28,9 +28,13 @@ const entreeController = {
 
   async addOneEntree(req, res) {
     try {
+      let imgURL = "";
+      if (req.file) {
+        imgURL = "/uploads/" + req.file.filename;
+      }
       const entreeItem = new Entree({
         ...req.body,
-        imgURL: "/uploads/" + req.file.filename, // Update this URL to point to where your server serves static files
+        imgURL: imgURL,
       });
       await entreeItem.save();
       res.status(200).json(entreeItem);
@@ -39,7 +43,7 @@ const entreeController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
-
+  
   async updateEntree(req, res) {
     try {
       const { id } = req.params;
