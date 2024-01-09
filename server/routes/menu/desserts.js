@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const upload = require('../../utils/multerSetup')
 const {
   getAllDessert,
   getOneDessert,
@@ -8,7 +9,7 @@ const {
   deleteDessert,
 } = require("../../controllers/dessertController");
 
-router.route("/").get(getAllDessert).post(addOneDessert);
-router.route("/:id").get(getOneDessert).put(updateDessert).delete(deleteDessert);
+router.route("/").get(getAllDessert).post(upload.single('image'),addOneDessert);
+router.route("/:id").get(getOneDessert).put(upload.single('imgage'),updateDessert).delete(deleteDessert);
 
 module.exports = router;

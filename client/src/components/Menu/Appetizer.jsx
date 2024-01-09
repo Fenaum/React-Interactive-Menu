@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import menuAPI from "../../utils/menuService";
-const fetchAppetizer = menuAPI.fetchAppetizer;
+import useFetchMenuData from '../../hooks/useFetchMenuData'
 
 export default function Appetizer() {
+  const { appetizers } = useFetchMenuData();
+
   const containerRef = useRef(null);
-  const [appetizerData, setAppetizerData] = useState([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -21,14 +21,7 @@ export default function Appetizer() {
     }
   }, []);
 
-  //fetching data and store in in state
-  useEffect(() => {
-    fetchAppetizer()
-      .then((data) => setAppetizerData(data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  const appetizerItemsList = appetizerData.map((appetizerItem) => (
+  const appetizerItemsList = appetizers.map((appetizerItem) => (
     <div className="item-card" key={appetizerItem._id}>
       <img className="item-img" src={appetizerItem.imgURL} alt="item-img" />
       <h2>{appetizerItem.name}</h2>

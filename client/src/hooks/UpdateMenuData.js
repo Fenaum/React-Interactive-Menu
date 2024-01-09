@@ -11,6 +11,7 @@ export default function UpdateMenuData(id, data, image, category) {
           .catch((error) => console.error(error));
       case "entrees":
         // update entree
+        console.log(id, data);
         return updateEntree(id, data, image)
           .then((response) => console.log(response))
           .catch((error) => console.error(error));

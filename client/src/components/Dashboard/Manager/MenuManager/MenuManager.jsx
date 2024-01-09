@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect, } from "react";
 import "./MenuManager.css";
 import MenuItem from "./MenuItem";
 import MenuEditor from "./MenuEditor";
@@ -14,7 +14,11 @@ export default function MenuManager() {
     useFetchMenuData(dataVersion);
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setEditing] = useState(false);
-  const [editedItem, setEditedItem] = useState(null);
+  const [editedItem, setEditedItem] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
   const [newItem, setNewItem] = useState({
     name: "",
     description: "",
@@ -38,22 +42,29 @@ export default function MenuManager() {
     return currentItem;
   }
 
+  const updateMenuCallback = useCallback(() => {
+    return updateMenuData(
+      currentItemId,
+      editedItem,
+      selectedFile,
+      currentCategory?.type
+    );
+  }, [currentItemId, editedItem, selectedFile, currentCategory]);
+
+  const deleteItemCallback = useCallback(() => {
+    return deleteMenuData(currentItemId, currentCategory?.type);
+  }, [currentItemId, currentCategory]);
+
+  const addItemCallback = useCallback(() => {
+    return addMenuData(newItem, selectedFile, newItem.category);
+  }, [newItem, selectedFile]);
+
   useEffect(() => {
-    if (currentCategory) {
-      setUpdateMenu(() =>
-        updateMenuData(
-          currentItemId,
-          editedItem,
-          selectedFile,
-          currentCategory?.type
-        )
-      );
-      setDeleteItem(() => deleteMenuData(currentItemId, currentCategory?.type));
-    }
-
-    setAddItem(() => addMenuData(newItem, selectedFile, newItem.category));
-  }, [currentCategory, currentItemId, editedItem, selectedFile, dataVersion, newItem, deleteItem]);
-
+    setUpdateMenu(updateMenuCallback);
+    setDeleteItem(deleteItemCallback);
+    setAddItem(addItemCallback);
+  }, [updateMenuCallback, deleteItemCallback, addItemCallback]);
+  
   async function handleAddItem() {
     await addItem();
     setDataVersion(dataVersion + 1);
