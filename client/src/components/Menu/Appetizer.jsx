@@ -3,7 +3,7 @@ import useFetchMenuData from '../../hooks/useFetchMenuData'
 
 export default function Appetizer() {
   const { appetizers } = useFetchMenuData();
-
+  
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -21,16 +21,23 @@ export default function Appetizer() {
     }
   }, []);
 
-  const appetizerItemsList = appetizers.map((appetizerItem) => (
-    <div className="item-card" key={appetizerItem._id}>
-      <img className="item-img" src={appetizerItem.imgURL} alt="item-img" />
-      <h2>{appetizerItem.name}</h2>
-      <p className="price">Price: ${appetizerItem.price}</p>
+  const appetizerItemsList = appetizers.map((appetizerItem) => {
+    const imageUrl =
+      appetizerItem.imgURL && appetizerItem.imgURL.startsWith("http")
+        ? appetizerItem.imgURL
+        : `http://localhost:5000${appetizerItem.imgURL || ""}`;
+    
+    return (
+      <div className="item-card" key={appetizerItem._id}>
+        <img className="item-img" src={imageUrl} alt="item-img" />
+        <h2>{appetizerItem.name}</h2>
+        <p className="price">Price: ${appetizerItem.price}</p>
 
-      <p>{appetizerItem.description}</p>
-      {/* Add additional data rendering here */}
-    </div>
-  ));
+        <p>{appetizerItem.description}</p>
+        {/* Add additional data rendering here */}
+      </div>
+    );
+  });
 
   return (
     <div className="card-container" id="card-container" ref={containerRef}>

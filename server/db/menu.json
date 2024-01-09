@@ -56,6 +56,7 @@
         ],
         "calories": 620,
         "promotion": true,
+        "promotionDetails": "Introducing: Osso Buco \n Indulge in this Italian classic, crafted with love and passion by our skilled chefs. Osso Buco is the ultimate comfort food, and it's available now for a limited time. Don't miss out on this exquisite culinary journey!",
         "tags": ["Italian", "Braised", "Veal"],
         "imgURL": "https://s3-eu-west-1.amazonaws.com/tscmediumimages/2014/12/18/18det8znu5_Ossobucco.jpg"
       },

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const entreeSchema = new mongoose.Schema(
   {
@@ -35,6 +35,7 @@ const entreeSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    promotionDetails: [String],
     tags: [String],
     imgURL: String,
     description: String,
@@ -44,6 +45,6 @@ const entreeSchema = new mongoose.Schema(
   }
 );
 
-const Entree = mongoose.model('Entree', entreeSchema);
+const Entree = mongoose.model("Entree", entreeSchema);
 
 module.exports = Entree;
