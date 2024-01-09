@@ -21,16 +21,23 @@ export default function Dessert() {
     }
   }, []);
 
-  const dessertItemsList = desserts.map((dessertItem) => (
-    <div className="item-card" key={dessertItem._id}>
-      <img className="item-img" src={dessertItem.imgURL} alt="item-img" />
-      <h2>{dessertItem.name}</h2>
-      <p className="price">Price: ${dessertItem.price}</p>
+  const dessertItemsList = desserts.map((dessertItem) => {
+    const imageUrl =
+      dessertItem.imgURL && dessertItem.imgURL.startsWith("http")
+        ? dessertItem.imgURL
+        : `http://localhost:5000${dessertItem.imgURL || ""}`;
 
-      <p>{dessertItem.description}</p>
-      {/* Add additional data rendering here */}
-    </div>
-  ));
+    return (
+      <div className="item-card" key={dessertItem._id}>
+        <img className="item-img" src={imageUrl} alt="item-img" />
+        <h2>{dessertItem.name}</h2>
+        <p className="price">Price: ${dessertItem.price}</p>
+
+        <p>{dessertItem.description}</p>
+        {/* Add additional data rendering here */}
+      </div>
+    );
+  });
 
   return (
     <div className="card-container" id="card-container" ref={containerRef}>

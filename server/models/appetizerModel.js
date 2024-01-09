@@ -35,6 +35,7 @@ const appetizerSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    promotionDetails: [String],
     tags: [String],
     imgURL: String,
     description: String,
