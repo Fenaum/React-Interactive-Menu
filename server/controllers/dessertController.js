@@ -10,6 +10,7 @@ const dessertController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+
   async getOneDessert(req, res) {
     try {
       const { id } = req.params;
@@ -24,22 +25,42 @@ const dessertController = {
       res.status(500).send({ error: err.message });
     }
   },
+
   async addOneDessert(req, res) {
     try {
-      const dessertItem = await Dessert.create(req.body);
+      let imgURL = "";
+      if (req.file) {
+        imgURL = '/uploads/' + req.file.filename;
+      }
+      const dessertItem = new Dessert({
+        ...req.body,
+        imgURL: imgURL,
+      });
+      await dessertItem.save();
       res.status(200).json(dessertItem);
     } catch (err) {
       console.log(err);
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+
   async updateDessert(req, res) {
     try {
       const { id } = req.params;
-      const dessertItem = await Dessert.findByIdAndUpdate(id, req.body);
+      let updateData = req.body;
+      if (req.file) {
+        if (!req.file.filename) {
+          return res.status(400).json({ message: "Image upload failed" });
+        }
+        updateData.imgURL = "/uploads/" + req.file.filename;
+      }
+      const dessertItem = await Dessert.findByIdAndUpdate(id, updateData, {
+        new: true,
+      });
       if (!dessertItem) {
         res.status(404).json({ message: `item does not exist` });
       } else {
+        console.log("name of file", req.file);
         return res
           .status(202)
           .json({ message: "item has been updated", dessertItem });
@@ -49,6 +70,7 @@ const dessertController = {
       res.status(500).send({ error: { code: 500, message: err.message } });
     }
   },
+
   async deleteDessert(req, res) {
     try {
       const { id } = req.params;

@@ -11,11 +11,18 @@ const menuAPI = {
     }
   },
 
-  async addEntree(entreeData) {
+  async addEntree(entreeData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(entreeData).forEach((key) => {
+        formData.append(key, entreeData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
       const response = await axios.post(
         "http://localhost:5000/menu/entrees",
-        entreeData,
+        formData,
         { withCredentials: true }
       );
       return response.data;
@@ -25,11 +32,18 @@ const menuAPI = {
     }
   },
 
-  async updateEntree(id, entreeData) {
+  async updateEntree(id, entreeData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(entreeData).forEach((key) => {
+        formData.append(key, entreeData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
       const response = await axios.put(
         `http://localhost:5000/menu/entrees/${id}`,
-        entreeData,
+        formData,
         { withCredentials: true }
       );
       return response.data;
@@ -129,11 +143,18 @@ const menuAPI = {
     }
   },
 
-  async addDessert(dessertData) {
+  async addDessert(dessertData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(dessertData).forEach((key) => {
+        formData.append(key, dessertData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
       const response = await axios.post(
         "http://localhost:5000/menu/desserts",
-        dessertData,
+        formData,
         { withCredentials: true }
       );
       return response.data;
@@ -143,11 +164,18 @@ const menuAPI = {
     }
   },
 
-  async updateDessert(id, dessertData) {
+  async updateDessert(id, dessertData, imageFile) {
     try {
+      const formData = new FormData();
+      Object.keys(dessertData).forEach((key) => {
+        formData.append(key, dessertData[key]);
+      });
+      if (imageFile) {
+        formData.append("image", imageFile);
+      }
       const response = await axios.put(
         `http://localhost:5000/menu/desserts/${id}`,
-        dessertData,
+        formData,
         { withCredentials: true }
       );
       return response.data;

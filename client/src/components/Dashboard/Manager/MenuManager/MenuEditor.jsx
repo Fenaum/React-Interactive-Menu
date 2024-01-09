@@ -22,7 +22,7 @@ export default function MenuEditor({
   };
 
   const handleChange = (e) => {
-    setEditedItem({ ...editedItem, [e.target.name]: e.target.value });
+    setEditedItem({ ...editedItem, [e.target.name]: e.target.value || "" });
   };
 
   const handleSubmit = (e) => {

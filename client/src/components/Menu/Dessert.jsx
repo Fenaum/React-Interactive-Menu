@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import menuAPI from "../../utils/menuService";
-const fetchDessert = menuAPI.fetchDessert;
+import useFetchMenuData from "../../hooks/useFetchMenuData";
 
 export default function Dessert() {
+  const { desserts } = useFetchMenuData();
+
   const containerRef = useRef(null);
-  const [dessertData, setDessertData] = useState([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -21,14 +21,7 @@ export default function Dessert() {
     }
   }, []);
 
-  //fetching data and store in in state
-  useEffect(() => {
-    fetchDessert()
-      .then((data) => setDessertData(data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  const dessertItemsList = dessertData.map((dessertItem) => (
+  const dessertItemsList = desserts.map((dessertItem) => (
     <div className="item-card" key={dessertItem._id}>
       <img className="item-img" src={dessertItem.imgURL} alt="item-img" />
       <h2>{dessertItem.name}</h2>

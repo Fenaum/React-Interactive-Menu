@@ -63,7 +63,7 @@ const entreeController = {
         console.log("name of file", req.file);
         return res
           .status(202)
-          .json({ message: "item has been updated", appetizerItem });
+          .json({ message: "item has been updated", entreeItem });
       }
     } catch (err) {
       console.log(err);
