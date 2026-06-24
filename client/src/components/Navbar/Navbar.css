@@ -95,6 +95,18 @@ a {
     z-index: 2;
 }
 
+.cart-badge {
+    display: inline-block;
+    background-color: var(--color-wood-brown);
+    color: white;
+    border-radius: 12px;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.55rem;
+    font-weight: 700;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+
 
 
 

@@ -364,6 +364,88 @@ const menuAPI = {
       throw err;
     }
   },
+
+  async placeOrder(orderData) {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/service/customer/orders",
+        orderData,
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to place order:", err);
+      throw err;
+    }
+  },
+
+  async callWaiter(tableNumber, message) {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/service/customer/waiter-request",
+        { tableNumber, message },
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to send waiter request:", err);
+      throw err;
+    }
+  },
+
+  async fetchOrders() {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/service/management/orders",
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to fetch orders:", err);
+      throw err;
+    }
+  },
+
+  async updateOrderStatus(id, status) {
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/service/management/orders/${id}/status`,
+        { status },
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to update order status:", err);
+      throw err;
+    }
+  },
+
+  async fetchWaiterRequests() {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/service/management/waiter-requests",
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to fetch waiter requests:", err);
+      throw err;
+    }
+  },
+
+  async updateWaiterRequest(id, status) {
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/service/management/waiter-requests/${id}`,
+        { status },
+        { withCredentials: true }
+      );
+      return response.data;
+    } catch (err) {
+      console.error("Failed to update waiter request:", err);
+      throw err;
+    }
+  },
 };
 
 export default menuAPI;

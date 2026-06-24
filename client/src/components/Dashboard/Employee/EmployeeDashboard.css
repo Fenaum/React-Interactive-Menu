@@ -1,0 +1,180 @@
+.employee-dashboard {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 120px);
+}
+
+.employee-sidebar {
+  background-color: var(--color-darker-wood);
+  color: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.employee-sidebar h3 {
+  margin: 0 0 0.25rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.employee-username {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0 0 1rem;
+}
+
+.employee-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.employee-nav li {
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.employee-nav li:hover,
+.employee-nav li.active {
+  background-color: rgba(255,255,255,0.15);
+}
+
+.badge {
+  background-color: var(--color-gold);
+  color: var(--color-dark-charcoal);
+  border-radius: 12px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.employee-logout {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  border-radius: 8px;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.employee-logout:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.employee-content {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.employee-content h2 {
+  font-weight: 300;
+  color: var(--color-wood-brown);
+  margin-top: 0;
+}
+
+.employee-empty {
+  color: #888;
+  font-style: italic;
+}
+
+.employee-order-card,
+.employee-waiter-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.employee-order-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.employee-table {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.employee-time {
+  margin-left: auto;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.employee-status {
+  border-radius: 12px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-preparing { background: #dbeafe; color: #1e40af; }
+.status-ready { background: #d1fae5; color: #065f46; }
+.status-delivered { background: #e5e7eb; color: #374151; }
+.status-cancelled { background: #fee2e2; color: #991b1b; }
+
+.employee-order-items {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.employee-special {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin: 0.25rem 0;
+}
+
+.employee-total {
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.employee-waiter-msg {
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.employee-order-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.employee-order-actions button {
+  background-color: var(--color-wood-brown);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.employee-order-actions button:hover {
+  background-color: var(--color-darker-wood);
+}
+
+.employee-order-actions .btn-cancel {
+  background-color: #e55;
+}
+
+.employee-order-actions .btn-cancel:hover {
+  background-color: #c33;
+}

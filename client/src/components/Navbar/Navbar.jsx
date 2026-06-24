@@ -2,13 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.svg";
-import userLogo from "../../assets/images/user.svg"
+import userLogo from "../../assets/images/user.svg";
 import menuLogo from "../../assets/images/menu.svg";
-import About from "../About/About"
+import About from "../About/About";
 
-export default function Navbar(prop) {
+export default function Navbar({ user, cartCount }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const user = prop.user;
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -73,19 +72,17 @@ export default function Navbar(prop) {
       </header>
       <ul className={`menu-items ${isMenuOpen ? "show" : ""}`}>
         <li>
-          <Link onClick={handleClick} to="/cart">CART</Link>
-        </li>
-        <li>
-          <Link onClick={handleClick} to="/service">SERVICES</Link>
+          <Link onClick={handleClick} to="/cart">
+            CART{cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+          </Link>
         </li>
         <li>
           <Link onClick={handleClick} to="/about">ABOUT</Link>
         </li>
         <li>
-          <Link onClick={handleClick} to="/about">CONTACT</Link>
+          <Link onClick={handleClick} to="/login">SIGN IN</Link>
         </li>
       </ul>
     </>
   );
 }
-

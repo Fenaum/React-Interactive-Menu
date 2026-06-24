@@ -140,6 +140,30 @@
     color: var(--color-text-light);
 }
 
+.drinks > h3 {
+    margin: -1px;
+    padding: 20px;
+    background-color: var(--color-light-gray);
+    color: var(--color-light-cream);
+    font-weight: 200;
+}
+
+.add-to-cart-btn {
+    background-color: var(--color-wood-brown);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--color-darker-wood);
+}
+
 /* Responsive design for screens smaller than 600px */
 @media screen and (max-width: 600px) {
     .menu-indicator {

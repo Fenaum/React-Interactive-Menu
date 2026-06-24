@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import useFetchMenuData from '../../hooks/useFetchMenuData'
 
-export default function Appetizer() {
+export default function Appetizer({ addToCart }) {
   const { appetizers } = useFetchMenuData();
-  
+
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function Appetizer() {
         <p className="price">Price: ${appetizerItem.price}</p>
 
         <p>{appetizerItem.description}</p>
-        {/* Add additional data rendering here */}
+        <button className="add-to-cart-btn" onClick={() => addToCart(appetizerItem)}>+ Add to Cart</button>
       </div>
     );
   });

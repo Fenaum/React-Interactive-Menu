@@ -61,5 +61,73 @@
 }
 
 .dash-menu-logout:hover {
-    background-color: var(--color-darker-wood); /* Change the background color on hover */
+    background-color: var(--color-darker-wood);
+}
+
+.dash-user {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.85rem;
+    margin: -0.5rem 0 1rem;
+}
+
+.sales-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sales-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 160px;
+}
+
+.sales-stat-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+}
+
+.sales-stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-wood-brown);
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.sales-table th {
+    background-color: var(--color-wood-brown);
+    color: white;
+    padding: 0.6rem 1rem;
+    text-align: left;
+}
+
+.sales-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.sales-table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.sales-table select {
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.85rem;
 }

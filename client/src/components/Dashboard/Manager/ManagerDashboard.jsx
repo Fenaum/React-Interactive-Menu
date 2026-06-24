@@ -4,21 +4,20 @@ import { Route, Routes } from "react-router-dom";
 import DashMenu from "./DashMenu";
 import MenuManager from "./MenuManager/MenuManager";
 import Home from "./Home/Home";
+import Inventory from "./Inventory";
+import Sales from "./sales";
+import Orders from "./Orders";
 import "../dashboard.css";
+
 const { postUserLogout } = menuAPI;
 
-export default function ManagerDashboard({
-  user,
-  setUser,
-  setLastLoginLogoutTime,
-}) {
+export default function ManagerDashboard({ user, setUser, setLastLoginLogoutTime }) {
   const navigate = useNavigate();
 
   function handleClick(event) {
     event.preventDefault();
     postUserLogout(user)
-      .then((user) => {
-        console.log(user, "successfully logged out");
+      .then(() => {
         setUser(null);
         setLastLoginLogoutTime(Date.now());
         navigate("/");
@@ -27,6 +26,7 @@ export default function ManagerDashboard({
         console.error(err, { message: "error logging user off" });
       });
   }
+
   return (
     <>
       <hr />
@@ -36,6 +36,9 @@ export default function ManagerDashboard({
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="menu/*" element={<MenuManager />} />
+            <Route path="inventory" element={<Inventory />} />
+            <Route path="sales" element={<Sales />} />
+            <Route path="orders" element={<Orders />} />
           </Routes>
         </div>
       </div>

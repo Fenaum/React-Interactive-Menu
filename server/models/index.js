@@ -3,5 +3,7 @@ module.exports = {
     Appetizer: require('./appetizerModel'),
     Dessert: require('./dessertModel'),
     Drink: require('./drinkModel'),
-    User: require('./user')
+    User: require('./user'),
+    Order: require('./orderModel'),
+    WaiterRequest: require('./waiterRequestModel'),
 }
